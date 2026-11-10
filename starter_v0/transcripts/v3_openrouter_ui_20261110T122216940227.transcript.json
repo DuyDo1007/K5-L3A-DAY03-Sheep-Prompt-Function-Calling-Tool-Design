@@ -1,0 +1,284 @@
+{
+  "transcript_id": "v3_openrouter_ui_20261110T122216940227",
+  "version": "v3",
+  "artifact_version": "v3+p6bc51c2e3de1+tdd01e8ab526d",
+  "prompt_hash": "6bc51c2e3de1b1dc6fe07c90c5f63bd94b47102da918436d531892f0eb7bb09f",
+  "tools_hash": "dd01e8ab526d60a0ad865edd97b292c7c5a31c125d5659ccf8b2e8396dce3676",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "system_prompt": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T12:22:16",
+  "updated_at": "2026-11-10T12:23:52",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T12:22:37",
+      "user": "Tìm skill ui ux cho ai coding agent",
+      "status": "answered",
+      "assistant_text": "Based on my search, here are the key **UI/UX skills for AI coding agents** currently available, organized by category:\n\n## 🎨 **Core UI/UX Agent Skills (Ready to Install)**\n\n### **1. Comprehensive Design Systems**\n| Skill | Description | Source |\n|-------|-------------|--------|\n| **ui-ux-audit** | Audits interfaces across 8 dimensions: navigation, visual consistency, responsiveness, WCAG 2.2 AA accessibility, forms, system states | [Eagerworks](https://eagerworks.com/blog/agent-skills-ai-coding-agents) |\n| **better-interface** | Reviews screens/flows across accessibility, layout, writing, typography, color, UI polish → ranked report | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) |\n| **UI UX Pro Max** | 192 palettes, font pairings, 119 UX rules on call | [Instagram](https://www.instagram.com/p/DfF8VO_IUGR) |\n\n### **2. Specialized Visual Skills**\n| Skill | Focus |\n|-------|-------|\n| **better-colors** | Builds color systems, semantic tokens, contrast measurement |\n| **better-typography** | Type scale, spacing, font features, wrapping, truncation |\n| **better-layout** | Grouping, alignment, reading order, responsive structure, translation room |\n| **better-ui** | Polish: border radius, optical alignment, shadows, icon states, animation |\n| **Hue** | Turns any brand into its own design-language skill |\n\n### **3. Accessibility & Usability**\n| Skill | Focus |\n|-------|-------|\n| **better-accessibility** | Keyboard/focus, ARIA, accessible names, forms, screen-reader, motion/zoom (WCAG 2.2) |\n| **Impeccable** | Shape, critique, polish, animate with one skill |\n| **Taste Skill** | Dials for variance, motion, density + pre-flight check |\n\n### **4. Framework-Specific Skills**\n| Platform | Skills |\n|----------|--------|\n| **Expo/React Native** | `expo-native-ui` (Apple HIG, semantic colors, SF Symbols), `expo-router`, `expo-animation` |\n| **shadcn/ui** | Official skill: adds/updates components the shadcn way |\n| **Multi-agent (Codex, Copilot, Claude Code, Cursor)** | Via [ui-skills.com](https://www.ui-skills.com/agents/pi) - installs via skills CLI |\n\n## 📦 **Where to Find & Install**\n\n1. **GitHub Collection**: [jakubkrehel/skills](https://github.com/jakubkrehel/skills) - 10+ specialized skills\n2. **Skills Registry**: [ui-skills.com](https://www.ui-skills.com/agents/pi) - routes by topic/stack/intent\n3. **Expo Docs**: [docs.expo.dev/skills](https://docs.expo.dev/skills) - native mobile focus\n4. **Agent Skills Framework**: [Eagerworks guide](https://eagerworks.com/blog/agent-skills-ai-coding-agents) - how to use/build/contribute\n\n## 💡 **Key Insight from NN/g Research**\n> UX in agentic workflows isn't just pixels—it requires **exploratory research** (understanding user needs) and **evaluative research** (testing designs). AI coding agents dissolve technical constraints but **cannot replace human-centered design judgment**. [NN/g Article](https://www.nngroup.com/articles/ux-agentic-software-factories)\n\n## 🚀 **Quick Start**\nMost skills install via one command (e.g., `npx` or skills CLI) and work with **Cursor, Claude Code, GitHub Copilot, Codex, Kiro**, etc.\n\nWould you like me to:\n1. **Deep-dive** into a specific skill (e.g., `better-accessibility` or `expo-native-ui`)?\n2. **Find installation guides** for a particular AI coding agent?\n3. **Search for skills** in a specific domain (mobile, dashboard, design systems)?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "timeframe": "month",
+                "query": "UI UX skills for AI coding agent",
+                "max_results": 10,
+                "topic": "general"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "timeframe": "month",
+                "query": "UI UX skills for AI coding agent",
+                "max_results": 10,
+                "topic": "general"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "UI UX skills for AI coding agent",
+                "topic": "general",
+                "timeframe": "month",
+                "items": [
+                  {
+                    "title": "A Practical Guide to Agent Skills for AI Coding Agents: Use Them, Build Them, Contribute",
+                    "url": "https://eagerworks.com/blog/agent-skills-ai-coding-agents",
+                    "source": "eagerworks.com",
+                    "summary": "ui-ux-audit. Audits a product's interface across eight dimensions, including navigation, visual consistency, responsiveness, WCAG 2.2 AA accessibility, forms, and system states. Every finding comes with a concrete recommendation.\n audit-seo. Audits a site's technical SEO from a live URL, the source code, or both, and traces a live finding back to the line that causes it. It never fabricates search volume, rankings, or traffic. [...] Use scripts for deterministic steps. Anything that must be exact and repeatable belongs in scripts/ as code. Code runs the same way every time and executes without consuming context. The agent decides when to run it.\n Match freedom to the task. For processes that must be followed exactly, such as data pipelines, compliance checks, or migration steps, write tight, low-freedom instructions. For creative output where variety is good, leave room. [...] The description decides everything. The agent only ever sees name and description until a task matches. A vague description like \"helps with PRs\" rarely fires. State both what the skill does and when to use it, including the phrases a user would actually type. The example above lists \"PR description,\" \"PR summary,\" and \"open a pull request\" on purpose.",
+                    "score": 0.8690161
+                  },
+                  {
+                    "title": "I combined multiple UI/UX skills into one orchestrator for ...",
+                    "url": "https://www.reddit.com/r/buildinpublic/comments/1xsakds/i_combined_multiple_uiux_skills_into_one",
+                    "source": "reddit.com",
+                    "summary": "UX/UI Designer · Made an agent skill to enforce SOLID/clean code practices (works with any AI coding assistants) · Terminal kanban for managing multiple AI coding ...Read more",
+                    "score": 0.7971311
+                  },
+                  {
+                    "title": "Oil UI free ui design skill for ai agents",
+                    "url": "https://www.facebook.com/niyitech/posts/give-your-coding-agent-some-taste-a-free-ui-design-skill-for-ai-agents-details-/122157241275121169",
+                    "source": "facebook.com",
+                    "summary": "Agent Skills packages senior-engineer habits into reusable skills and slash commands for AI coding agents. The README frames the flow as define, plan, build, ...Read more",
+                    "score": 0.79080546
+                  },
+                  {
+                    "title": "Make your AI coding agents better at design with these 6 ...",
+                    "url": "https://www.instagram.com/p/De16gUIAd4V",
+                    "source": "instagram.com",
+                    "summary": "Make your AI coding agents better at design with these 6 useful skills! From improving UI layouts and accessibility to reviewing designs and turning ...Read more",
+                    "score": 0.7898345
+                  },
+                  {
+                    "title": "Pi Skills for Design Engineers | UI Skills",
+                    "url": "https://www.ui-skills.com/agents/pi",
+                    "source": "ui-skills.com",
+                    "summary": "Codex\n\nOpenAI's coding agent. Compatible with the skills CLI for installing reusable procedural knowledge - performance rules, design systems, and workflow patterns.GitHub Copilot logo\n\nGitHub Copilot\n\nGitHub's AI coding assistant. Skills installed via the skills CLI augment Copilot's project context with structured guidance the model uses across edits and chats.\n\nLooking for your next role?\n\nBrowse design + design engineering jobs\n\nStay in the loop [...] Claude Code\n\nAnthropic's official terminal agent. Skills installed via the skills CLI become available as procedural knowledge across every Claude Code session in the project.Cursor logo\n\nCursor\n\nAI-first code editor with deep agent integration. The skills CLI installs SKILL.md files so Cursor can reference them automatically across repo sessions.Codex logo\n\nCodex [...] OpenAIClaudeCursorCopilotAnthropicGeminiOpenClawDeepSeek\n\n## Featured skills\n\nibelick avatar\n\nui-skills-rootibelick\n\nUse when the user needs UI help and you must route by topic, stack, and intent to the smallest useful set of UI skills.ibelick avatar\n\nimprove-uiibelick\n\nAudit an existing product surface against its own design evidence, identify verified UI problems, and write self-contained implementation plans for another agent without modifying product source.anthropics avatar",
+                    "score": 0.750937
+                  },
+                  {
+                    "title": "The Role of UX in Agentic Software Factories - NN/G",
+                    "url": "https://www.nngroup.com/articles/ux-agentic-software-factories",
+                    "source": "nngroup.com",
+                    "summary": "| Design | Designers parse the documented requirements to create, iterate on, and test designs. | AI turns an approved intent.md into a spec.md, using the company’s standards as context. The product owner mocks up and iterates on the interface with an AI-design tool, then approves the spec. |\n| Build | Engineers write the code. | AI uses the spec.md to create a plan.md file outlining instructions for the AI coding agent. Once an engineer approves the plan, an agent writes the code. | [...] Product owners, engineering, and UX have long represented three balancing perspectives: business viability, technical feasibility, and user desirability, respectively. But if AI-coding agents dissolve many technical constraints and UX is reduced to context in Markdown files, then all the cards are in the product owner’s hands, and the approval gate is guarded primarily by business needs.\n\n### Design-Stage Assumptions [...] Building an exemplary user experience is still very difficult — even with the help of AI — because it requires understanding people, not just pixels. This means we must still understand what people need to accomplish (exploratory research) and test the design to ensure it does an excellent job of delivering on that need (evaluative research). This is not the same thing as a product owner iterating a quick mockup based on a simple intent.md and passing it to a coding agent for production",
+                    "score": 0.6847074
+                  },
+                  {
+                    "title": "GitHub - jakubkrehel/skills: A collection of agent skills that help you build great interfaces. · GitHub",
+                    "url": "https://github.com/jakubkrehel/skills",
+                    "source": "github.com",
+                    "summary": "better-colors: Builds and checks color systems by generating palettes, naming semantic tokens, converting between formats and measuring contrast.\n better-accessibility: Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom against WCAG 2.2.\n better-layout: Sets grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. [...] teardown: Creates a technical illustration of an object and lets you configure it, color it and download as an SVG, PNG or PDF.\n state-machine: Renders every state of a component you choose on a throwaway page, with mock data and a switcher, so you can work on each state. User-invoked.\n variant: Builds multiple variants of a component you're working on and helps you iterate and pick one. User-invoked. [...] better-interface: Reviews a screen, flow or whole interface across accessibility, layout, writing, typography, color and UI polish, and returns one ranked report.\n better-ui: Polishes surfaces, icons and motion with exact values for border radius, optical alignment, shadows, icon states and animation.\n better-typography: Sets and reviews how text renders, from the type scale and spacing to font features, wrapping, truncation and punctuation.",
+                    "score": 0.6211049
+                  },
+                  {
+                    "title": "Expo Skills for AI agents - Expo documentation",
+                    "url": "https://docs.expo.dev/skills",
+                    "source": "docs.expo.dev",
+                    "summary": "| `expo-native-ui` | Build beautiful, native-feeling Expo screens. Covers Apple HIG styling, semantic colors, native controls, SF Symbols, media, visual effects, gradients, storage, and responsive layout. For routing and navigation, use the expo-router skill; for motion and animation, use the expo-animation skill. | [...] in its own idiom, standardizing styles so screens (including AI-generated ones) look consistent and polished, fixing an app that looks AI-generated or generic instead of native (the named native-slop tells), building an in-app component library, or auditing an app for design-system drift (hardcoded colors, spacing, fonts). For platform styling specifics (semantic colors, HIG rules, native controls) use expo-native-ui; for folder layout of a new app use expo-project-structure. | [...] | Example prompt | Skill used |\n --- |\n| Build a settings screen with native-feeling controls | `expo-native-ui` |\n| Add tab navigation and a modal to my app | `expo-router` |\n| Set up Tailwind CSS in my Expo project | `expo-tailwind-setup` |\n| Embed a recharts chart in my native app using web code | `expo-dom` |\n| Add a SwiftUI picker component to my Expo app | `expo-ui` |\n| Use Material Design 3 components with Jetpack Compose | `expo-ui` |",
+                    "score": 0.61695945
+                  },
+                  {
+                    "title": "2 Agent Skills Every Frontend Developer Should Try",
+                    "url": "https://dev.to/erikch/2-agent-skills-every-frontend-developer-should-try-16pl",
+                    "source": "dev.to",
+                    "summary": "First one is Impeccable. Impeccable took a plain, AI-built website and gave it a design. It wasn't bad at all! Diagram Design took that same site and drew a diagram of how it works! Both install with one command, and both work with basically any coding harness. I used Kiro in my demos but you can use whatever you like.\n\nI made a video walking through both if you'd rather watch:\n\nVideo 1 [...] Erik Hanchett\nPosted on Oct 20•AI-assisted\n\nImage 1017Image 113Image 123Image 133Image 141\n\n# 2 Agent Skills Every Frontend Developer Should Try\n\n#ai#webdev#frontend#kiro\n\nInstalls via npx with popular AI coding harnesses\n\nI love to try out new agent skills. Anything that can help me be more productive I'm all for. Today I found two new ones I want to share with you. [...] ## []( is BACK! Join a Fest and build with open source AI. 🎃\n\nEvery Fest is a one-day, in-person event, either a Hack Day or a Meetup, hosted by local organizers. Search by name or city, or use your location to see what is closest.\n\nFind a fest near me →\n\nImage 38Promoted\n\nImage 39\n\n## [](\n\n[](\n\n👋 Kindness is contagious\n\n   What's a billboard?\n   Manage preferences\n\n  \n\n   Report billboard",
+                    "score": 0.49509352
+                  },
+                  {
+                    "title": "Instagram",
+                    "url": "https://www.instagram.com/p/DfF8VO_IUGR",
+                    "source": "instagram.com",
+                    "summary": "Ten skills that teach your agent taste. Part 1.  \n  \n→ Frontend Design. Anthropic’s own skill: pick a clear direction before any code  \n→ Impeccable. Shape, critique, polish and animate with one skill  \n→ Taste Skill. Dials for variance, motion and density, then a pre-flight check  \n→ Hallmark. 21 themes, page structures and 58 quality checks  \n→ UI UX Pro Max. 192 palettes, font pairings and 119 UX rules on call  \n→ Hue. Turns any brand into its own design-language skill [...] aiwontsaveyou's profile picture\n\naiwontsaveyou\n\nSkills\n\nReply\n\nreichel_kk's profile picture\n\nreichel\\_kk\n\nskills\n\nReply\n\noscatek.ai's profile picture\n\noscatek.ai\n\nSkills\n\nReply\n\nglixtix's profile picture\n\nglixtix\n\nSkill\n\nReply\n\ndesignanvis's profile picture\n\ndesignanvis\n\nSkills\n\nReply\n\nchrxs.alx's profile picture\n\nchrxs.alx\n\nskills\n\nReply\n\nadam.schlube's profile picture\n\nadam.schlube\n\nskills\n\nReply\n\nalveagency.online_'s profile picture\n\nalveagency.online\\_\n\nskills\n\nReply [...] → Extract DESIGN.md. Google Stitch’s skill: tokens and patterns from any codebase  \n→ shadcn/ui. The official skill: adds and updates components the shadcn way  \n→ Interface Design. Dashboards and admin panels with real hierarchy  \n→ Better Typography. Scale, line height, measure and font loading by role  \n  \nAll ten are free, most install with one line.  \n  \nComment SKILLS and we’ll DM you all 10 links.",
+                    "score": 0.46235222
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Based on my search, here are the key **UI/UX skills for AI coding agents** currently available, organized by category:\n\n## 🎨 **Core UI/UX Agent Skills (Ready to Install)**\n\n### **1. Comprehensive Design Systems**\n| Skill | Description | Source |\n|-------|-------------|--------|\n| **ui-ux-audit** | Audits interfaces across 8 dimensions: navigation, visual consistency, responsiveness, WCAG 2.2 AA accessibility, forms, system states | [Eagerworks](https://eagerworks.com/blog/agent-skills-ai-coding-agents) |\n| **better-interface** | Reviews screens/flows across accessibility, layout, writing, typography, color, UI polish → ranked report | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) |\n| **UI UX Pro Max** | 192 palettes, font pairings, 119 UX rules on call | [Instagram](https://www.instagram.com/p/DfF8VO_IUGR) |\n\n### **2. Specialized Visual Skills**\n| Skill | Focus |\n|-------|-------|\n| **better-colors** | Builds color systems, semantic tokens, contrast measurement |\n| **better-typography** | Type scale, spacing, font features, wrapping, truncation |\n| **better-layout** | Grouping, alignment, reading order, responsive structure, translation room |\n| **better-ui** | Polish: border radius, optical alignment, shadows, icon states, animation |\n| **Hue** | Turns any brand into its own design-language skill |\n\n### **3. Accessibility & Usability**\n| Skill | Focus |\n|-------|-------|\n| **better-accessibility** | Keyboard/focus, ARIA, accessible names, forms, screen-reader, motion/zoom (WCAG 2.2) |\n| **Impeccable** | Shape, critique, polish, animate with one skill |\n| **Taste Skill** | Dials for variance, motion, density + pre-flight check |\n\n### **4. Framework-Specific Skills**\n| Platform | Skills |\n|----------|--------|\n| **Expo/React Native** | `expo-native-ui` (Apple HIG, semantic colors, SF Symbols), `expo-router`, `expo-animation` |\n| **shadcn/ui** | Official skill: adds/updates components the shadcn way |\n| **Multi-agent (Codex, Copilot, Claude Code, Cursor)** | Via [ui-skills.com](https://www.ui-skills.com/agents/pi) - installs via skills CLI |\n\n## 📦 **Where to Find & Install**\n\n1. **GitHub Collection**: [jakubkrehel/skills](https://github.com/jakubkrehel/skills) - 10+ specialized skills\n2. **Skills Registry**: [ui-skills.com](https://www.ui-skills.com/agents/pi) - routes by topic/stack/intent\n3. **Expo Docs**: [docs.expo.dev/skills](https://docs.expo.dev/skills) - native mobile focus\n4. **Agent Skills Framework**: [Eagerworks guide](https://eagerworks.com/blog/agent-skills-ai-coding-agents) - how to use/build/contribute\n\n## 💡 **Key Insight from NN/g Research**\n> UX in agentic workflows isn't just pixels—it requires **exploratory research** (understanding user needs) and **evaluative research** (testing designs). AI coding agents dissolve technical constraints but **cannot replace human-centered design judgment**. [NN/g Article](https://www.nngroup.com/articles/ux-agentic-software-factories)\n\n## 🚀 **Quick Start**\nMost skills install via one command (e.g., `npx` or skills CLI) and work with **Cursor, Claude Code, GitHub Copilot, Codex, Kiro**, etc.\n\nWould you like me to:\n1. **Deep-dive** into a specific skill (e.g., `better-accessibility` or `expo-native-ui`)?\n2. **Find installation guides** for a particular AI coding agent?\n3. **Search for skills** in a specific domain (mobile, dashboard, design systems)?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "timeframe": "month",
+            "query": "UI UX skills for AI coding agent",
+            "max_results": 10,
+            "topic": "general"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "UI UX skills for AI coding agent",
+            "topic": "general",
+            "timeframe": "month",
+            "items": [
+              {
+                "title": "A Practical Guide to Agent Skills for AI Coding Agents: Use Them, Build Them, Contribute",
+                "url": "https://eagerworks.com/blog/agent-skills-ai-coding-agents",
+                "source": "eagerworks.com",
+                "summary": "ui-ux-audit. Audits a product's interface across eight dimensions, including navigation, visual consistency, responsiveness, WCAG 2.2 AA accessibility, forms, and system states. Every finding comes with a concrete recommendation.\n audit-seo. Audits a site's technical SEO from a live URL, the source code, or both, and traces a live finding back to the line that causes it. It never fabricates search volume, rankings, or traffic. [...] Use scripts for deterministic steps. Anything that must be exact and repeatable belongs in scripts/ as code. Code runs the same way every time and executes without consuming context. The agent decides when to run it.\n Match freedom to the task. For processes that must be followed exactly, such as data pipelines, compliance checks, or migration steps, write tight, low-freedom instructions. For creative output where variety is good, leave room. [...] The description decides everything. The agent only ever sees name and description until a task matches. A vague description like \"helps with PRs\" rarely fires. State both what the skill does and when to use it, including the phrases a user would actually type. The example above lists \"PR description,\" \"PR summary,\" and \"open a pull request\" on purpose.",
+                "score": 0.8690161
+              },
+              {
+                "title": "I combined multiple UI/UX skills into one orchestrator for ...",
+                "url": "https://www.reddit.com/r/buildinpublic/comments/1xsakds/i_combined_multiple_uiux_skills_into_one",
+                "source": "reddit.com",
+                "summary": "UX/UI Designer · Made an agent skill to enforce SOLID/clean code practices (works with any AI coding assistants) · Terminal kanban for managing multiple AI coding ...Read more",
+                "score": 0.7971311
+              },
+              {
+                "title": "Oil UI free ui design skill for ai agents",
+                "url": "https://www.facebook.com/niyitech/posts/give-your-coding-agent-some-taste-a-free-ui-design-skill-for-ai-agents-details-/122157241275121169",
+                "source": "facebook.com",
+                "summary": "Agent Skills packages senior-engineer habits into reusable skills and slash commands for AI coding agents. The README frames the flow as define, plan, build, ...Read more",
+                "score": 0.79080546
+              },
+              {
+                "title": "Make your AI coding agents better at design with these 6 ...",
+                "url": "https://www.instagram.com/p/De16gUIAd4V",
+                "source": "instagram.com",
+                "summary": "Make your AI coding agents better at design with these 6 useful skills! From improving UI layouts and accessibility to reviewing designs and turning ...Read more",
+                "score": 0.7898345
+              },
+              {
+                "title": "Pi Skills for Design Engineers | UI Skills",
+                "url": "https://www.ui-skills.com/agents/pi",
+                "source": "ui-skills.com",
+                "summary": "Codex\n\nOpenAI's coding agent. Compatible with the skills CLI for installing reusable procedural knowledge - performance rules, design systems, and workflow patterns.GitHub Copilot logo\n\nGitHub Copilot\n\nGitHub's AI coding assistant. Skills installed via the skills CLI augment Copilot's project context with structured guidance the model uses across edits and chats.\n\nLooking for your next role?\n\nBrowse design + design engineering jobs\n\nStay in the loop [...] Claude Code\n\nAnthropic's official terminal agent. Skills installed via the skills CLI become available as procedural knowledge across every Claude Code session in the project.Cursor logo\n\nCursor\n\nAI-first code editor with deep agent integration. The skills CLI installs SKILL.md files so Cursor can reference them automatically across repo sessions.Codex logo\n\nCodex [...] OpenAIClaudeCursorCopilotAnthropicGeminiOpenClawDeepSeek\n\n## Featured skills\n\nibelick avatar\n\nui-skills-rootibelick\n\nUse when the user needs UI help and you must route by topic, stack, and intent to the smallest useful set of UI skills.ibelick avatar\n\nimprove-uiibelick\n\nAudit an existing product surface against its own design evidence, identify verified UI problems, and write self-contained implementation plans for another agent without modifying product source.anthropics avatar",
+                "score": 0.750937
+              },
+              {
+                "title": "The Role of UX in Agentic Software Factories - NN/G",
+                "url": "https://www.nngroup.com/articles/ux-agentic-software-factories",
+                "source": "nngroup.com",
+                "summary": "| Design | Designers parse the documented requirements to create, iterate on, and test designs. | AI turns an approved intent.md into a spec.md, using the company’s standards as context. The product owner mocks up and iterates on the interface with an AI-design tool, then approves the spec. |\n| Build | Engineers write the code. | AI uses the spec.md to create a plan.md file outlining instructions for the AI coding agent. Once an engineer approves the plan, an agent writes the code. | [...] Product owners, engineering, and UX have long represented three balancing perspectives: business viability, technical feasibility, and user desirability, respectively. But if AI-coding agents dissolve many technical constraints and UX is reduced to context in Markdown files, then all the cards are in the product owner’s hands, and the approval gate is guarded primarily by business needs.\n\n### Design-Stage Assumptions [...] Building an exemplary user experience is still very difficult — even with the help of AI — because it requires understanding people, not just pixels. This means we must still understand what people need to accomplish (exploratory research) and test the design to ensure it does an excellent job of delivering on that need (evaluative research). This is not the same thing as a product owner iterating a quick mockup based on a simple intent.md and passing it to a coding agent for production",
+                "score": 0.6847074
+              },
+              {
+                "title": "GitHub - jakubkrehel/skills: A collection of agent skills that help you build great interfaces. · GitHub",
+                "url": "https://github.com/jakubkrehel/skills",
+                "source": "github.com",
+                "summary": "better-colors: Builds and checks color systems by generating palettes, naming semantic tokens, converting between formats and measuring contrast.\n better-accessibility: Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom against WCAG 2.2.\n better-layout: Sets grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. [...] teardown: Creates a technical illustration of an object and lets you configure it, color it and download as an SVG, PNG or PDF.\n state-machine: Renders every state of a component you choose on a throwaway page, with mock data and a switcher, so you can work on each state. User-invoked.\n variant: Builds multiple variants of a component you're working on and helps you iterate and pick one. User-invoked. [...] better-interface: Reviews a screen, flow or whole interface across accessibility, layout, writing, typography, color and UI polish, and returns one ranked report.\n better-ui: Polishes surfaces, icons and motion with exact values for border radius, optical alignment, shadows, icon states and animation.\n better-typography: Sets and reviews how text renders, from the type scale and spacing to font features, wrapping, truncation and punctuation.",
+                "score": 0.6211049
+              },
+              {
+                "title": "Expo Skills for AI agents - Expo documentation",
+                "url": "https://docs.expo.dev/skills",
+                "source": "docs.expo.dev",
+                "summary": "| `expo-native-ui` | Build beautiful, native-feeling Expo screens. Covers Apple HIG styling, semantic colors, native controls, SF Symbols, media, visual effects, gradients, storage, and responsive layout. For routing and navigation, use the expo-router skill; for motion and animation, use the expo-animation skill. | [...] in its own idiom, standardizing styles so screens (including AI-generated ones) look consistent and polished, fixing an app that looks AI-generated or generic instead of native (the named native-slop tells), building an in-app component library, or auditing an app for design-system drift (hardcoded colors, spacing, fonts). For platform styling specifics (semantic colors, HIG rules, native controls) use expo-native-ui; for folder layout of a new app use expo-project-structure. | [...] | Example prompt | Skill used |\n --- |\n| Build a settings screen with native-feeling controls | `expo-native-ui` |\n| Add tab navigation and a modal to my app | `expo-router` |\n| Set up Tailwind CSS in my Expo project | `expo-tailwind-setup` |\n| Embed a recharts chart in my native app using web code | `expo-dom` |\n| Add a SwiftUI picker component to my Expo app | `expo-ui` |\n| Use Material Design 3 components with Jetpack Compose | `expo-ui` |",
+                "score": 0.61695945
+              },
+              {
+                "title": "2 Agent Skills Every Frontend Developer Should Try",
+                "url": "https://dev.to/erikch/2-agent-skills-every-frontend-developer-should-try-16pl",
+                "source": "dev.to",
+                "summary": "First one is Impeccable. Impeccable took a plain, AI-built website and gave it a design. It wasn't bad at all! Diagram Design took that same site and drew a diagram of how it works! Both install with one command, and both work with basically any coding harness. I used Kiro in my demos but you can use whatever you like.\n\nI made a video walking through both if you'd rather watch:\n\nVideo 1 [...] Erik Hanchett\nPosted on Oct 20•AI-assisted\n\nImage 1017Image 113Image 123Image 133Image 141\n\n# 2 Agent Skills Every Frontend Developer Should Try\n\n#ai#webdev#frontend#kiro\n\nInstalls via npx with popular AI coding harnesses\n\nI love to try out new agent skills. Anything that can help me be more productive I'm all for. Today I found two new ones I want to share with you. [...] ## []( is BACK! Join a Fest and build with open source AI. 🎃\n\nEvery Fest is a one-day, in-person event, either a Hack Day or a Meetup, hosted by local organizers. Search by name or city, or use your location to see what is closest.\n\nFind a fest near me →\n\nImage 38Promoted\n\nImage 39\n\n## [](\n\n[](\n\n👋 Kindness is contagious\n\n   What's a billboard?\n   Manage preferences\n\n  \n\n   Report billboard",
+                "score": 0.49509352
+              },
+              {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/p/DfF8VO_IUGR",
+                "source": "instagram.com",
+                "summary": "Ten skills that teach your agent taste. Part 1.  \n  \n→ Frontend Design. Anthropic’s own skill: pick a clear direction before any code  \n→ Impeccable. Shape, critique, polish and animate with one skill  \n→ Taste Skill. Dials for variance, motion and density, then a pre-flight check  \n→ Hallmark. 21 themes, page structures and 58 quality checks  \n→ UI UX Pro Max. 192 palettes, font pairings and 119 UX rules on call  \n→ Hue. Turns any brand into its own design-language skill [...] aiwontsaveyou's profile picture\n\naiwontsaveyou\n\nSkills\n\nReply\n\nreichel_kk's profile picture\n\nreichel\\_kk\n\nskills\n\nReply\n\noscatek.ai's profile picture\n\noscatek.ai\n\nSkills\n\nReply\n\nglixtix's profile picture\n\nglixtix\n\nSkill\n\nReply\n\ndesignanvis's profile picture\n\ndesignanvis\n\nSkills\n\nReply\n\nchrxs.alx's profile picture\n\nchrxs.alx\n\nskills\n\nReply\n\nadam.schlube's profile picture\n\nadam.schlube\n\nskills\n\nReply\n\nalveagency.online_'s profile picture\n\nalveagency.online\\_\n\nskills\n\nReply [...] → Extract DESIGN.md. Google Stitch’s skill: tokens and patterns from any codebase  \n→ shadcn/ui. The official skill: adds and updates components the shadcn way  \n→ Interface Design. Dashboards and admin panels with real hierarchy  \n→ Better Typography. Scale, line height, measure and font loading by role  \n  \nAll ten are free, most install with one line.  \n  \nComment SKILLS and we’ll DM you all 10 links.",
+                "score": 0.46235222
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:22:58"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T12:23:45",
+      "user": "Lấy 10 tweet gần đây nhất của Elon Musk.",
+      "status": "answered",
+      "assistant_text": "I'm unable to retrieve Elon Musk's recent tweets at the moment due to a missing API configuration (RAPIDAPI_KEY environment variable is not set).\n\n**Alternative options:**\n1. **Direct access**: Visit [@elonmusk on X/Twitter](https://x.com/elonmusk) directly\n2. **Search for recent discussions**: I can search for tweets *about* Elon Musk or specific topics he's discussing using the social search tool\n3. **News coverage**: I can look up recent news articles covering his latest statements\n\nWould you like me to:\n- Search for recent tweets *mentioning* Elon Musk or specific topics (SpaceX, Tesla, X/Twitter, etc.)?\n- Look up recent news coverage of his activities?\n- Try a different approach?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "limit": 10,
+                "screenname": "elonmusk"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "timeline",
+              "args": {
+                "limit": 10,
+                "screenname": "elonmusk"
+              },
+              "result": {
+                "tool": "get_user_tweets",
+                "error": "RuntimeError",
+                "message": "Missing RAPIDAPI_KEY env var"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "I'm unable to retrieve Elon Musk's recent tweets at the moment due to a missing API configuration (RAPIDAPI_KEY environment variable is not set).\n\n**Alternative options:**\n1. **Direct access**: Visit [@elonmusk on X/Twitter](https://x.com/elonmusk) directly\n2. **Search for recent discussions**: I can search for tweets *about* Elon Musk or specific topics he's discussing using the social search tool\n3. **News coverage**: I can look up recent news articles covering his latest statements\n\nWould you like me to:\n- Search for recent tweets *mentioning* Elon Musk or specific topics (SpaceX, Tesla, X/Twitter, etc.)?\n- Look up recent news coverage of his activities?\n- Try a different approach?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "limit": 10,
+            "screenname": "elonmusk"
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "error": "RuntimeError",
+            "message": "Missing RAPIDAPI_KEY env var"
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:23:52"
+    }
+  ]
+}

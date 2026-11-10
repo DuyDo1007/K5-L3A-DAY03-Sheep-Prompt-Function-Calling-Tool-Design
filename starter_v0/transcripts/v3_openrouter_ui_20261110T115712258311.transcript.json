@@ -1,0 +1,534 @@
+{
+  "transcript_id": "v3_openrouter_ui_20261110T115712258311",
+  "version": "v3",
+  "artifact_version": "v3+p3acb2995b10e+tdd01e8ab526d",
+  "prompt_hash": "3acb2995b10eae7e042242331815708094c152b738b99edc856fbdc429f4aec2",
+  "tools_hash": "dd01e8ab526d60a0ad865edd97b292c7c5a31c125d5659ccf8b2e8396dce3676",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "system_prompt": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:57:12",
+  "updated_at": "2026-11-10T12:03:05",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T12:00:32",
+      "user": "Tin tức mới nhất về OpenAI trong tuần này",
+      "status": "answered",
+      "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần này (dựa trên kết quả tìm kiếm tuần 1-7/11/2026):\n\n## 📰 Tin tức nổi bật tuần này\n\n### 1. **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11)\n- Đã đóng đợt đầu 11 tỷ USD trong vòng vốn mục tiêu lên tới 30 tỷ USD\n- Định giá giảm từ mức 1,5 nghìn tỷ USD ban đầu mong đợi\n- SoftBank và MGX tham gia đầu tư (theo Bloomberg/Reuters)\n\n### 2. **Chiến dịch \"thu hút\" cộng đồng về trung tâm dữ liệu** (Reuters, 5/11)\n- Sau thất cử trong bầu cử giữa kỳ, OpenAI triển khai chính sách mới để xây dựng niềm tin với cộng đồng địa phương\n- Cam kết: không còn NDA với quan chức công, công khai kế hoạch xây dựng và tác động giao thông/nhiễu âm/ánh sáng\n- CEO Sam Altman từng quyên góp 1 triệu USD cho ủy ban nhậm chức Trump\n\n### 3. **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu** (CNBC, 6/11)\n- \"Không nghĩ bầu cử giữa kỳ thay đổi gì lớn cho công ty\"\n- Sẽ tiếp tục xây dựng mối quan hệ với cộng đồng và huy động vốn để đáp ứng nhu cầu khách hàng\n\n### 4. **Nhân viên cảnh báo lỗ hổng bảo mật vận hành nhiều năm** (Reuters, 3/11)\n- 5 nguồn tin nội bộ cho biết kiểm soát quá lỏng lẻo, người ngoài (kể cả chính phủ nước ngoài) có thể truy cập thông tin nhạy cảm\n- OpenAI phản hồi: là tổ chức bị tấn công nhiều nhất thế giới, đầu tư mạnh vào an ninh\n\n### 5. **Mua lại Pierre Computer Company** (Axios/OpenAI Blog, 4/11)\n- Mục đích: mở rộng công cụ Codex cho lập trình viên (Code Storage, Trees, Diffs)\n- Thách thức GitHub của Microsoft trong kỷ nguyên AI agent viết code\n- Chi tiết tài chính không công bố; dự án open-source của Pierre vẫn duy trì\n\n### 6. **Các cập nhật từ blog chính thức OpenAI**\n- **Images 2.6**: Mô hình hình ảnh mới - chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn\n- **A thousand fewer paths to root**: Bài viết về bảo mật - \"Mỗi thế hệ mô hình giúp xây dựng phần mềm an toàn hơn cho thế hệ sau\"\n- **Partnering with Hacktron**: Chương trình tìm lỗ hổng (6/11)\n\n---\n\n**Nguồn**: Reuters (3 bài), CNBC, Axios, OpenAI Blog (4 bài) – tất cả trong tuần 1-7/11/2026.\n\nBạn có muốn tôi đi sâu vào chủ đề nào cụ thể (tài chính, bảo mật, chiến lược dữ liệu, hay công cụ dev) không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "OpenAI",
+                "max_results": 10,
+                "timeframe": "week",
+                "topic": "news"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "OpenAI",
+                "max_results": 10,
+                "timeframe": "week",
+                "topic": "news"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "OpenAI",
+                "topic": "news",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "OpenAI",
+                    "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                    "source": "tavily.com",
+                    "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                    "score": 0.90593183
+                  },
+                  {
+                    "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                    "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                    "source": "openai.com",
+                    "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                    "score": 0.72231215
+                  },
+                  {
+                    "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                    "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                    "source": "reuters.com",
+                    "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion.",
+                    "score": 0.7147281
+                  },
+                  {
+                    "title": "OpenAI kicks off charm offensive to change voters' view of data centers | Reuters",
+                    "url": "https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05",
+                    "source": "reuters.com",
+                    "summary": "SAN FRANCISCO, Nov 5 (Reuters) - Stunning ​victories by Democrats in US midterm elections this week have been interpreted by many as Americans repudiating tech ‌industry plans to build data centers across the country. OpenAI has now embarked on new strategies to change their minds.\n\nThe AI lab on Thursday laid out policies — in the works since August — intended to help the company build more trust with local communities and convince them that data centers will ​benefit them. [...] OpenAI officials, along with many of their peers in tech, ​have spent the last ⁠two years trying to build ties with the administration of US President Donald Trump in hopes of shaping federal policy around AI.\n\nOpenAI CEO Sam Altman donated $1 million to Trump's inaugural committee and later attended Trump's second inauguration. Last year, Brockman donated $25 million in his personal capacity to ⁠a Trump ​super PAC. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nOpenAI said it will no longer use non-disclosure agreements with public officials when negotiating or discussing future sites, although ​proprietary information would still be under wraps. It will also give residents access to construction plans ⁠and their potential effect on traffic, noise and lighting.",
+                    "score": 0.66569364
+                  },
+                  {
+                    "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                    "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                    "source": "cnbc.com",
+                    "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                    "score": 0.65914243
+                  },
+                  {
+                    "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                    "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                    "source": "reuters.com",
+                    "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                    "score": 0.6213807
+                  },
+                  {
+                    "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                    "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                    "source": "axios.com",
+                    "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                    "score": 0.5550741
+                  },
+                  {
+                    "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+                    "url": "https://openai.com/index/openai-to-acquire-pierre",
+                    "source": "openai.com",
+                    "summary": "Today we're announcing that OpenAI will acquire Pierre Computer Company, Inc⁠(opens in a new window). (“Pierre”), the company behind Code Storage⁠(opens in a new window) and a family of standout open-source developer tools. If you’ve browsed files or reviewed a change in the Codex app, you’ve already used Pierre’s Trees and Diffs libraries. We’re excited to work with the Pierre team to build on the Git workflows that developers already rely on and adapt them to how teams work with coding [...] Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] Skip to main content\n\n\n\nLog inTry ChatGPT(opens in a new window)\n\n   Research\n   Products\n   Business\n   Developers\n   Company\n   Foundation(opens in a new window)\n\nOpenAI to acquire Pierre Computer Company, Inc. | OpenAI\n\nNovember 4, 2026\n\nCompany\n\n# OpenAI to acquire Pierre Computer Company, Inc.\n\nExpanding Codex’s tools for building, understanding, and reviewing code.\n\nShare\n\nCraftsmanship meets scale for the agentic era",
+                    "score": 0.5100334
+                  },
+                  {
+                    "title": "A thousand fewer paths to root",
+                    "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+                    "source": "openai.com",
+                    "summary": "Developers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window)\n\nMore\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies [...] (opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] Every generation of models should help us build software that the next generation finds harder to compromise. We will continue working towards building a secure Internet that anyone can joyfully build on.\n\n   2026\n\n## Author\n\nOpenAI\n\n## Keep reading\n\nView all\n\nImage 5: Partnering with Hacktron to find vulnerabilities in OpenAI’s systems — Cover\n\nPartnering with Hacktron to strengthen OpenAI’s security Security Nov 6, 2026\n\nImage 6: BioBasicsBench — Cover",
+                    "score": 0.44767818
+                  },
+                  {
+                    "title": "Introducing Images 2.6",
+                    "url": "https://openai.com/index/introducing-images-2-6",
+                    "source": "openai.com",
+                    "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                    "score": 0.41463867
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần này (dựa trên kết quả tìm kiếm tuần 1-7/11/2026):\n\n## 📰 Tin tức nổi bật tuần này\n\n### 1. **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11)\n- Đã đóng đợt đầu 11 tỷ USD trong vòng vốn mục tiêu lên tới 30 tỷ USD\n- Định giá giảm từ mức 1,5 nghìn tỷ USD ban đầu mong đợi\n- SoftBank và MGX tham gia đầu tư (theo Bloomberg/Reuters)\n\n### 2. **Chiến dịch \"thu hút\" cộng đồng về trung tâm dữ liệu** (Reuters, 5/11)\n- Sau thất cử trong bầu cử giữa kỳ, OpenAI triển khai chính sách mới để xây dựng niềm tin với cộng đồng địa phương\n- Cam kết: không còn NDA với quan chức công, công khai kế hoạch xây dựng và tác động giao thông/nhiễu âm/ánh sáng\n- CEO Sam Altman từng quyên góp 1 triệu USD cho ủy ban nhậm chức Trump\n\n### 3. **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu** (CNBC, 6/11)\n- \"Không nghĩ bầu cử giữa kỳ thay đổi gì lớn cho công ty\"\n- Sẽ tiếp tục xây dựng mối quan hệ với cộng đồng và huy động vốn để đáp ứng nhu cầu khách hàng\n\n### 4. **Nhân viên cảnh báo lỗ hổng bảo mật vận hành nhiều năm** (Reuters, 3/11)\n- 5 nguồn tin nội bộ cho biết kiểm soát quá lỏng lẻo, người ngoài (kể cả chính phủ nước ngoài) có thể truy cập thông tin nhạy cảm\n- OpenAI phản hồi: là tổ chức bị tấn công nhiều nhất thế giới, đầu tư mạnh vào an ninh\n\n### 5. **Mua lại Pierre Computer Company** (Axios/OpenAI Blog, 4/11)\n- Mục đích: mở rộng công cụ Codex cho lập trình viên (Code Storage, Trees, Diffs)\n- Thách thức GitHub của Microsoft trong kỷ nguyên AI agent viết code\n- Chi tiết tài chính không công bố; dự án open-source của Pierre vẫn duy trì\n\n### 6. **Các cập nhật từ blog chính thức OpenAI**\n- **Images 2.6**: Mô hình hình ảnh mới - chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn\n- **A thousand fewer paths to root**: Bài viết về bảo mật - \"Mỗi thế hệ mô hình giúp xây dựng phần mềm an toàn hơn cho thế hệ sau\"\n- **Partnering with Hacktron**: Chương trình tìm lỗ hổng (6/11)\n\n---\n\n**Nguồn**: Reuters (3 bài), CNBC, Axios, OpenAI Blog (4 bài) – tất cả trong tuần 1-7/11/2026.\n\nBạn có muốn tôi đi sâu vào chủ đề nào cụ thể (tài chính, bảo mật, chiến lược dữ liệu, hay công cụ dev) không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "OpenAI",
+            "max_results": 10,
+            "timeframe": "week",
+            "topic": "news"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "OpenAI",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "OpenAI",
+                "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                "source": "tavily.com",
+                "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                "score": 0.90593183
+              },
+              {
+                "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                "source": "openai.com",
+                "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                "score": 0.72231215
+              },
+              {
+                "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                "source": "reuters.com",
+                "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion.",
+                "score": 0.7147281
+              },
+              {
+                "title": "OpenAI kicks off charm offensive to change voters' view of data centers | Reuters",
+                "url": "https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05",
+                "source": "reuters.com",
+                "summary": "SAN FRANCISCO, Nov 5 (Reuters) - Stunning ​victories by Democrats in US midterm elections this week have been interpreted by many as Americans repudiating tech ‌industry plans to build data centers across the country. OpenAI has now embarked on new strategies to change their minds.\n\nThe AI lab on Thursday laid out policies — in the works since August — intended to help the company build more trust with local communities and convince them that data centers will ​benefit them. [...] OpenAI officials, along with many of their peers in tech, ​have spent the last ⁠two years trying to build ties with the administration of US President Donald Trump in hopes of shaping federal policy around AI.\n\nOpenAI CEO Sam Altman donated $1 million to Trump's inaugural committee and later attended Trump's second inauguration. Last year, Brockman donated $25 million in his personal capacity to ⁠a Trump ​super PAC. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nOpenAI said it will no longer use non-disclosure agreements with public officials when negotiating or discussing future sites, although ​proprietary information would still be under wraps. It will also give residents access to construction plans ⁠and their potential effect on traffic, noise and lighting.",
+                "score": 0.66569364
+              },
+              {
+                "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                "source": "cnbc.com",
+                "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                "score": 0.65914243
+              },
+              {
+                "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                "source": "reuters.com",
+                "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                "score": 0.6213807
+              },
+              {
+                "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                "source": "axios.com",
+                "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                "score": 0.5550741
+              },
+              {
+                "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+                "url": "https://openai.com/index/openai-to-acquire-pierre",
+                "source": "openai.com",
+                "summary": "Today we're announcing that OpenAI will acquire Pierre Computer Company, Inc⁠(opens in a new window). (“Pierre”), the company behind Code Storage⁠(opens in a new window) and a family of standout open-source developer tools. If you’ve browsed files or reviewed a change in the Codex app, you’ve already used Pierre’s Trees and Diffs libraries. We’re excited to work with the Pierre team to build on the Git workflows that developers already rely on and adapt them to how teams work with coding [...] Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] Skip to main content\n\n\n\nLog inTry ChatGPT(opens in a new window)\n\n   Research\n   Products\n   Business\n   Developers\n   Company\n   Foundation(opens in a new window)\n\nOpenAI to acquire Pierre Computer Company, Inc. | OpenAI\n\nNovember 4, 2026\n\nCompany\n\n# OpenAI to acquire Pierre Computer Company, Inc.\n\nExpanding Codex’s tools for building, understanding, and reviewing code.\n\nShare\n\nCraftsmanship meets scale for the agentic era",
+                "score": 0.5100334
+              },
+              {
+                "title": "A thousand fewer paths to root",
+                "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+                "source": "openai.com",
+                "summary": "Developers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window)\n\nMore\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies [...] (opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] Every generation of models should help us build software that the next generation finds harder to compromise. We will continue working towards building a secure Internet that anyone can joyfully build on.\n\n   2026\n\n## Author\n\nOpenAI\n\n## Keep reading\n\nView all\n\nImage 5: Partnering with Hacktron to find vulnerabilities in OpenAI’s systems — Cover\n\nPartnering with Hacktron to strengthen OpenAI’s security Security Nov 6, 2026\n\nImage 6: BioBasicsBench — Cover",
+                "score": 0.44767818
+              },
+              {
+                "title": "Introducing Images 2.6",
+                "url": "https://openai.com/index/introducing-images-2-6",
+                "source": "openai.com",
+                "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                "score": 0.41463867
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:01:26"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T12:02:43",
+      "user": "repo của Vin20K là làm gì",
+      "status": "max_tool_rounds",
+      "assistant_text": "Stopped after 4 tool rounds. Inspect the transcript for details.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "github_search",
+              "args": {
+                "limit": 5,
+                "query": "Vin20K"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "github_search",
+              "args": {
+                "limit": 5,
+                "query": "Vin20K"
+              },
+              "result": {
+                "tool": "get_repo_inform",
+                "error": "HTTPError",
+                "message": "403 Client Error: rate limit exceeded for url: https://api.github.com/search/repositories?q=Vin20K&sort=stars&order=desc&per_page=5"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "Vin20K dataset repository",
+                "max_results": 5,
+                "topic": "general"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "Vin20K dataset repository",
+                "max_results": 5,
+                "topic": "general"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "Vin20K dataset repository",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "Dataset - NIOZ Data Repository",
+                    "url": "https://doi.nioz.nl/dataset?tags=macrofauna&tags=Dutch+Western+Wadden+Sea&license_id=CC0-1.0&res_format=PDF&organization=nioz",
+                    "source": "doi.nioz.nl",
+                    "summary": "1. Home\n2. Datasets\n\n ## Balgzand macrozoobenthos database 1967 - 2019 13 Digital Objects Cite this dataset\n\n  The Balgzand macrozoobenthos programme was set up initially to study the secondary production of the macrobenthic invertebrates of the Wadden Sea. This happened within the...\n\n   Version 3\n\n  + Balgzand\n  + balgzand\n  + benthos\n  + Dutch Western Wadden Sea\n  + dutch western wadden sea\n\nYou can also access this registry using the API (see API Docs).",
+                    "score": 0.06947242
+                  },
+                  {
+                    "title": "AI Datasets - HackerThink",
+                    "url": "https://hackerthink.com/datasets",
+                    "source": "hackerthink.com",
+                    "summary": "# AI Datasets\n\nBrowse, filter, and compare datasets — HuggingFace-style discovery\n\nLoading datasets...\n\nCompare",
+                    "score": 0.04315974
+                  },
+                  {
+                    "title": "Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog",
+                    "url": "https://datasetcatalog.nlm.nih.gov/dataset?q=0000125996",
+                    "source": "datasetcatalog.nlm.nih.gov",
+                    "summary": "Title: Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog\n## 0 Item(s). # NLM Dataset Catalog. Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog. Borealis (The Canadian Dataverse Repository):2025 Jan;URI: doi:10.5683/SP3/2EUFYD. # Canadian Vote Intention Dataset. ## ACCESS INFORMATION. Borealis (The Canadian Dataverse Repository). David1,Goodyear-Grant, Elizabeth2,Lucas, Jack3,Romualdi, Tyler4. doi:10.5683/SP3/2EUFYD. * Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). The Canadian Vote Intention Dataset is a new and harmonized database spanning nearly eight decades (1945–2023) of public opinion surveys from Gallup, Environics, Pollara, the Canadian Election Study, and the Consortium on Electoral Democracy. The dataset includes over one million responses on Canadians’ federal vote intention and vote choice and a suite of demographic and geographic variables, including age, gender, religion, language, education, union membership, occupation, community size, province, and region. Bloc Populaire; Bloc Québécois; CCF / NDP Party; Education; Green Party. IDG 430-2023-00595IDG 430-2023-00595. Funded by:Social Sciences and Humanities Research Council of Canada (SSHRC) Insight Development Grant. No Associated Publication Data Available. No Related Dataset Data Available. The National Library of Medicine (NLM) provides information about biomedical datasets. Inclusion on an NLM Web page does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health. Learn more:NLM Web Policies (nih.gov).",
+                    "score": 0.040211637
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "topic": "general",
+                "query": "Vin20K Vietnamese dataset",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "topic": "general",
+                "query": "Vin20K Vietnamese dataset",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "Vin20K Vietnamese dataset",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "awesome-vietnamese-datasets/README.md at main · tungnk99/awesome-vietnamese-datasets · GitHub",
+                    "url": "https://github.com/tungnk99/awesome-vietnamese-datasets/blob/main/README.md",
+                    "source": "github.com",
+                    "summary": "Title: awesome-vietnamese-datasets/README.md at main · tungnk99/awesome-vietnamese-datasets · GitHub\n## Navigation Menu. You signed in with another tab or window. Reload to refresh your session. You switched accounts on another tab or window. ## Repository navigation. ## Expand file tree. # README.md. ## Latest commit. ## History. 41 lines (32 loc) · 2.54 KB. ## File metadata and controls. # 📚 Vietnamese Corpus Datasets. Tài liệu này tổng hợp các **corpus tiếng Việt** phục vụ cho mục đích nghiên cứu và phát triển trong lĩnh vực Natural Language Processing (NLP). Các corpus chủ yếu bao gồm tập văn bản thô, được sử dụng làm nguồn dữ liệu cho quá trình training và pre-training các language models (LM). ## 🔹 General Corpus. Văn bản chung (Wikipedia, báo chí, sách, web…). | Dataset | #Samples | Size | Year | License | Link | Citation |. | wikipedia\\_vi | 1,281,412 | ~570MB | – | – | Hugging Face | – |. | Vietnamese-Book-Corpus | 16,407 | ~1.92GB | – | – | Hugging Face | – |. | Binhvq News Corpus | 14,896,998 | ~18.6 GB | 2018 | Apache License | GitHub | – |. | vietnamese-poetry-corpus | 198,598 | ~164 MB | – | – | Hugging Face | – |. | BKAINewsCorpus | 16,762,024 | ~28.7 GB | 2024 | – | Hugging Face | – |. | NewsCategory | 596,524 | ~1.04 GB | 2024 | – | Hugging Face | – |. | NewsSapo | 31,728,183 | - | 2024 | – | Hugging Face | – |. | 10000 Vietnamese Books | 10400 | ~8.5 GB | – | – | kaggle | – |. * Các con số chỉ mang tính tham khảo, cần kiểm chứng từ nguồn chính thức. * Một số dataset bị giới hạn bản quyền → chỉ dùng cho mục đích nghiên cứu. * Một số dataset có thể trùng lặp dữ liệu với nhau, cần xử lý loại bỏ duplicate khi sử dụng. * Bạn có thể đóng góp thêm corpus mới bằng cách tạo **Pull Request** 🙌. You can’t perform that action at this time.",
+                    "score": 0.4719782
+                  },
+                  {
+                    "title": "GitHub - tuanone123/awesome-vietnamese-llm-dataset: A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. Bilingual EN/VI. · GitHub",
+                    "url": "https://github.com/tuanone123/awesome-vietnamese-llm-dataset",
+                    "source": "github.com",
+                    "summary": "Title: GitHub - tuanone123/awesome-vietnamese-llm-dataset: A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. Bilingual EN/VI. · GitHub\n## Navigation Menu. You signed in with another tab or window. You switched accounts on another tab or window. ## Repository navigation. * NotificationsYou must be signed in to change notification settings. * Star0 (0)You must be signed in to star a repository. A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. ## Latest commit. | Name | Name | Last commit message | Last commit date |. | README.vi.md | README.vi.md |  |  |. ## Repository files navigation. **A curated, LLM-era list of Vietnamese-language datasets for training and evaluating large language models — pretraining corpora, instruction tuning, benchmarks, translation, speech, and vision-language.** Every entry is a real dataset with a working link. > **Why this list?** Vietnamese has ~100M speakers but is still low-resource for modern LLM work. Older lists focus on classic NLP toolkits; this one is organized the way you actually build and evaluate an LLM today — corpora, SFT, preference, benchmarks, and multimodal. 🔒 marks a dataset that is **gated** (you must accept terms or log in on Hugging Face). * FineWeb2 — Large multilingual CommonCrawl corpus (~20TB, 1000+ languages) with a Vietnamese `vie_Latn` config. * BKAINewsCorpus — ~32M Vietnamese news articles (~53GB clean text after dedup), built for continual LLM pretraining. * C4 (Vietnamese config) — Colossal Clean Crawled Corpus; use the `vi` config for a Vietnamese web-text split. * UIT-ViQuAD 2.0 — Vietnamese extractive machine reading comprehension on Wikipedia; ~39.6k QA pairs including unanswerable questions. * UIT-ViHSD — Hate-speech detection: ~33k social-media comments labeled HATE / OFFENSIVE / CLEAN. * Common Voice — Vietnamese — Mozilla's crowd-sourced multilingual speech dataset; contribute or download the Vietnamese split. * Viet-ViTextVQA-gemini-VQA — 9,594 images with 50,000+ Vietnamese scene-text QA pairs. * ViLQA — Vietnamese legal question answering with machine reading comprehension and answer generation (KSE 2024). In short: **the dataset must be real and the link must work**, one dataset per pull request, added to the right category, with a one-line description and size, in both `README.md` and `README.vi.md`. To the extent possible under law, the contributors have waived all copyright and related rights to this list.",
+                    "score": 0.42520002
+                  },
+                  {
+                    "title": "KTVIC: A Vietnamese Image Captioning Dataset on the Life Domain | alphaXiv",
+                    "url": "https://alphaxiv.org/audio/2401.08100",
+                    "source": "alphaxiv.org",
+                    "summary": "21,635 Vietnamese captions, serving as a valuable resource for advancing image captioning in the Vietnamese language. We conduct experiments using various deep neural networks as the baselines on our dataset, evaluating them using the standard image captioning metrics, including BLEU, METEOR, CIDEr, and ROUGE. Our findings underscore the effectiveness of the proposed dataset and its potential contributions to the field of image captioning in the Vietnamese context. [...] Image captioning is a crucial task with applications in a wide range of domains, including healthcare and education. Despite extensive research on English image captioning datasets, the availability of such datasets for Vietnamese remains limited, with only two existing datasets. In this study, we introduce KTVIC, a comprehensive Vietnamese Image Captioning dataset focused on the life domain, covering a wide range of daily activities. This dataset comprises 4,327 images and 21,635 Vietnamese [...] AbstractPaper\n\nSubmitted 16 Jan 2024\n\n# KTVIC: A Vietnamese Image Captioning Dataset on the Life Domain\n\nVan-Quang NguyenVan-Quang NguyenThi-Hong VuongThi-Hong Vuong\n\n## Abstract",
+                    "score": 0.28606498
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "max_results": 5,
+                "query": "\"Vin20K\" dataset",
+                "topic": "general"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "max_results": 5,
+                "query": "\"Vin20K\" dataset",
+                "topic": "general"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "\"Vin20K\" dataset",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "DEPRESJON dataset - Zenodo | NLM Dataset Catalog",
+                    "url": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002042471",
+                    "source": "datasetcatalog.nlm.nih.gov",
+                    "summary": "Title: DEPRESJON dataset - Zenodo | NLM Dataset Catalog\n## 0 Item(s). # NLM Dataset Catalog. DEPRESJON dataset - Zenodo | NLM Dataset Catalog. Zenodo:2018 Apr;URI: 10.5281/zenodo.1219550. # DEPRESJON dataset. ## ACCESS INFORMATION. Fasmer, Ole Bernt1,Garcia-Ceja, Enrique2,Jakobsen, Petter3,Nordgreen, Tine4,Oedegaard, Ketil J.5,Riegler, Michael6,Torresen, Jim7. * Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). This dataset contains sensor data collected from patients suffering from depression. The dataset contains motor activity recordings of 23 unipolar and bipolar depressed patients and 32 healthy controls. For each patient we provide motor activity sensor data over several days of continuous measuring and also some demographic data. The severity of the patients' depressive state was labeled using ratings done by medical experts on the Montgomery-Asberg Depression Rating Scale (MADRS). For more information please visit http://datasets.simula.no/depresjon/ Use terms and citation The use of the DEPRESJON dataset is restricted for research and educational purposes only. The use of the DEPRESJON dataset for other purposes including commercial purposes is forbidden without prior written permission. In all documents and papers that use or refer to the DEPRESJON dataset or report experimental results based on the DEPRESJON dataset, a reference to the dataset paper have to be included: E. DEPRESJON: A Motor Activity Database of Depression Episodes in Unipolar and Bipolar Patients. In Proceedings of the 9th ACM on Multimedia Systems Conference (pp. Instructions (and BibTex) on how to cite the DEPRESJON dataset can be found in http://datasets.simula.no/depresjon/. depression, accelerometer, actigraphy, dataset, machine learning, bipolar disorder. No Grants or Funding Data Available. No Associated Publication Data Available. No Related Dataset Data Available. The National Library of Medicine (NLM) provides information about biomedical datasets. Inclusion on an NLM Web page does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health. Learn more:NLM Web Policies (nih.gov).",
+                    "score": 0.045901228
+                  },
+                  {
+                    "title": "Work Dataset Dataset by Authur",
+                    "url": "https://platform.ultralytics.com/authur/datasets/work-dataset",
+                    "source": "platform.ultralytics.com",
+                    "summary": "Title: Work Dataset Dataset by Authur\nAnnotate, train and deploy YOLO models in one click. $25 free creditswith work email. Cookies help us see which docs, models, and features you find useful, so we can keep improving them. Choose what you share in , or read our Privacy Policy. Work Dataset Dataset by Authur. # work-dataset. 3 images·2 labeled·9 annotations·471.3 KBUpdated Oct 28, 2026. Indoor and outdoor scenes of cooking, poultry, and floral displays, with pots, vegetables, chickens, and glass vases labeled for object detection across settings. ## Comments. Ask a question, share your results, or help someone else.",
+                    "score": 0.029627915
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "github_search",
+          "args": {
+            "limit": 5,
+            "query": "Vin20K"
+          },
+          "result": {
+            "tool": "get_repo_inform",
+            "error": "HTTPError",
+            "message": "403 Client Error: rate limit exceeded for url: https://api.github.com/search/repositories?q=Vin20K&sort=stars&order=desc&per_page=5"
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "Vin20K dataset repository",
+            "max_results": 5,
+            "topic": "general"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Vin20K dataset repository",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Dataset - NIOZ Data Repository",
+                "url": "https://doi.nioz.nl/dataset?tags=macrofauna&tags=Dutch+Western+Wadden+Sea&license_id=CC0-1.0&res_format=PDF&organization=nioz",
+                "source": "doi.nioz.nl",
+                "summary": "1. Home\n2. Datasets\n\n ## Balgzand macrozoobenthos database 1967 - 2019 13 Digital Objects Cite this dataset\n\n  The Balgzand macrozoobenthos programme was set up initially to study the secondary production of the macrobenthic invertebrates of the Wadden Sea. This happened within the...\n\n   Version 3\n\n  + Balgzand\n  + balgzand\n  + benthos\n  + Dutch Western Wadden Sea\n  + dutch western wadden sea\n\nYou can also access this registry using the API (see API Docs).",
+                "score": 0.06947242
+              },
+              {
+                "title": "AI Datasets - HackerThink",
+                "url": "https://hackerthink.com/datasets",
+                "source": "hackerthink.com",
+                "summary": "# AI Datasets\n\nBrowse, filter, and compare datasets — HuggingFace-style discovery\n\nLoading datasets...\n\nCompare",
+                "score": 0.04315974
+              },
+              {
+                "title": "Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog",
+                "url": "https://datasetcatalog.nlm.nih.gov/dataset?q=0000125996",
+                "source": "datasetcatalog.nlm.nih.gov",
+                "summary": "Title: Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog\n## 0 Item(s). # NLM Dataset Catalog. Canadian Vote Intention Dataset - Borealis (The Canadian Dataverse Repository) | NLM Dataset Catalog. Borealis (The Canadian Dataverse Repository):2025 Jan;URI: doi:10.5683/SP3/2EUFYD. # Canadian Vote Intention Dataset. ## ACCESS INFORMATION. Borealis (The Canadian Dataverse Repository). David1,Goodyear-Grant, Elizabeth2,Lucas, Jack3,Romualdi, Tyler4. doi:10.5683/SP3/2EUFYD. * Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). The Canadian Vote Intention Dataset is a new and harmonized database spanning nearly eight decades (1945–2023) of public opinion surveys from Gallup, Environics, Pollara, the Canadian Election Study, and the Consortium on Electoral Democracy. The dataset includes over one million responses on Canadians’ federal vote intention and vote choice and a suite of demographic and geographic variables, including age, gender, religion, language, education, union membership, occupation, community size, province, and region. Bloc Populaire; Bloc Québécois; CCF / NDP Party; Education; Green Party. IDG 430-2023-00595IDG 430-2023-00595. Funded by:Social Sciences and Humanities Research Council of Canada (SSHRC) Insight Development Grant. No Associated Publication Data Available. No Related Dataset Data Available. The National Library of Medicine (NLM) provides information about biomedical datasets. Inclusion on an NLM Web page does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health. Learn more:NLM Web Policies (nih.gov).",
+                "score": 0.040211637
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "topic": "general",
+            "query": "Vin20K Vietnamese dataset",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Vin20K Vietnamese dataset",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "awesome-vietnamese-datasets/README.md at main · tungnk99/awesome-vietnamese-datasets · GitHub",
+                "url": "https://github.com/tungnk99/awesome-vietnamese-datasets/blob/main/README.md",
+                "source": "github.com",
+                "summary": "Title: awesome-vietnamese-datasets/README.md at main · tungnk99/awesome-vietnamese-datasets · GitHub\n## Navigation Menu. You signed in with another tab or window. Reload to refresh your session. You switched accounts on another tab or window. ## Repository navigation. ## Expand file tree. # README.md. ## Latest commit. ## History. 41 lines (32 loc) · 2.54 KB. ## File metadata and controls. # 📚 Vietnamese Corpus Datasets. Tài liệu này tổng hợp các **corpus tiếng Việt** phục vụ cho mục đích nghiên cứu và phát triển trong lĩnh vực Natural Language Processing (NLP). Các corpus chủ yếu bao gồm tập văn bản thô, được sử dụng làm nguồn dữ liệu cho quá trình training và pre-training các language models (LM). ## 🔹 General Corpus. Văn bản chung (Wikipedia, báo chí, sách, web…). | Dataset | #Samples | Size | Year | License | Link | Citation |. | wikipedia\\_vi | 1,281,412 | ~570MB | – | – | Hugging Face | – |. | Vietnamese-Book-Corpus | 16,407 | ~1.92GB | – | – | Hugging Face | – |. | Binhvq News Corpus | 14,896,998 | ~18.6 GB | 2018 | Apache License | GitHub | – |. | vietnamese-poetry-corpus | 198,598 | ~164 MB | – | – | Hugging Face | – |. | BKAINewsCorpus | 16,762,024 | ~28.7 GB | 2024 | – | Hugging Face | – |. | NewsCategory | 596,524 | ~1.04 GB | 2024 | – | Hugging Face | – |. | NewsSapo | 31,728,183 | - | 2024 | – | Hugging Face | – |. | 10000 Vietnamese Books | 10400 | ~8.5 GB | – | – | kaggle | – |. * Các con số chỉ mang tính tham khảo, cần kiểm chứng từ nguồn chính thức. * Một số dataset bị giới hạn bản quyền → chỉ dùng cho mục đích nghiên cứu. * Một số dataset có thể trùng lặp dữ liệu với nhau, cần xử lý loại bỏ duplicate khi sử dụng. * Bạn có thể đóng góp thêm corpus mới bằng cách tạo **Pull Request** 🙌. You can’t perform that action at this time.",
+                "score": 0.4719782
+              },
+              {
+                "title": "GitHub - tuanone123/awesome-vietnamese-llm-dataset: A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. Bilingual EN/VI. · GitHub",
+                "url": "https://github.com/tuanone123/awesome-vietnamese-llm-dataset",
+                "source": "github.com",
+                "summary": "Title: GitHub - tuanone123/awesome-vietnamese-llm-dataset: A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. Bilingual EN/VI. · GitHub\n## Navigation Menu. You signed in with another tab or window. You switched accounts on another tab or window. ## Repository navigation. * NotificationsYou must be signed in to change notification settings. * Star0 (0)You must be signed in to star a repository. A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, translation, speech, multimodal. ## Latest commit. | Name | Name | Last commit message | Last commit date |. | README.vi.md | README.vi.md |  |  |. ## Repository files navigation. **A curated, LLM-era list of Vietnamese-language datasets for training and evaluating large language models — pretraining corpora, instruction tuning, benchmarks, translation, speech, and vision-language.** Every entry is a real dataset with a working link. > **Why this list?** Vietnamese has ~100M speakers but is still low-resource for modern LLM work. Older lists focus on classic NLP toolkits; this one is organized the way you actually build and evaluate an LLM today — corpora, SFT, preference, benchmarks, and multimodal. 🔒 marks a dataset that is **gated** (you must accept terms or log in on Hugging Face). * FineWeb2 — Large multilingual CommonCrawl corpus (~20TB, 1000+ languages) with a Vietnamese `vie_Latn` config. * BKAINewsCorpus — ~32M Vietnamese news articles (~53GB clean text after dedup), built for continual LLM pretraining. * C4 (Vietnamese config) — Colossal Clean Crawled Corpus; use the `vi` config for a Vietnamese web-text split. * UIT-ViQuAD 2.0 — Vietnamese extractive machine reading comprehension on Wikipedia; ~39.6k QA pairs including unanswerable questions. * UIT-ViHSD — Hate-speech detection: ~33k social-media comments labeled HATE / OFFENSIVE / CLEAN. * Common Voice — Vietnamese — Mozilla's crowd-sourced multilingual speech dataset; contribute or download the Vietnamese split. * Viet-ViTextVQA-gemini-VQA — 9,594 images with 50,000+ Vietnamese scene-text QA pairs. * ViLQA — Vietnamese legal question answering with machine reading comprehension and answer generation (KSE 2024). In short: **the dataset must be real and the link must work**, one dataset per pull request, added to the right category, with a one-line description and size, in both `README.md` and `README.vi.md`. To the extent possible under law, the contributors have waived all copyright and related rights to this list.",
+                "score": 0.42520002
+              },
+              {
+                "title": "KTVIC: A Vietnamese Image Captioning Dataset on the Life Domain | alphaXiv",
+                "url": "https://alphaxiv.org/audio/2401.08100",
+                "source": "alphaxiv.org",
+                "summary": "21,635 Vietnamese captions, serving as a valuable resource for advancing image captioning in the Vietnamese language. We conduct experiments using various deep neural networks as the baselines on our dataset, evaluating them using the standard image captioning metrics, including BLEU, METEOR, CIDEr, and ROUGE. Our findings underscore the effectiveness of the proposed dataset and its potential contributions to the field of image captioning in the Vietnamese context. [...] Image captioning is a crucial task with applications in a wide range of domains, including healthcare and education. Despite extensive research on English image captioning datasets, the availability of such datasets for Vietnamese remains limited, with only two existing datasets. In this study, we introduce KTVIC, a comprehensive Vietnamese Image Captioning dataset focused on the life domain, covering a wide range of daily activities. This dataset comprises 4,327 images and 21,635 Vietnamese [...] AbstractPaper\n\nSubmitted 16 Jan 2024\n\n# KTVIC: A Vietnamese Image Captioning Dataset on the Life Domain\n\nVan-Quang NguyenVan-Quang NguyenThi-Hong VuongThi-Hong Vuong\n\n## Abstract",
+                "score": 0.28606498
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "max_results": 5,
+            "query": "\"Vin20K\" dataset",
+            "topic": "general"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "\"Vin20K\" dataset",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "DEPRESJON dataset - Zenodo | NLM Dataset Catalog",
+                "url": "https://datasetcatalog.nlm.nih.gov/dataset?q=0002042471",
+                "source": "datasetcatalog.nlm.nih.gov",
+                "summary": "Title: DEPRESJON dataset - Zenodo | NLM Dataset Catalog\n## 0 Item(s). # NLM Dataset Catalog. DEPRESJON dataset - Zenodo | NLM Dataset Catalog. Zenodo:2018 Apr;URI: 10.5281/zenodo.1219550. # DEPRESJON dataset. ## ACCESS INFORMATION. Fasmer, Ole Bernt1,Garcia-Ceja, Enrique2,Jakobsen, Petter3,Nordgreen, Tine4,Oedegaard, Ketil J.5,Riegler, Michael6,Torresen, Jim7. * Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). This dataset contains sensor data collected from patients suffering from depression. The dataset contains motor activity recordings of 23 unipolar and bipolar depressed patients and 32 healthy controls. For each patient we provide motor activity sensor data over several days of continuous measuring and also some demographic data. The severity of the patients' depressive state was labeled using ratings done by medical experts on the Montgomery-Asberg Depression Rating Scale (MADRS). For more information please visit http://datasets.simula.no/depresjon/ Use terms and citation The use of the DEPRESJON dataset is restricted for research and educational purposes only. The use of the DEPRESJON dataset for other purposes including commercial purposes is forbidden without prior written permission. In all documents and papers that use or refer to the DEPRESJON dataset or report experimental results based on the DEPRESJON dataset, a reference to the dataset paper have to be included: E. DEPRESJON: A Motor Activity Database of Depression Episodes in Unipolar and Bipolar Patients. In Proceedings of the 9th ACM on Multimedia Systems Conference (pp. Instructions (and BibTex) on how to cite the DEPRESJON dataset can be found in http://datasets.simula.no/depresjon/. depression, accelerometer, actigraphy, dataset, machine learning, bipolar disorder. No Grants or Funding Data Available. No Associated Publication Data Available. No Related Dataset Data Available. The National Library of Medicine (NLM) provides information about biomedical datasets. Inclusion on an NLM Web page does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health. Learn more:NLM Web Policies (nih.gov).",
+                "score": 0.045901228
+              },
+              {
+                "title": "Work Dataset Dataset by Authur",
+                "url": "https://platform.ultralytics.com/authur/datasets/work-dataset",
+                "source": "platform.ultralytics.com",
+                "summary": "Title: Work Dataset Dataset by Authur\nAnnotate, train and deploy YOLO models in one click. $25 free creditswith work email. Cookies help us see which docs, models, and features you find useful, so we can keep improving them. Choose what you share in , or read our Privacy Policy. Work Dataset Dataset by Authur. # work-dataset. 3 images·2 labeled·9 annotations·471.3 KBUpdated Oct 28, 2026. Indoor and outdoor scenes of cooking, poultry, and floral displays, with pots, vegetables, chickens, and glass vases labeled for object detection across settings. ## Comments. Ask a question, share your results, or help someone else.",
+                "score": 0.029627915
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:03:05"
+    }
+  ]
+}

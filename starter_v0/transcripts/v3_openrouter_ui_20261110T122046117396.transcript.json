@@ -1,0 +1,227 @@
+{
+  "transcript_id": "v3_openrouter_ui_20261110T122046117396",
+  "version": "v3",
+  "artifact_version": "v3+p6bc51c2e3de1+tdd01e8ab526d",
+  "prompt_hash": "6bc51c2e3de1b1dc6fe07c90c5f63bd94b47102da918436d531892f0eb7bb09f",
+  "tools_hash": "dd01e8ab526d60a0ad865edd97b292c7c5a31c125d5659ccf8b2e8396dce3676",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "system_prompt": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T12:20:46",
+  "updated_at": "2026-11-10T12:21:21",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T12:20:50",
+      "user": "Tin tức mới nhất về OpenAI trong tuần này",
+      "status": "answered",
+      "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần qua (dựa trên kết quả tìm kiếm tin tức tuần này):\n\n## 💰 **Tài chính & Đầu tư**\n- **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11): Vòng vốn do SoftBank và MGX dẫn đầu, tuy nhiên chỉ đạt 1/3 mục tiêu 30 tỷ USD và định giá giảm từ 1,5 nghìn tỷ USD ban đầu. [[Reuters]](https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06)\n\n## 🏗️ **Cơ sở hạ tầng & Trung tâm dữ liệu**\n- **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu** bất chấp kết quả bầu cử giữa kỳ (CNBC, 6/11): \"Chúng tôi sẽ tiếp tục công việc để xây dựng niềm tin với các cộng đồng.\" [[CNBC]](https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html)\n- **Cam kết trả toàn bộ chi phí điện cho trung tâm dữ liệu** sau khi cử tri bác bỏ mở rộng AI nhanh chóng (CNBC, 5/11). [[CNBC]](https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html)\n- **Đặt tiêu chuẩn mới cho cơ sở hạ tầng AI có trách nhiệm** – cam kết tạo việc làm địa phương, hợp tác với công đoàn, báo cáo tuyển dụng hàng năm. [[OpenAI Blog]](https://openai.com/index/setting-new-standard-responsible-ai-infrastructure)\n\n## 🔒 **An ninh & Vận hành**\n- **Nhân viên cảnh báo lỗ hổng an ninh vận hành nhiều năm** (Reuters, 3/11): Nguồn tin cho biết kiểm soát truy cập mã nguồn quá lỏng lẻo, rủi ro rò rỉ bí mật kỹ thuật cho chính phủ nước ngoài. [[Reuters]](https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03)\n\n## 🛠️ **Sản phẩm & Công nghệ**\n- **Mua Pierre Computer** – startup công cụ lập trình, tích hợp vào Codex, thách thức GitHub của Microsoft (Axios, 4/11). [[Axios]](https://www.axios.com/2026/11/04/openai-pierre-computer-github)\n- **Tăng tốc kỹ thuật cho thế giới vật lý** – hợp tác với Chip Ganassi Racing, chuyển quét 3D thành mô hình CAD có thể chỉnh sửa. [[OpenAI Blog]](https://openai.com/index/accelerating-engineering-for-the-physical-world)\n- **Ra mắt Images 2.6** – sinh ảnh chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn. [[OpenAI Blog]](https://openai.com/index/introducing-images-2-6)\n- **GPT‑6 Cyber** – agent an ninh mạng điều chỉnh (aligned) để phân tích kiến trúc phức tạp, nhận diện rủi ro nhanh hơn. [[OpenAI Blog]](https://openai.com/index/introducing-gpt-6-cyber)\n\n---\n\n**Tóm gọn:** Tuần này OpenAI tập trung vào **mở rộng vốn & hạ tầng**, **đáp ứng lo ngại cộng đồng/an ninh**, và **mở rộng hệ sinh thái công cụ cho lập trình viên/kỹ sư**.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "topic": "news",
+                "max_results": 10,
+                "query": "OpenAI",
+                "timeframe": "week"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "topic": "news",
+                "max_results": 10,
+                "query": "OpenAI",
+                "timeframe": "week"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "OpenAI",
+                "topic": "news",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "OpenAI",
+                    "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                    "source": "tavily.com",
+                    "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                    "score": 0.90593183
+                  },
+                  {
+                    "title": "Accelerating engineering for the physical world | OpenAI",
+                    "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+                    "source": "openai.com",
+                    "summary": "Today, we’re sharing advances in how OpenAI models help engineers design, simulate, and build physical products. These capabilities span mechanical and electrical engineering and end-to-end system design, and are already helping our internal teams test ideas and iterate faster. [...] of the ability of AI models to positively impact iteration speed for professional workflows. [...] We’re expanding our collaboration with Chip Ganassi Racing (CGR) to explore how OpenAI models can accelerate engineering and prototyping. Working with its R&D team, we’re testing workflows that turn 3D scans of existing parts into editable CAD models and 2D manufacturing drawings. This is particularly useful when the original design files are unavailable.",
+                    "score": 0.73138535
+                  },
+                  {
+                    "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                    "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                    "source": "openai.com",
+                    "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                    "score": 0.72231215
+                  },
+                  {
+                    "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                    "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                    "source": "reuters.com",
+                    "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion. [...] Reporting by Prathik Jayaprakash in ​Bengaluru; Editing by Leroy Leo\n\nOur Standards: The Thomson Reuters Trust Principles.",
+                    "score": 0.7147281
+                  },
+                  {
+                    "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                    "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                    "source": "cnbc.com",
+                    "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                    "score": 0.65914243
+                  },
+                  {
+                    "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                    "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                    "source": "reuters.com",
+                    "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                    "score": 0.6213807
+                  },
+                  {
+                    "title": "OpenAI to pay for data center power after election shows AI concern",
+                    "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html",
+                    "source": "cnbc.com",
+                    "summary": "OpenAI reaffirmed its promise to pay the full cost of powering data centers as part of a series of commitments the company published Thursday, two days after voters at the polls roundly rejected the rapid expansion of AI. [...] AI companies like OpenAI depend on AI data centers to serve customers and develop new models, and they're seeking to build out as rapidly as possible to meet demand. In February, OpenAI told investors that it's targeting $600 billion in total compute spend by 2030, and the company has since announced massive data center projects in Georgia and Ohio. [...] OpenAI has repeatedly pledged to protect ratepayers and invest in local communities this year, and Lehane said the company's latest commitments build on many of its previous initiatives. He said the policy blueprint has been in the works since August, and that he met with dozens of lawmakers and candidates since then.",
+                    "score": 0.5829428
+                  },
+                  {
+                    "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                    "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                    "source": "axios.com",
+                    "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                    "score": 0.5550741
+                  },
+                  {
+                    "title": "Introducing Images 2.6",
+                    "url": "https://openai.com/index/introducing-images-2-6",
+                    "source": "openai.com",
+                    "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                    "score": 0.41463867
+                  },
+                  {
+                    "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+                    "url": "https://openai.com/index/introducing-gpt-6-cyber",
+                    "source": "openai.com",
+                    "summary": "> “_Defending modern infrastructure requires continuous innovation. As the threat landscape grows in complexity, harnessing frontier AI models like OpenAI GPT‑6 Cyber is an essential step toward tipping the scale in favor of defenders. Integrating these capabilities into our research allows our teams to analyze complex architectures and identify risks with greater speed and precision, ultimately strengthening the resilience and trust of the technology our customers rely on_.” [...] Developers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window)\n\nMore\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies [...] (opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States",
+                    "score": 0.32917655
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần qua (dựa trên kết quả tìm kiếm tin tức tuần này):\n\n## 💰 **Tài chính & Đầu tư**\n- **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11): Vòng vốn do SoftBank và MGX dẫn đầu, tuy nhiên chỉ đạt 1/3 mục tiêu 30 tỷ USD và định giá giảm từ 1,5 nghìn tỷ USD ban đầu. [[Reuters]](https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06)\n\n## 🏗️ **Cơ sở hạ tầng & Trung tâm dữ liệu**\n- **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu** bất chấp kết quả bầu cử giữa kỳ (CNBC, 6/11): \"Chúng tôi sẽ tiếp tục công việc để xây dựng niềm tin với các cộng đồng.\" [[CNBC]](https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html)\n- **Cam kết trả toàn bộ chi phí điện cho trung tâm dữ liệu** sau khi cử tri bác bỏ mở rộng AI nhanh chóng (CNBC, 5/11). [[CNBC]](https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html)\n- **Đặt tiêu chuẩn mới cho cơ sở hạ tầng AI có trách nhiệm** – cam kết tạo việc làm địa phương, hợp tác với công đoàn, báo cáo tuyển dụng hàng năm. [[OpenAI Blog]](https://openai.com/index/setting-new-standard-responsible-ai-infrastructure)\n\n## 🔒 **An ninh & Vận hành**\n- **Nhân viên cảnh báo lỗ hổng an ninh vận hành nhiều năm** (Reuters, 3/11): Nguồn tin cho biết kiểm soát truy cập mã nguồn quá lỏng lẻo, rủi ro rò rỉ bí mật kỹ thuật cho chính phủ nước ngoài. [[Reuters]](https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03)\n\n## 🛠️ **Sản phẩm & Công nghệ**\n- **Mua Pierre Computer** – startup công cụ lập trình, tích hợp vào Codex, thách thức GitHub của Microsoft (Axios, 4/11). [[Axios]](https://www.axios.com/2026/11/04/openai-pierre-computer-github)\n- **Tăng tốc kỹ thuật cho thế giới vật lý** – hợp tác với Chip Ganassi Racing, chuyển quét 3D thành mô hình CAD có thể chỉnh sửa. [[OpenAI Blog]](https://openai.com/index/accelerating-engineering-for-the-physical-world)\n- **Ra mắt Images 2.6** – sinh ảnh chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn. [[OpenAI Blog]](https://openai.com/index/introducing-images-2-6)\n- **GPT‑6 Cyber** – agent an ninh mạng điều chỉnh (aligned) để phân tích kiến trúc phức tạp, nhận diện rủi ro nhanh hơn. [[OpenAI Blog]](https://openai.com/index/introducing-gpt-6-cyber)\n\n---\n\n**Tóm gọn:** Tuần này OpenAI tập trung vào **mở rộng vốn & hạ tầng**, **đáp ứng lo ngại cộng đồng/an ninh**, và **mở rộng hệ sinh thái công cụ cho lập trình viên/kỹ sư**.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "topic": "news",
+            "max_results": 10,
+            "query": "OpenAI",
+            "timeframe": "week"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "OpenAI",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "OpenAI",
+                "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                "source": "tavily.com",
+                "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                "score": 0.90593183
+              },
+              {
+                "title": "Accelerating engineering for the physical world | OpenAI",
+                "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+                "source": "openai.com",
+                "summary": "Today, we’re sharing advances in how OpenAI models help engineers design, simulate, and build physical products. These capabilities span mechanical and electrical engineering and end-to-end system design, and are already helping our internal teams test ideas and iterate faster. [...] of the ability of AI models to positively impact iteration speed for professional workflows. [...] We’re expanding our collaboration with Chip Ganassi Racing (CGR) to explore how OpenAI models can accelerate engineering and prototyping. Working with its R&D team, we’re testing workflows that turn 3D scans of existing parts into editable CAD models and 2D manufacturing drawings. This is particularly useful when the original design files are unavailable.",
+                "score": 0.73138535
+              },
+              {
+                "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                "source": "openai.com",
+                "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                "score": 0.72231215
+              },
+              {
+                "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                "source": "reuters.com",
+                "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion. [...] Reporting by Prathik Jayaprakash in ​Bengaluru; Editing by Leroy Leo\n\nOur Standards: The Thomson Reuters Trust Principles.",
+                "score": 0.7147281
+              },
+              {
+                "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                "source": "cnbc.com",
+                "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                "score": 0.65914243
+              },
+              {
+                "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                "source": "reuters.com",
+                "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                "score": 0.6213807
+              },
+              {
+                "title": "OpenAI to pay for data center power after election shows AI concern",
+                "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html",
+                "source": "cnbc.com",
+                "summary": "OpenAI reaffirmed its promise to pay the full cost of powering data centers as part of a series of commitments the company published Thursday, two days after voters at the polls roundly rejected the rapid expansion of AI. [...] AI companies like OpenAI depend on AI data centers to serve customers and develop new models, and they're seeking to build out as rapidly as possible to meet demand. In February, OpenAI told investors that it's targeting $600 billion in total compute spend by 2030, and the company has since announced massive data center projects in Georgia and Ohio. [...] OpenAI has repeatedly pledged to protect ratepayers and invest in local communities this year, and Lehane said the company's latest commitments build on many of its previous initiatives. He said the policy blueprint has been in the works since August, and that he met with dozens of lawmakers and candidates since then.",
+                "score": 0.5829428
+              },
+              {
+                "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                "source": "axios.com",
+                "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                "score": 0.5550741
+              },
+              {
+                "title": "Introducing Images 2.6",
+                "url": "https://openai.com/index/introducing-images-2-6",
+                "source": "openai.com",
+                "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                "score": 0.41463867
+              },
+              {
+                "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+                "url": "https://openai.com/index/introducing-gpt-6-cyber",
+                "source": "openai.com",
+                "summary": "> “_Defending modern infrastructure requires continuous innovation. As the threat landscape grows in complexity, harnessing frontier AI models like OpenAI GPT‑6 Cyber is an essential step toward tipping the scale in favor of defenders. Integrating these capabilities into our research allows our teams to analyze complex architectures and identify risks with greater speed and precision, ultimately strengthening the resilience and trust of the technology our customers rely on_.” [...] Developers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window)\n\nMore\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies [...] (opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States",
+                "score": 0.32917655
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:21:21"
+    }
+  ]
+}

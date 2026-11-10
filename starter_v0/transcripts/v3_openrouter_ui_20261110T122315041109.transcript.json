@@ -1,0 +1,797 @@
+{
+  "transcript_id": "v3_openrouter_ui_20261110T122315041109",
+  "version": "v3",
+  "artifact_version": "v3+p6bc51c2e3de1+tdd01e8ab526d",
+  "prompt_hash": "6bc51c2e3de1b1dc6fe07c90c5f63bd94b47102da918436d531892f0eb7bb09f",
+  "tools_hash": "dd01e8ab526d60a0ad865edd97b292c7c5a31c125d5659ccf8b2e8396dce3676",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "system_prompt": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T12:23:15",
+  "updated_at": "2026-11-10T12:57:31",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T12:23:16",
+      "user": "Tin tức mới nhất về OpenAI trong tuần này",
+      "status": "answered",
+      "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần này (dựa trên kết quả tìm kiếm tin tức tuần qua):\n\n## 🏦 **Tài chính & Đầu tư**\n- **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11) – Chỉ là phần đầu của vòng vốn mục tiêu 30 tỷ USD; SoftBank và MGX tham gia. Định giá giảm từ mức 1,5 nghìn tỷ USD ban đầu.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06)*\n\n## 🏗️ **Cơ sở hạ tầng & Trung tâm dữ liệu**\n- **OpenAI công bố cam kết \"chuẩn mới cho hạ tầng AI có trách nhiệm\"** (Blog OpenAI) – Bao gồm: trả toàn bộ chi phí điện cho trung tâm dữ liệu, công khai kế hoạch xây dựng, tạo việc làm địa phương, báo cáo hàng năm.  \n  *Nguồn: [OpenAI](https://openai.com/index/setting-new-standard-responsible-ai-infrastructure)*\n- **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu bất chấp kết quả bầu cử giữa kỳ** (CNBC, 6/11) – \"Sẽ tiếp tục xây dựng niềm tin với cộng đồng\".  \n  *Nguồn: [CNBC](https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html)*\n- **Chiến dịch \"thu hút cử tri\" thay đổi quan điểm về trung tâm dữ liệu** (Reuters, 5/11) – Sau thất cử của phe ủng hộ trung tâm dữ liệu, OpenAI bỏ NDA với quan chức công, công khai tác động giao thông/nhiễu tiếng/ánh sáng.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05)*\n\n## 🔒 **An ninh & Vận hành**\n- **Nhân viên cảnh báo lỗ hổng an ninh vận hành nhiều năm** (Reuters, 3/11) – Lo ngại kiểm soát truy cập mã nguồn lỏng lẻo, rủi ro rò rỉ cho chính phủ nước ngoài. OpenAI khẳng định đầu tư mạnh vào bảo mật.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03)*\n\n## 💻 **Công cụ phát triển & Mua lại**\n- **Mua lại Pierre Computer, nhắm vào GitHub của Microsoft** (Axios, 4/11) – Tích hợp công nghệ lưu trữ mã vào Codex; ra mắt Pando (giảm 80% thời gian đẩy thay đổi mã).  \n  *Nguồn: [Axios](https://www.axios.com/2026/11/04/openai-pierre-computer-github)*\n\n## ⚙️ **Kỹ thuật & Sản phẩm**\n- **Tăng tốc kỹ thuật cho thế giới vật lý** (Blog OpenAI) – Mô hình hỗ trợ thiết kế cơ khí/điện tử, chuyển quét 3D thành CAD, hợp tác với Chip Ganassi Racing.  \n  *Nguồn: [OpenAI](https://openai.com/index/accelerating-engineering-for-the-physical-world)*\n- **Ra mắt Images 2.6** – Tạo hình ảnh chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn.  \n  *Nguồn: [OpenAI](https://openai.com/index/introducing-images-2-6)*\n\n---\n\n**Tóm gọn:** Tuần này OpenAI tập trung vào **huy động vốn khổng lồ**, **cam kết trách nhiệm với cộng đồng xung quanh trung tâm dữ liệu**, **mua lại công cụ dev (Pierre)** và **nâng cấp mô hình hình ảnh/kỹ thuật**. An ninh nội bộ cũng thành đề nóng sau loạt cảnh báo của nhân viên.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "OpenAI",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 10
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "OpenAI",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 10
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "OpenAI",
+                "topic": "news",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "OpenAI",
+                    "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                    "source": "tavily.com",
+                    "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                    "score": 0.90593183
+                  },
+                  {
+                    "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                    "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                    "source": "openai.com",
+                    "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                    "score": 0.72231215
+                  },
+                  {
+                    "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                    "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                    "source": "reuters.com",
+                    "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion. [...] Reporting by Prathik Jayaprakash in ​Bengaluru; Editing by Leroy Leo\n\nOur Standards: The Thomson Reuters Trust Principles.",
+                    "score": 0.7147281
+                  },
+                  {
+                    "title": "OpenAI kicks off charm offensive to change voters' view of data centers | Reuters",
+                    "url": "https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05",
+                    "source": "reuters.com",
+                    "summary": "SAN FRANCISCO, Nov 5 (Reuters) - Stunning ​victories by Democrats in US midterm elections this week have been interpreted by many as Americans repudiating tech ‌industry plans to build data centers across the country. OpenAI has now embarked on new strategies to change their minds.\n\nThe AI lab on Thursday laid out policies — in the works since August — intended to help the company build more trust with local communities and convince them that data centers will ​benefit them. [...] OpenAI officials, along with many of their peers in tech, ​have spent the last ⁠two years trying to build ties with the administration of US President Donald Trump in hopes of shaping federal policy around AI.\n\nOpenAI CEO Sam Altman donated $1 million to Trump's inaugural committee and later attended Trump's second inauguration. Last year, Brockman donated $25 million in his personal capacity to ⁠a Trump ​super PAC. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nOpenAI said it will no longer use non-disclosure agreements with public officials when negotiating or discussing future sites, although ​proprietary information would still be under wraps. It will also give residents access to construction plans ⁠and their potential effect on traffic, noise and lighting.",
+                    "score": 0.66569364
+                  },
+                  {
+                    "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                    "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                    "source": "cnbc.com",
+                    "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                    "score": 0.65914243
+                  },
+                  {
+                    "title": "Accelerating engineering for the physical world | OpenAI",
+                    "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+                    "source": "openai.com",
+                    "summary": "Today, we’re sharing advances in how OpenAI models help engineers design, simulate, and build physical products. These capabilities span mechanical and electrical engineering and end-to-end system design, and are already helping our internal teams test ideas and iterate faster. [...] of the ability of AI models to positively impact iteration speed for professional workflows. [...] We’re expanding our collaboration with Chip Ganassi Racing (CGR) to explore how OpenAI models can accelerate engineering and prototyping. Working with its R&D team, we’re testing workflows that turn 3D scans of existing parts into editable CAD models and 2D manufacturing drawings. This is particularly useful when the original design files are unavailable.",
+                    "score": 0.73138535
+                  },
+                  {
+                    "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                    "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                    "source": "reuters.com",
+                    "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                    "score": 0.6213807
+                  },
+                  {
+                    "title": "OpenAI to pay for data center power after election shows AI concern",
+                    "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html",
+                    "source": "cnbc.com",
+                    "summary": "OpenAI reaffirmed its promise to pay the full cost of powering data centers as part of a series of commitments the company published Thursday, two days after voters at the polls roundly rejected the rapid expansion of AI. [...] AI companies like OpenAI depend on AI data centers to serve customers and develop new models, and they're seeking to build out as rapidly as possible to meet demand. In February, OpenAI told investors that it's targeting $600 billion in total compute spend by 2030, and the company has since announced massive data center projects in Georgia and Ohio. [...] OpenAI has repeatedly pledged to protect ratepayers and invest in local communities this year, and Lehane said the company's latest commitments build on many of its previous initiatives. He said the policy blueprint has been in the works since August, and that he met with dozens of lawmakers and candidates since then.",
+                    "score": 0.5829428
+                  },
+                  {
+                    "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                    "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                    "source": "axios.com",
+                    "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                    "score": 0.5550741
+                  },
+                  {
+                    "title": "Introducing Images 2.6",
+                    "url": "https://openai.com/index/introducing-images-2-6",
+                    "source": "openai.com",
+                    "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                    "score": 0.41463867
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là tóm tắt các tin tức quan trọng nhất về OpenAI trong tuần này (dựa trên kết quả tìm kiếm tin tức tuần qua):\n\n## 🏦 **Tài chính & Đầu tư**\n- **OpenAI huy động 11 tỷ USD, định giá 1,25 nghìn tỷ USD** (Reuters, 6/11) – Chỉ là phần đầu của vòng vốn mục tiêu 30 tỷ USD; SoftBank và MGX tham gia. Định giá giảm từ mức 1,5 nghìn tỷ USD ban đầu.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06)*\n\n## 🏗️ **Cơ sở hạ tầng & Trung tâm dữ liệu**\n- **OpenAI công bố cam kết \"chuẩn mới cho hạ tầng AI có trách nhiệm\"** (Blog OpenAI) – Bao gồm: trả toàn bộ chi phí điện cho trung tâm dữ liệu, công khai kế hoạch xây dựng, tạo việc làm địa phương, báo cáo hàng năm.  \n  *Nguồn: [OpenAI](https://openai.com/index/setting-new-standard-responsible-ai-infrastructure)*\n- **CFO Sarah Friar khẳng định tiếp tục đầu tư trung tâm dữ liệu bất chấp kết quả bầu cử giữa kỳ** (CNBC, 6/11) – \"Sẽ tiếp tục xây dựng niềm tin với cộng đồng\".  \n  *Nguồn: [CNBC](https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html)*\n- **Chiến dịch \"thu hút cử tri\" thay đổi quan điểm về trung tâm dữ liệu** (Reuters, 5/11) – Sau thất cử của phe ủng hộ trung tâm dữ liệu, OpenAI bỏ NDA với quan chức công, công khai tác động giao thông/nhiễu tiếng/ánh sáng.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05)*\n\n## 🔒 **An ninh & Vận hành**\n- **Nhân viên cảnh báo lỗ hổng an ninh vận hành nhiều năm** (Reuters, 3/11) – Lo ngại kiểm soát truy cập mã nguồn lỏng lẻo, rủi ro rò rỉ cho chính phủ nước ngoài. OpenAI khẳng định đầu tư mạnh vào bảo mật.  \n  *Nguồn: [Reuters](https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03)*\n\n## 💻 **Công cụ phát triển & Mua lại**\n- **Mua lại Pierre Computer, nhắm vào GitHub của Microsoft** (Axios, 4/11) – Tích hợp công nghệ lưu trữ mã vào Codex; ra mắt Pando (giảm 80% thời gian đẩy thay đổi mã).  \n  *Nguồn: [Axios](https://www.axios.com/2026/11/04/openai-pierre-computer-github)*\n\n## ⚙️ **Kỹ thuật & Sản phẩm**\n- **Tăng tốc kỹ thuật cho thế giới vật lý** (Blog OpenAI) – Mô hình hỗ trợ thiết kế cơ khí/điện tử, chuyển quét 3D thành CAD, hợp tác với Chip Ganassi Racing.  \n  *Nguồn: [OpenAI](https://openai.com/index/accelerating-engineering-for-the-physical-world)*\n- **Ra mắt Images 2.6** – Tạo hình ảnh chính xác hơn, nhất quán nhân vật tốt hơn, tốc độ nhanh hơn.  \n  *Nguồn: [OpenAI](https://openai.com/index/introducing-images-2-6)*\n\n---\n\n**Tóm gọn:** Tuần này OpenAI tập trung vào **huy động vốn khổng lồ**, **cam kết trách nhiệm với cộng đồng xung quanh trung tâm dữ liệu**, **mua lại công cụ dev (Pierre)** và **nâng cấp mô hình hình ảnh/kỹ thuật**. An ninh nội bộ cũng thành đề nóng sau loạt cảnh báo của nhân viên.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "OpenAI",
+            "topic": "news",
+            "timeframe": "week",
+            "max_results": 10
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "OpenAI",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "OpenAI",
+                "url": "https://tavily.com/knowledge/company/p4PyTakV77G9",
+                "source": "tavily.com",
+                "summary": "# OpenAI\nID: p4PyTakV77G9\nWebsite: www.openai.com\nHeadquarters: San Francisco, CA, United States\nLinkedIn: www.linkedin.com/company/openai · 11,529,792 followers\nIndustry: Research Services\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Partnership\nSocial profiles: www.facebook.com/openai, www.twitter.com/openai, www.crunchbase.com/organization/openai, www.instagram.com/openai.gpt, www.instagram.com/openai, www.youtube.com/@openai, www.youtube.com/openai, github.com/openai [...] Description: OpenAI is a company that believes in research and development to lead to artificial general intelligence, a system that can solve human-level problems. [...] ## Products and services\nKeywords: research & development, emerging ai software, openai, artificial intelligence machine learning, artificial general intelligence, development, research, human-level problems, technology, application-software, artificial-intelligence, platform",
+                "score": 0.90593183
+              },
+              {
+                "title": "Setting a new standard for responsible AI infrastructure | OpenAI",
+                "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+                "source": "openai.com",
+                "summary": "The promise of AI is that it gives people more power to shape their own futures. It can help someone learn a new skill, build a business, or solve a problem that was previously out of reach. Building more computing infrastructure capacity in the United States can help lower the cost of delivering AI, put these tools in more people’s hands, and ensure America stays at the forefront of the technology. [...] protect residents, and ensure that the benefits of AI infrastructure are broadly shared. [...] Create opportunities for local workers and businesses.We’ll publish the jobs we expect to create, work with unions and training providers to help residents prepare for them, and report annually on hiring and apprenticeships. We’ll also make sustained investments in priorities residents help select.",
+                "score": 0.72231215
+              },
+              {
+                "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation, source says | Reuters",
+                "url": "https://www.reuters.com/business/openai-secures-11-billion-funding-125-trillion-valuation-bloomberg-news-reports-2026-11-06",
+                "source": "reuters.com",
+                "summary": "Nov 6 (Reuters) - OpenAI has closed ‌on new funding of $11 billion, the initial part of a round ​that values the company ​at $1.25 trillion, a source familiar with ⁠the matter said on Friday.\n\nThe $11 ​billion raised so far represents ​only a portion of OpenAI's original target of up to $30 billion, while ​the company's valuation has ​come down from the $1.5 trillion level it ‌had ⁠initially sought, two investors said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nAdvertisement · Scroll to continue\n\nSoftBank and MGX participated in the funding, the investors said.\n\nBloomberg News reported ​on the ​funding ⁠earlier on Friday.\n\nSentiment toward AI companies has ​cooled in the last ​month, ⁠with some investors valuing rival Anthropic's planned IPO at about $1.5 ⁠trillion, ​below earlier expectations ​of roughly $2 trillion. [...] Reporting by Prathik Jayaprakash in ​Bengaluru; Editing by Leroy Leo\n\nOur Standards: The Thomson Reuters Trust Principles.",
+                "score": 0.7147281
+              },
+              {
+                "title": "OpenAI kicks off charm offensive to change voters' view of data centers | Reuters",
+                "url": "https://www.reuters.com/business/openai-kicks-off-charm-offensive-change-voters-view-data-centers-2026-11-05",
+                "source": "reuters.com",
+                "summary": "SAN FRANCISCO, Nov 5 (Reuters) - Stunning ​victories by Democrats in US midterm elections this week have been interpreted by many as Americans repudiating tech ‌industry plans to build data centers across the country. OpenAI has now embarked on new strategies to change their minds.\n\nThe AI lab on Thursday laid out policies — in the works since August — intended to help the company build more trust with local communities and convince them that data centers will ​benefit them. [...] OpenAI officials, along with many of their peers in tech, ​have spent the last ⁠two years trying to build ties with the administration of US President Donald Trump in hopes of shaping federal policy around AI.\n\nOpenAI CEO Sam Altman donated $1 million to Trump's inaugural committee and later attended Trump's second inauguration. Last year, Brockman donated $25 million in his personal capacity to ⁠a Trump ​super PAC. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nOpenAI said it will no longer use non-disclosure agreements with public officials when negotiating or discussing future sites, although ​proprietary information would still be under wraps. It will also give residents access to construction plans ⁠and their potential effect on traffic, noise and lighting.",
+                "score": 0.66569364
+              },
+              {
+                "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+                "url": "https://www.cnbc.com/2026/11/06/open-ai-data-centers-election.html",
+                "source": "cnbc.com",
+                "summary": "OpenAI CFO Sarah Friar on Friday said the company will continue to invest in artificial intelligence infrastructure, even after voters strongly rebuked data centers during Tuesday's midterm elections. [...] OpenAI depends on data centers to train its AI models and serve customers, and Friar said she doesn't think the midterms dramatically changed anything for the company.\n\n\"If the midterm means more focus on data centers and communities, we're going to keep doing the work to get into those communities and to build trust with them,\" Friar said. [...] \"When I think about the midterms, I need to keep thinking about how do we keep investing to meet that customer demand,\" Friar told CNBC's Sara Eisen in an interview at the Citi TMT Leadership Summit at California's Pebble Beach. \"It starts early with having built relationships with all of the hyperscalers, and it will continue to mean that we raise capital.\"",
+                "score": 0.65914243
+              },
+              {
+                "title": "Accelerating engineering for the physical world | OpenAI",
+                "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+                "source": "openai.com",
+                "summary": "Today, we’re sharing advances in how OpenAI models help engineers design, simulate, and build physical products. These capabilities span mechanical and electrical engineering and end-to-end system design, and are already helping our internal teams test ideas and iterate faster. [...] of the ability of AI models to positively impact iteration speed for professional workflows. [...] We’re expanding our collaboration with Chip Ganassi Racing (CGR) to explore how OpenAI models can accelerate engineering and prototyping. Working with its R&D team, we’re testing workflows that turn 3D scans of existing parts into editable CAD models and 2D manufacturing drawings. This is particularly useful when the original design files are unavailable.",
+                "score": 0.73138535
+              },
+              {
+                "title": "OpenAI employees warned about operational security lapses for years, sources say | Reuters",
+                "url": "https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03",
+                "source": "reuters.com",
+                "summary": "OpenAI and Anthropic have tried to ​maintain a more open research culture to both ⁠attract employees and foster creativity that can lead to breakthroughs. The AI field is rooted in academia, where machine-learning scientists have openly discussed their research.\n\nSome OpenAI employees are increasingly worried about this approach as AI grows more capable, according to the five people. [...] When asked about employees' concerns and their view that management did not act on these issues, OpenAI spokesperson Elana Widmann ​said that OpenAI is one of the most targeted organizations in the world. As a result, the company invests heavily in its security program to protect against attacks from insiders, cybercriminals and nation-states, she said. [...] The Reuters Daily Briefing newsletter provides all the news you need to start your day. Sign up here.\n\nThese workers argued that OpenAI's controls were so lax ‌that outsiders, including foreign governments, could obtain sensitive information about the AI lab's technology with relative ease, the people said. For example, anybody at OpenAI who could access its code could see the technical details underlying many company projects.",
+                "score": 0.6213807
+              },
+              {
+                "title": "OpenAI to pay for data center power after election shows AI concern",
+                "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html",
+                "source": "cnbc.com",
+                "summary": "OpenAI reaffirmed its promise to pay the full cost of powering data centers as part of a series of commitments the company published Thursday, two days after voters at the polls roundly rejected the rapid expansion of AI. [...] AI companies like OpenAI depend on AI data centers to serve customers and develop new models, and they're seeking to build out as rapidly as possible to meet demand. In February, OpenAI told investors that it's targeting $600 billion in total compute spend by 2030, and the company has since announced massive data center projects in Georgia and Ohio. [...] OpenAI has repeatedly pledged to protect ratepayers and invest in local communities this year, and Lehane said the company's latest commitments build on many of its previous initiatives. He said the policy blueprint has been in the works since August, and that he met with dozens of lawmakers and candidates since then.",
+                "score": 0.5829428
+              },
+              {
+                "title": "Exclusive: OpenAI targets Microsoft's GitHub with deal",
+                "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github",
+                "source": "axios.com",
+                "summary": "OpenAI will acquire Pierre Computer, a developer tools startup whose technology is already embedded in Codex, the company told Axios exclusively.\n\nWhy it matters:OpenAI is joining a slew of companies challenging Microsoft's GitHub as AI agents take on more coding work. The platform has acted as a central repository and nerve center for software development for many years.\n\nZoom out:GitHub has faced a number of reliability issues and outages as AI coding has taken off. [...] Financial terms were not disclosed. Pierre's open-source projects will remain open-source.\n\nBetween the lines:Earlier this week, OpenAI revealed Pando, built to handle the explosion of code generated by AI agents.\n\n   OpenAI says Pando reduced the time needed to push code changes by nearly 80%. \n   The company is now exploring ways to make the technology available to customers. [...] Cursor, now owned by Elon Musk's SpaceX, launched GitHub rival Origin in August.\n   Former GitHub CEO Thomas Dohmke, who launched a new coding startup, announced a competing product last month.\n   Microsoft owns nearly a quarter of OpenAI, although the two companies also compete in a variety of ways, a dynamic that is common across the competitive AI landscape.\n\nDriving the news: OpenAI plans to integrate Pierre's Code Storage function into Codex, where Pierre's technology is already used.",
+                "score": 0.5550741
+              },
+              {
+                "title": "Introducing Images 2.6",
+                "url": "https://openai.com/index/introducing-images-2-6",
+                "source": "openai.com",
+                "summary": "Business\n   Overview\n   Solutions\n   Resources\n   Plugins\n   Customer Stories\n   Partner Network\n   Contact Sales\n\nDevelopers\n   Plugins(opens in a new window)\n   Models(opens in a new window)\n   Docs(opens in a new window)\n   Resources(opens in a new window)\n   Developer Forum(opens in a new window)\n\nCompany\n   About Us\n   Our Charter\n   Careers\n   News\n\nSupport\n   Help Center(opens in a new window)\n   OpenAI Status(opens in a new window) [...] More\n   Stories\n   Academy\n   Supply Co.\n   Livestreams\n   Podcast\n   RSS\n\nTerms & Policies\n   Terms of Use\n   Privacy Policy\n   Other Policies\n\n(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)(opens in a new window)\n\nOpenAI © 2015–2026 Your privacy choices\n\nEnglish United States [...] > “At Picsart, we see how much creators value being able to generate an image fast. OpenAI’s new 2.6 model brings more accurate results, better character consistency, and faster generations. Paired with Picsart’s advanced editing tools, it gives our users more time to experiment, refine details, and turn one idea into a whole social campaign.”\n\n—Davit Avoyan, Director GTM at Picsart\n\nImage 9: A giant multicolored glass whale floats above misty mountains beside a stone chapel at sunset.",
+                "score": 0.41463867
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:23:46"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T12:25:35",
+      "user": " check cho tôi top 10 repo nhiều sao nhất",
+      "status": "answered",
+      "assistant_text": "Dưới đây là **Top 10 repository có số lượng sao (stars) nhiều nhất trên GitHub** (lọc các repo >100k sao, sắp xếp theo stars giảm dần):\n\n| # | Repository | ⭐ Stars | 🍴 Forks | Ngôn ngữ chính | Mô tả ngắn |\n|---|------------|---------|---------|----------------|------------|\n| 1 | **[codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)** | 561,407 | 52,535 | Markdown | Học lập trình bằng cách tái tạo lại các công nghệ yêu thích từ đầu. |\n| 2 | **[sindresorhus/awesome](https://github.com/sindresorhus/awesome)** | 534,386 | 38,259 | — | Danh sách \"Awesome\" về mọi chủ đề thú vị (tài nguyên, công cụ, v.v.). |\n| 3 | **[public-apis/public-apis](https://github.com/public-apis/public-apis)** | 497,686 | 55,651 | Python | Danh sách tập hợp các API miễn phí công khai. |\n| 4 | **[freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)** | 458,829 | 47,437 | TypeScript | Mã nguồn mở & chương trình học miễn phí của freeCodeCamp.org. |\n| 5 | **[morluto/rea](https://github.com/morluto/rea)** | 447,569 | 110,361 | TypeScript | \"Reverse engineer anything with agents\" – phân tích hành vi ứng dụng đến nhị phân native. |\n| 6 | **[EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)** | 401,399 | 67,493 | Python | Kho sách lập trình miễn phí lớn. |\n| 7 | **[openclaw/openclaw](https://github.com/openclaw/openclaw)** | 394,266 | 82,855 | TypeScript | \"The AI that really does things. Any OS. Any Platform.\" |\n| 8 | **[donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)** | 377,478 | 59,253 | Python | Học thiết kế hệ thống lớn, ôn phỏng vấn system design (kèm flashcards Anki). |\n| 9 | **[nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)** | 371,690 | 45,686 | TypeScript | Lộ trình tương tác, hướng dẫn phát triển sự nghiệp cho developer. |\n| 10 | **[jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university)** | 364,154 | 85,533 | — | Kế hoạch học khoa học máy tính hoàn chỉnh để trở thành kỹ sư phần mềm. |\n\n**Lưu ý:** Danh sách này được lọc từ các repo có **>100.000 sao** và sắp xếp theo số sao giảm dần (dữ liệu tại thời điểm truy xuất). Các repo ở trên chủ yếu là **tài nguyên học tập, danh sách tổng hợp (awesome-lists), roadmap, sách miễn phí** – phản ánh nhu cầu cộng đồng developer về kiến thức và hướng dẫn.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "github_search",
+              "args": {
+                "limit": 10,
+                "sort_by": "stars",
+                "query": "stars:>100000"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "github_search",
+              "args": {
+                "limit": 10,
+                "sort_by": "stars",
+                "query": "stars:>100000"
+              },
+              "result": {
+                "tool": "get_repo_inform",
+                "query": "stars:>100000",
+                "language": "",
+                "sort_by": "stars",
+                "total_count": 141,
+                "items": [
+                  {
+                    "title": "codecrafters-io/build-your-own-x",
+                    "url": "https://github.com/codecrafters-io/build-your-own-x",
+                    "summary": "Master programming by recreating your favorite technologies from scratch.",
+                    "stars": 561407,
+                    "forks": 52535,
+                    "language": "Markdown",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "sindresorhus/awesome",
+                    "url": "https://github.com/sindresorhus/awesome",
+                    "summary": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+                    "stars": 534386,
+                    "forks": 38259,
+                    "language": "",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "public-apis/public-apis",
+                    "url": "https://github.com/public-apis/public-apis",
+                    "summary": "A collective list of free APIs",
+                    "stars": 497686,
+                    "forks": 55651,
+                    "language": "Python",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "freeCodeCamp/freeCodeCamp",
+                    "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+                    "summary": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+                    "stars": 458829,
+                    "forks": 47437,
+                    "language": "TypeScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "morluto/rea",
+                    "url": "https://github.com/morluto/rea",
+                    "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+                    "stars": 447569,
+                    "forks": 110361,
+                    "language": "TypeScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "EbookFoundation/free-programming-books",
+                    "url": "https://github.com/EbookFoundation/free-programming-books",
+                    "summary": ":books: Freely available programming books",
+                    "stars": 401399,
+                    "forks": 67493,
+                    "language": "Python",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "openclaw/openclaw",
+                    "url": "https://github.com/openclaw/openclaw",
+                    "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+                    "stars": 394266,
+                    "forks": 82855,
+                    "language": "TypeScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "donnemartin/system-design-primer",
+                    "url": "https://github.com/donnemartin/system-design-primer",
+                    "summary": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+                    "stars": 377478,
+                    "forks": 59253,
+                    "language": "Python",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "nilbuild/developer-roadmap",
+                    "url": "https://github.com/nilbuild/developer-roadmap",
+                    "summary": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+                    "stars": 371690,
+                    "forks": 45686,
+                    "language": "TypeScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "jwasham/coding-interview-university",
+                    "url": "https://github.com/jwasham/coding-interview-university",
+                    "summary": "A complete computer science study plan to become a software engineer.",
+                    "stars": 364154,
+                    "forks": 85533,
+                    "language": "",
+                    "source": "github.com"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là **Top 10 repository có số lượng sao (stars) nhiều nhất trên GitHub** (lọc các repo >100k sao, sắp xếp theo stars giảm dần):\n\n| # | Repository | ⭐ Stars | 🍴 Forks | Ngôn ngữ chính | Mô tả ngắn |\n|---|------------|---------|---------|----------------|------------|\n| 1 | **[codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)** | 561,407 | 52,535 | Markdown | Học lập trình bằng cách tái tạo lại các công nghệ yêu thích từ đầu. |\n| 2 | **[sindresorhus/awesome](https://github.com/sindresorhus/awesome)** | 534,386 | 38,259 | — | Danh sách \"Awesome\" về mọi chủ đề thú vị (tài nguyên, công cụ, v.v.). |\n| 3 | **[public-apis/public-apis](https://github.com/public-apis/public-apis)** | 497,686 | 55,651 | Python | Danh sách tập hợp các API miễn phí công khai. |\n| 4 | **[freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)** | 458,829 | 47,437 | TypeScript | Mã nguồn mở & chương trình học miễn phí của freeCodeCamp.org. |\n| 5 | **[morluto/rea](https://github.com/morluto/rea)** | 447,569 | 110,361 | TypeScript | \"Reverse engineer anything with agents\" – phân tích hành vi ứng dụng đến nhị phân native. |\n| 6 | **[EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)** | 401,399 | 67,493 | Python | Kho sách lập trình miễn phí lớn. |\n| 7 | **[openclaw/openclaw](https://github.com/openclaw/openclaw)** | 394,266 | 82,855 | TypeScript | \"The AI that really does things. Any OS. Any Platform.\" |\n| 8 | **[donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)** | 377,478 | 59,253 | Python | Học thiết kế hệ thống lớn, ôn phỏng vấn system design (kèm flashcards Anki). |\n| 9 | **[nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)** | 371,690 | 45,686 | TypeScript | Lộ trình tương tác, hướng dẫn phát triển sự nghiệp cho developer. |\n| 10 | **[jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university)** | 364,154 | 85,533 | — | Kế hoạch học khoa học máy tính hoàn chỉnh để trở thành kỹ sư phần mềm. |\n\n**Lưu ý:** Danh sách này được lọc từ các repo có **>100.000 sao** và sắp xếp theo số sao giảm dần (dữ liệu tại thời điểm truy xuất). Các repo ở trên chủ yếu là **tài nguyên học tập, danh sách tổng hợp (awesome-lists), roadmap, sách miễn phí** – phản ánh nhu cầu cộng đồng developer về kiến thức và hướng dẫn.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "github_search",
+          "args": {
+            "limit": 10,
+            "sort_by": "stars",
+            "query": "stars:>100000"
+          },
+          "result": {
+            "tool": "get_repo_inform",
+            "query": "stars:>100000",
+            "language": "",
+            "sort_by": "stars",
+            "total_count": 141,
+            "items": [
+              {
+                "title": "codecrafters-io/build-your-own-x",
+                "url": "https://github.com/codecrafters-io/build-your-own-x",
+                "summary": "Master programming by recreating your favorite technologies from scratch.",
+                "stars": 561407,
+                "forks": 52535,
+                "language": "Markdown",
+                "source": "github.com"
+              },
+              {
+                "title": "sindresorhus/awesome",
+                "url": "https://github.com/sindresorhus/awesome",
+                "summary": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+                "stars": 534386,
+                "forks": 38259,
+                "language": "",
+                "source": "github.com"
+              },
+              {
+                "title": "public-apis/public-apis",
+                "url": "https://github.com/public-apis/public-apis",
+                "summary": "A collective list of free APIs",
+                "stars": 497686,
+                "forks": 55651,
+                "language": "Python",
+                "source": "github.com"
+              },
+              {
+                "title": "freeCodeCamp/freeCodeCamp",
+                "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+                "summary": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+                "stars": 458829,
+                "forks": 47437,
+                "language": "TypeScript",
+                "source": "github.com"
+              },
+              {
+                "title": "morluto/rea",
+                "url": "https://github.com/morluto/rea",
+                "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+                "stars": 447569,
+                "forks": 110361,
+                "language": "TypeScript",
+                "source": "github.com"
+              },
+              {
+                "title": "EbookFoundation/free-programming-books",
+                "url": "https://github.com/EbookFoundation/free-programming-books",
+                "summary": ":books: Freely available programming books",
+                "stars": 401399,
+                "forks": 67493,
+                "language": "Python",
+                "source": "github.com"
+              },
+              {
+                "title": "openclaw/openclaw",
+                "url": "https://github.com/openclaw/openclaw",
+                "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+                "stars": 394266,
+                "forks": 82855,
+                "language": "TypeScript",
+                "source": "github.com"
+              },
+              {
+                "title": "donnemartin/system-design-primer",
+                "url": "https://github.com/donnemartin/system-design-primer",
+                "summary": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+                "stars": 377478,
+                "forks": 59253,
+                "language": "Python",
+                "source": "github.com"
+              },
+              {
+                "title": "nilbuild/developer-roadmap",
+                "url": "https://github.com/nilbuild/developer-roadmap",
+                "summary": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+                "stars": 371690,
+                "forks": 45686,
+                "language": "TypeScript",
+                "source": "github.com"
+              },
+              {
+                "title": "jwasham/coding-interview-university",
+                "url": "https://github.com/jwasham/coding-interview-university",
+                "summary": "A complete computer science study plan to become a software engineer.",
+                "stars": 364154,
+                "forks": 85533,
+                "language": "",
+                "source": "github.com"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:26:06"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T12:27:31",
+      "user": " tìm skill UI UX cho codex",
+      "status": "answered",
+      "assistant_text": "Dưới đây là các **repository skill UI/UX dành riêng cho Codex (và các AI coding agent khác như Claude Code, Cursor)** được tìm thấy trên GitHub, sắp xếp theo số sao:\n\n---\n\n### 🏆 **Top Skills UI/UX cho Codex**\n\n| # | Repository | ⭐ Stars | Ngôn ngữ | Mô tả chính |\n|---|------------|---------|----------|-------------|\n| 1 | **[layr-hq/layr](https://github.com/layr-hq/layr)** | 79 | — | Hệ thống **UX, design, product optimization** modular: biến giao diện do AI xây thành production-grade apps. Áp dụng nguyên tắc thiết kế đã chứng minh thành ràng buộc bắt buộc (constraints). Hỗ trợ **Claude, Codex, Cursor** và các agentic AI khác. |\n| 2 | **[Moddingflow/better-design](https://github.com/Moddingflow/better-design)** | 51 | JavaScript | **UI/UX & frontend design skill** chuyên biệt cho AI coding agents: Codex, Claude Code, Cursor. Bao gồm: Art direction, `DESIGN.md`, design tokens, motion, accessibility, validation giao diện thực tế. |\n| 3 | **[What0ff/snowe-ui-skill](https://github.com/What0ff/snowe-ui-skill)** | 11 | Python | Skill **UI/UX architecture-first** cho Codex: khung quyết định nhân quả (causal decision framing), tổng hợp dựa trên bằng chứng (evidence-led synthesis), đánh giá render, triển khai responsive. |\n| 4 | **[codewithasnari/nongeneric](https://github.com/codewithasnari/nongeneric)** | 10 | JavaScript | **Anti-slop design + GSAP motion skill pack** cho AI agents. Có **82 quy tắc UI detector** để tránh giao diện generic, nhàm chán. |\n| 5 | **[yappologistic/frontend-GOD](https://github.com/yappologistic/frontend-GOD)** | 6 | JavaScript | **Codex plugin** cho frontend production-grade: design, UX, accessibility, responsiveness, visual QA. |\n| 6 | **[MrBlushu/blushu-design-skills](https://github.com/MrBlushu/blushu-design-skills)** | 6 | Python | Workflow thiết kế **modular, vui vẻ** để xây website suy nghĩ kỹ với Codex và Claude Code. |\n| 7 | **[Cznorth/front-interaction-design-skill](https://github.com/Cznorth/front-interaction-design-skill)** | 4 | — | Skill cho **frontend interaction design**, nén UX flow, state modeling, AI UI constraints. |\n| 8 | **[RealTask/MAX-DESIGN](https://github.com/RealTask/MAX-DESIGN)** | 4 | JavaScript | **Production-ready UI/UX skills**: frontend design, design systems, accessibility, motion, design review. |\n| 9 | **[SpellbourneDZ/ui-design-skill](https://github.com/SpellbourneDZ/ui-design-skill)** | 3 | — | Agent skill xây dựng **giao diện polished, product-specific** tránh \"AI UI slop\" chung chung. |\n| 10 | **[arham777/ui-ux-kit](https://github.com/arham777/ui-ux-kit)** | 3 | — | **Taste-first, anti-AI-slop** design skill cho web/app. Định tuyến brief đến đúng rules (landing, dashboard, e-commerce, mobile, redesign...), xuất `DESIGN_SYSTEM.md`. Portable `SKILL.md` cho **Claude Code, Cursor, Codex**. |\n\n---\n\n### 💡 **Phân loại nhanh theo nhu cầu**\n\n| Nhu cầu | Repo khuyến nghị |\n|---------|------------------|\n| **Hệ thống toàn diện, production-grade, constraint-based** | `layr-hq/layr` (⭐79) |\n| **Design tokens, art direction, accessibility, motion, validation thực tế** | `Moddingflow/better-design` (⭐51) |\n| **Kiến trúc quyết định nhân quả, evidence-led, responsive** | `What0ff/snowe-ui-skill` |\n| **Chống generic/slop, có detector quy tắc (82 rules), GSAP motion** | `codewithasnari/nongeneric` |\n| **Plugin Codex chuyên frontend + visual QA** | `yappologistic/frontend-GOD` |\n| **Portable SKILL.md, đa dạng loại dự án, xuất DESIGN_SYSTEM.md** | `arham777/ui-ux-kit` |\n\n---\n\n### 🔧 **Cách dùng chung**\nHầu hết các repo trên đều cung cấp file **`SKILL.md`** hoặc **`AGENTS.md`** – bạn copy vào project hoặc cấu hình agent (Codex/Claude Code/Cursor) để agent \"học\" skill này và áp dụng khi sinh code UI/UX.\n\n> **Lưu ý:** Đây là các project cộng đồng (community-maintained), không phải skill chính thức của OpenAI. Hãy review code trước khi dùng trong production.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "github_search",
+              "args": {
+                "query": "Codex UI UX design frontend",
+                "limit": 10,
+                "sort_by": "stars"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "github_search",
+              "args": {
+                "query": "Codex UI UX design frontend",
+                "limit": 10,
+                "sort_by": "stars"
+              },
+              "result": {
+                "tool": "get_repo_inform",
+                "query": "Codex UI UX design frontend",
+                "language": "",
+                "sort_by": "stars",
+                "total_count": 46,
+                "items": [
+                  {
+                    "title": "layr-hq/layr",
+                    "url": "https://github.com/layr-hq/layr",
+                    "summary": "A modular UX, design, and product optimisation system for turning AI-built interfaces into production-grade apps, turning proven principles into enforceable constraints that reduce friction, build trust, and drive action. Works with Claude, Codex, Cursor + all other agentic AI models.",
+                    "stars": 79,
+                    "forks": 6,
+                    "language": "",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "Moddingflow/better-design",
+                    "url": "https://github.com/Moddingflow/better-design",
+                    "summary": "UI/UX and frontend design skill for AI coding agents: Codex, Claude Code, Cursor. Art direction, DESIGN.md, design tokens, motion, accessibility, and real interface validation.",
+                    "stars": 51,
+                    "forks": 1,
+                    "language": "JavaScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "What0ff/snowe-ui-skill",
+                    "url": "https://github.com/What0ff/snowe-ui-skill",
+                    "summary": "Architecture-first UI/UX design skill for Codex: causal decision framing, evidence-led synthesis, rendered evaluation, and responsive implementation.",
+                    "stars": 11,
+                    "forks": 0,
+                    "language": "Python",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "codewithasnari/nongeneric",
+                    "url": "https://github.com/codewithasnari/nongeneric",
+                    "summary": "Anti-slop design + GSAP motion skill pack for AI coding agents, with an 82-rule UI detector.",
+                    "stars": 10,
+                    "forks": 0,
+                    "language": "JavaScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "yappologistic/frontend-GOD",
+                    "url": "https://github.com/yappologistic/frontend-GOD",
+                    "summary": "Codex plugin for production-grade frontend design, UX, accessibility, responsiveness, and visual QA.",
+                    "stars": 6,
+                    "forks": 1,
+                    "language": "JavaScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "MrBlushu/blushu-design-skills",
+                    "url": "https://github.com/MrBlushu/blushu-design-skills",
+                    "summary": "A playful, modular design workflow for building thoughtful websites with Codex and Claude Code.",
+                    "stars": 6,
+                    "forks": 0,
+                    "language": "Python",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "Cznorth/front-interaction-design-skill",
+                    "url": "https://github.com/Cznorth/front-interaction-design-skill",
+                    "summary": "Codex skill for frontend interaction design, UX flow compression, state modeling, and AI UI constraints",
+                    "stars": 4,
+                    "forks": 0,
+                    "language": "",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "RealTask/MAX-DESIGN",
+                    "url": "https://github.com/RealTask/MAX-DESIGN",
+                    "summary": "Production-ready UI/UX design skills for AI coding agents: frontend design, design systems, accessibility, motion, and design review.",
+                    "stars": 4,
+                    "forks": 0,
+                    "language": "JavaScript",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "SpellbourneDZ/ui-design-skill",
+                    "url": "https://github.com/SpellbourneDZ/ui-design-skill",
+                    "summary": "An agent skill for building polished, product-specific interfaces without generic AI UI slop.",
+                    "stars": 3,
+                    "forks": 0,
+                    "language": "",
+                    "source": "github.com"
+                  },
+                  {
+                    "title": "arham777/ui-ux-kit",
+                    "url": "https://github.com/arham777/ui-ux-kit",
+                    "summary": "Taste-first, anti-AI-slop design skill for any web or app UI — routes the brief to the right rules (landing, dashboard, product, e-commerce, mobile, redesign) and documents the result in a DESIGN_SYSTEM.md. Portable SKILL.md for Claude Code, Cursor, Codex & more.",
+                    "stars": 3,
+                    "forks": 1,
+                    "language": "",
+                    "source": "github.com"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là các **repository skill UI/UX dành riêng cho Codex (và các AI coding agent khác như Claude Code, Cursor)** được tìm thấy trên GitHub, sắp xếp theo số sao:\n\n---\n\n### 🏆 **Top Skills UI/UX cho Codex**\n\n| # | Repository | ⭐ Stars | Ngôn ngữ | Mô tả chính |\n|---|------------|---------|----------|-------------|\n| 1 | **[layr-hq/layr](https://github.com/layr-hq/layr)** | 79 | — | Hệ thống **UX, design, product optimization** modular: biến giao diện do AI xây thành production-grade apps. Áp dụng nguyên tắc thiết kế đã chứng minh thành ràng buộc bắt buộc (constraints). Hỗ trợ **Claude, Codex, Cursor** và các agentic AI khác. |\n| 2 | **[Moddingflow/better-design](https://github.com/Moddingflow/better-design)** | 51 | JavaScript | **UI/UX & frontend design skill** chuyên biệt cho AI coding agents: Codex, Claude Code, Cursor. Bao gồm: Art direction, `DESIGN.md`, design tokens, motion, accessibility, validation giao diện thực tế. |\n| 3 | **[What0ff/snowe-ui-skill](https://github.com/What0ff/snowe-ui-skill)** | 11 | Python | Skill **UI/UX architecture-first** cho Codex: khung quyết định nhân quả (causal decision framing), tổng hợp dựa trên bằng chứng (evidence-led synthesis), đánh giá render, triển khai responsive. |\n| 4 | **[codewithasnari/nongeneric](https://github.com/codewithasnari/nongeneric)** | 10 | JavaScript | **Anti-slop design + GSAP motion skill pack** cho AI agents. Có **82 quy tắc UI detector** để tránh giao diện generic, nhàm chán. |\n| 5 | **[yappologistic/frontend-GOD](https://github.com/yappologistic/frontend-GOD)** | 6 | JavaScript | **Codex plugin** cho frontend production-grade: design, UX, accessibility, responsiveness, visual QA. |\n| 6 | **[MrBlushu/blushu-design-skills](https://github.com/MrBlushu/blushu-design-skills)** | 6 | Python | Workflow thiết kế **modular, vui vẻ** để xây website suy nghĩ kỹ với Codex và Claude Code. |\n| 7 | **[Cznorth/front-interaction-design-skill](https://github.com/Cznorth/front-interaction-design-skill)** | 4 | — | Skill cho **frontend interaction design**, nén UX flow, state modeling, AI UI constraints. |\n| 8 | **[RealTask/MAX-DESIGN](https://github.com/RealTask/MAX-DESIGN)** | 4 | JavaScript | **Production-ready UI/UX skills**: frontend design, design systems, accessibility, motion, design review. |\n| 9 | **[SpellbourneDZ/ui-design-skill](https://github.com/SpellbourneDZ/ui-design-skill)** | 3 | — | Agent skill xây dựng **giao diện polished, product-specific** tránh \"AI UI slop\" chung chung. |\n| 10 | **[arham777/ui-ux-kit](https://github.com/arham777/ui-ux-kit)** | 3 | — | **Taste-first, anti-AI-slop** design skill cho web/app. Định tuyến brief đến đúng rules (landing, dashboard, e-commerce, mobile, redesign...), xuất `DESIGN_SYSTEM.md`. Portable `SKILL.md` cho **Claude Code, Cursor, Codex**. |\n\n---\n\n### 💡 **Phân loại nhanh theo nhu cầu**\n\n| Nhu cầu | Repo khuyến nghị |\n|---------|------------------|\n| **Hệ thống toàn diện, production-grade, constraint-based** | `layr-hq/layr` (⭐79) |\n| **Design tokens, art direction, accessibility, motion, validation thực tế** | `Moddingflow/better-design` (⭐51) |\n| **Kiến trúc quyết định nhân quả, evidence-led, responsive** | `What0ff/snowe-ui-skill` |\n| **Chống generic/slop, có detector quy tắc (82 rules), GSAP motion** | `codewithasnari/nongeneric` |\n| **Plugin Codex chuyên frontend + visual QA** | `yappologistic/frontend-GOD` |\n| **Portable SKILL.md, đa dạng loại dự án, xuất DESIGN_SYSTEM.md** | `arham777/ui-ux-kit` |\n\n---\n\n### 🔧 **Cách dùng chung**\nHầu hết các repo trên đều cung cấp file **`SKILL.md`** hoặc **`AGENTS.md`** – bạn copy vào project hoặc cấu hình agent (Codex/Claude Code/Cursor) để agent \"học\" skill này và áp dụng khi sinh code UI/UX.\n\n> **Lưu ý:** Đây là các project cộng đồng (community-maintained), không phải skill chính thức của OpenAI. Hãy review code trước khi dùng trong production.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "github_search",
+          "args": {
+            "query": "Codex UI UX design frontend",
+            "limit": 10,
+            "sort_by": "stars"
+          },
+          "result": {
+            "tool": "get_repo_inform",
+            "query": "Codex UI UX design frontend",
+            "language": "",
+            "sort_by": "stars",
+            "total_count": 46,
+            "items": [
+              {
+                "title": "layr-hq/layr",
+                "url": "https://github.com/layr-hq/layr",
+                "summary": "A modular UX, design, and product optimisation system for turning AI-built interfaces into production-grade apps, turning proven principles into enforceable constraints that reduce friction, build trust, and drive action. Works with Claude, Codex, Cursor + all other agentic AI models.",
+                "stars": 79,
+                "forks": 6,
+                "language": "",
+                "source": "github.com"
+              },
+              {
+                "title": "Moddingflow/better-design",
+                "url": "https://github.com/Moddingflow/better-design",
+                "summary": "UI/UX and frontend design skill for AI coding agents: Codex, Claude Code, Cursor. Art direction, DESIGN.md, design tokens, motion, accessibility, and real interface validation.",
+                "stars": 51,
+                "forks": 1,
+                "language": "JavaScript",
+                "source": "github.com"
+              },
+              {
+                "title": "What0ff/snowe-ui-skill",
+                "url": "https://github.com/What0ff/snowe-ui-skill",
+                "summary": "Architecture-first UI/UX design skill for Codex: causal decision framing, evidence-led synthesis, rendered evaluation, and responsive implementation.",
+                "stars": 11,
+                "forks": 0,
+                "language": "Python",
+                "source": "github.com"
+              },
+              {
+                "title": "codewithasnari/nongeneric",
+                "url": "https://github.com/codewithasnari/nongeneric",
+                "summary": "Anti-slop design + GSAP motion skill pack for AI coding agents, with an 82-rule UI detector.",
+                "stars": 10,
+                "forks": 0,
+                "language": "JavaScript",
+                "source": "github.com"
+              },
+              {
+                "title": "yappologistic/frontend-GOD",
+                "url": "https://github.com/yappologistic/frontend-GOD",
+                "summary": "Codex plugin for production-grade frontend design, UX, accessibility, responsiveness, and visual QA.",
+                "stars": 6,
+                "forks": 1,
+                "language": "JavaScript",
+                "source": "github.com"
+              },
+              {
+                "title": "MrBlushu/blushu-design-skills",
+                "url": "https://github.com/MrBlushu/blushu-design-skills",
+                "summary": "A playful, modular design workflow for building thoughtful websites with Codex and Claude Code.",
+                "stars": 6,
+                "forks": 0,
+                "language": "Python",
+                "source": "github.com"
+              },
+              {
+                "title": "Cznorth/front-interaction-design-skill",
+                "url": "https://github.com/Cznorth/front-interaction-design-skill",
+                "summary": "Codex skill for frontend interaction design, UX flow compression, state modeling, and AI UI constraints",
+                "stars": 4,
+                "forks": 0,
+                "language": "",
+                "source": "github.com"
+              },
+              {
+                "title": "RealTask/MAX-DESIGN",
+                "url": "https://github.com/RealTask/MAX-DESIGN",
+                "summary": "Production-ready UI/UX design skills for AI coding agents: frontend design, design systems, accessibility, motion, and design review.",
+                "stars": 4,
+                "forks": 0,
+                "language": "JavaScript",
+                "source": "github.com"
+              },
+              {
+                "title": "SpellbourneDZ/ui-design-skill",
+                "url": "https://github.com/SpellbourneDZ/ui-design-skill",
+                "summary": "An agent skill for building polished, product-specific interfaces without generic AI UI slop.",
+                "stars": 3,
+                "forks": 0,
+                "language": "",
+                "source": "github.com"
+              },
+              {
+                "title": "arham777/ui-ux-kit",
+                "url": "https://github.com/arham777/ui-ux-kit",
+                "summary": "Taste-first, anti-AI-slop design skill for any web or app UI — routes the brief to the right rules (landing, dashboard, product, e-commerce, mobile, redesign) and documents the result in a DESIGN_SYSTEM.md. Portable SKILL.md for Claude Code, Cursor, Codex & more.",
+                "stars": 3,
+                "forks": 1,
+                "language": "",
+                "source": "github.com"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:28:12"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-11-10T12:41:22",
+      "user": "elonmusk hôm nay có gì",
+      "status": "answered",
+      "assistant_text": "Xin lỗi, hiện tại tôi **không thể truy xuất bài đăng mới nhất của @elonmusk** do lỗi cấu hình API (thiếu `RAPIDAPI_KEY` ở phía máy chủ).\n\nBạn có thể:\n- Kiểm tra trực tiếp tại: **https://x.com/elonmusk**\n- Hoặc thử lại sau vài phút nếu hệ thống đã được sửa.\n\nNếu bạn cần tóm tắt tin tức *về* Elon Musk (không phải bài đăng của chính ông) từ các nguồn báo chí, tôi có thể dùng `lookup` để tìm kiếm. Bạn có muốn tôi làm vậy không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "elonmusk",
+                "limit": 10
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "timeline",
+              "args": {
+                "screenname": "elonmusk",
+                "limit": 10
+              },
+              "result": {
+                "tool": "get_user_tweets",
+                "error": "RuntimeError",
+                "message": "Missing RAPIDAPI_KEY env var"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Xin lỗi, hiện tại tôi **không thể truy xuất bài đăng mới nhất của @elonmusk** do lỗi cấu hình API (thiếu `RAPIDAPI_KEY` ở phía máy chủ).\n\nBạn có thể:\n- Kiểm tra trực tiếp tại: **https://x.com/elonmusk**\n- Hoặc thử lại sau vài phút nếu hệ thống đã được sửa.\n\nNếu bạn cần tóm tắt tin tức *về* Elon Musk (không phải bài đăng của chính ông) từ các nguồn báo chí, tôi có thể dùng `lookup` để tìm kiếm. Bạn có muốn tôi làm vậy không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "elonmusk",
+            "limit": 10
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "error": "RuntimeError",
+            "message": "Missing RAPIDAPI_KEY env var"
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:41:35"
+    },
+    {
+      "turn_index": 5,
+      "started_at": "2026-11-10T12:57:25",
+      "user": " 2 cộng 3",
+      "status": "answered",
+      "assistant_text": "Tôi là trợ lý nghiên cứu và tin tức, không thực hiện giải toán học hay lập trình. Tôi chỉ hỗ trợ:\n- Tìm kiếm tin tức, bài báo, báo cáo mới nhất\n- Tra cứu bài đăng trên X/Twitter theo chủ đề hoặc tài khoản\n- Tìm paper khoa học, repo GitHub, tài liệu kỹ thuật\n- Tóm tắt nội dung từ URL bạn cung cấp\n\nNếu bạn cần tra cứu tài liệu về toán học, thuật toán hoặc bài báo khoa học liên quan, hãy cho tôi biết chủ đề cụ thể — tôi sẽ tìm giúp bạn.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Tôi là trợ lý nghiên cứu và tin tức, không thực hiện giải toán học hay lập trình. Tôi chỉ hỗ trợ:\n- Tìm kiếm tin tức, bài báo, báo cáo mới nhất\n- Tra cứu bài đăng trên X/Twitter theo chủ đề hoặc tài khoản\n- Tìm paper khoa học, repo GitHub, tài liệu kỹ thuật\n- Tóm tắt nội dung từ URL bạn cung cấp\n\nNếu bạn cần tra cứu tài liệu về toán học, thuật toán hoặc bài báo khoa học liên quan, hãy cho tôi biết chủ đề cụ thể — tôi sẽ tìm giúp bạn.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T12:57:31"
+    }
+  ]
+}

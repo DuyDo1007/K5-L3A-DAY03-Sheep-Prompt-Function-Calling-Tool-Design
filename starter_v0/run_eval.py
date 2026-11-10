@@ -78,6 +78,43 @@ def safe_slug(value: str) -> str:
     return slug.strip("_") or "run"
 
 
+def save_run(runs_dir: Path, payload: dict[str, Any]) -> Path:
+    """Number saved runs independently of the prompt version; never overwrite a log."""
+    runs_dir.mkdir(parents=True, exist_ok=True)
+    numbers = []
+    for path in runs_dir.glob("*.json"):
+        match = re.match(r"^v(\d{2,})(?:_|\.json$)", path.name, re.IGNORECASE)
+        if match:
+            numbers.append(int(match.group(1)))
+    number = max(numbers, default=0) + 1
+    suffix = "_".join(safe_slug(str(payload[key])) for key in ("phase", "suite", "provider"))
+    while True:
+        run_id = f"v{number:02d}_{suffix}"
+        out_path = runs_dir / f"{run_id}.json"
+        # Reserve the sequence number across concurrent runs with different suffixes.
+        reservation = runs_dir / f".v{number:02d}.lock"
+        try:
+            with reservation.open("x", encoding="utf-8"):
+                pass
+        except FileExistsError:
+            number += 1
+            continue
+        try:
+            if any(runs_dir.glob(f"v{number:02d}_*.json")):
+                number += 1
+                continue
+            saved_payload = {**payload, "run_id": run_id, "run_number": number}
+            try:
+                with out_path.open("x", encoding="utf-8") as output:
+                    json.dump(saved_payload, output, ensure_ascii=False, indent=2, default=str)
+            except FileExistsError:
+                number += 1
+                continue
+            return out_path
+        finally:
+            reservation.unlink(missing_ok=True)
+
+
 def case_messages(case: dict[str, Any]) -> list[dict[str, str]]:
     if "turns" in case:
         turns = case["turns"]
@@ -326,16 +363,7 @@ def main() -> None:
     args.runs_dir.mkdir(parents=True, exist_ok=True)
     now = datetime.now()
     generated_at = now.isoformat(timespec="seconds")
-    timestamp = now.strftime("%Y%m%dT%H%M%S%f")
-    run_id = "_".join([
-        safe_slug(args.version),
-        safe_slug(args.phase),
-        safe_slug(args.suite),
-        safe_slug(args.provider),
-        timestamp,
-    ])
     payload = {
-        "run_id": run_id,
         "version": args.version,
         **artifact_version_dict(artifact_version),
         "phase": args.phase,
@@ -351,8 +379,7 @@ def main() -> None:
         "results": results,
     }
 
-    out_path = args.runs_dir / f"{run_id}.json"
-    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    out_path = save_run(args.runs_dir, payload)
     print_table(results, summary)
     print(f"\nArtifact version: {artifact_version.artifact_version}")
     print(f"\nSaved: {out_path}")

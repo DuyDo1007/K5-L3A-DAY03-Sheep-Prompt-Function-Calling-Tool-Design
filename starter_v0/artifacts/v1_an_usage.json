@@ -1,0 +1,705 @@
+{
+  "version": "v1_an",
+  "provider": "openrouter",
+  "requested_model": "google/gemini-3.5-flash-lite",
+  "dataset_id": "day04_v2_research_base",
+  "case_count": 20,
+  "started_at_utc": "2026-11-10T04:07:38.409549+00:00",
+  "status": "completed",
+  "run_file": "runs\\v1_an_B_base_openrouter_20261110T110855696060.json",
+  "requests": [
+    {
+      "case_id": "R01_user_tweets_routing",
+      "status": "response_received",
+      "response_id": "gen-1794283660-VbK0ABwgd6RwjXBlwesS",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 19,
+        "prompt_tokens": 1465,
+        "total_tokens": 1484,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.000487,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.000487,
+          "upstream_inference_prompt_cost": 0.0004395,
+          "upstream_inference_completions_cost": 4.75e-05
+        }
+      }
+    },
+    {
+      "case_id": "R02_search_tweets_routing",
+      "status": "response_received",
+      "response_id": "gen-1794283663-3oI6xMsDsHjlh7cTgmgW",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 26,
+        "prompt_tokens": 1469,
+        "total_tokens": 1495,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005057,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005057,
+          "upstream_inference_prompt_cost": 0.0004407,
+          "upstream_inference_completions_cost": 6.5e-05
+        }
+      }
+    },
+    {
+      "case_id": "R03_web_news_routing",
+      "status": "response_received",
+      "response_id": "gen-1794283668-Z7T44BtzOxoiYRfrwV3W",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 30,
+        "prompt_tokens": 1466,
+        "total_tokens": 1496,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005148,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005148,
+          "upstream_inference_prompt_cost": 0.0004398,
+          "upstream_inference_completions_cost": 7.5e-05
+        }
+      }
+    },
+    {
+      "case_id": "R04_read_url_routing",
+      "status": "response_received",
+      "response_id": "gen-1794283674-wWGAoksai7FjITG5EDZ0",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 24,
+        "prompt_tokens": 1475,
+        "total_tokens": 1499,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005025,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005025,
+          "upstream_inference_prompt_cost": 0.0004425,
+          "upstream_inference_completions_cost": 6e-05
+        }
+      }
+    },
+    {
+      "case_id": "R05_limit_arg",
+      "status": "response_received",
+      "response_id": "gen-1794283687-t0oD49lq4Ioofk4n7dR3",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 22,
+        "prompt_tokens": 1467,
+        "total_tokens": 1489,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0004951,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0004951,
+          "upstream_inference_prompt_cost": 0.0004401,
+          "upstream_inference_completions_cost": 5.5e-05
+        }
+      }
+    },
+    {
+      "case_id": "R06_timeframe_arg",
+      "status": "response_received",
+      "response_id": "gen-1794283690-8Yq66NXjkBbQGD0lEJ2g",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 31,
+        "prompt_tokens": 1462,
+        "total_tokens": 1493,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005161,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005161,
+          "upstream_inference_prompt_cost": 0.0004386,
+          "upstream_inference_completions_cost": 7.75e-05
+        }
+      }
+    },
+    {
+      "case_id": "R07_search_type_arg",
+      "status": "response_received",
+      "response_id": "gen-1794283691-WFIT1e21rKJc1Qj2LnmA",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 1468,
+        "total_tokens": 1493,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005029,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005029,
+          "upstream_inference_prompt_cost": 0.0004404,
+          "upstream_inference_completions_cost": 6.25e-05
+        }
+      }
+    },
+    {
+      "case_id": "R08_out_of_scope",
+      "status": "response_received",
+      "response_id": "gen-1794283697-BR6R6FXemRQAKhva3zlt",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 1473,
+        "total_tokens": 1656,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0008994,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0008994,
+          "upstream_inference_prompt_cost": 0.0004419,
+          "upstream_inference_completions_cost": 0.0004575
+        }
+      }
+    },
+    {
+      "case_id": "R09_no_tool_capability",
+      "status": "response_received",
+      "response_id": "gen-1794283703-OpX9Uk6Q4aVCDXDFZ1fl",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 275,
+        "prompt_tokens": 1465,
+        "total_tokens": 1740,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.001127,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.001127,
+          "upstream_inference_prompt_cost": 0.0004395,
+          "upstream_inference_completions_cost": 0.0006875
+        }
+      }
+    },
+    {
+      "case_id": "R10_missing_handle",
+      "status": "response_received",
+      "response_id": "gen-1794283707-xMLDZfbhpciNfLYIwfMu",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 48,
+        "prompt_tokens": 1466,
+        "total_tokens": 1514,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005598,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005598,
+          "upstream_inference_prompt_cost": 0.0004398,
+          "upstream_inference_completions_cost": 0.00012
+        }
+      }
+    },
+    {
+      "case_id": "R11_missing_url",
+      "status": "response_received",
+      "response_id": "gen-1794283709-fbHV60QxSFWX8mw0UmjE",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 1464,
+        "total_tokens": 1505,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005417,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005417,
+          "upstream_inference_prompt_cost": 0.0004392,
+          "upstream_inference_completions_cost": 0.0001025
+        }
+      }
+    },
+    {
+      "case_id": "R12_confirm_before_send",
+      "status": "response_received",
+      "response_id": "gen-1794283710-I4cTujuUtSQmVfMcmfJU",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 58,
+        "prompt_tokens": 1465,
+        "total_tokens": 1523,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005845,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005845,
+          "upstream_inference_prompt_cost": 0.0004395,
+          "upstream_inference_completions_cost": 0.000145
+        }
+      }
+    },
+    {
+      "case_id": "R13_parallel_web_and_tweets",
+      "status": "response_received",
+      "response_id": "gen-1794283713-84lKrHfHv2YJgahqESUc",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 51,
+        "prompt_tokens": 1470,
+        "total_tokens": 1521,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005685,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005685,
+          "upstream_inference_prompt_cost": 0.000441,
+          "upstream_inference_completions_cost": 0.0001275
+        }
+      }
+    },
+    {
+      "case_id": "R14_out_of_scope_coding",
+      "status": "response_received",
+      "response_id": "gen-1794283714-ngX8k7OOGpgbfuwiVxUc",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 84,
+        "prompt_tokens": 1468,
+        "total_tokens": 1552,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0006504,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0006504,
+          "upstream_inference_prompt_cost": 0.0004404,
+          "upstream_inference_completions_cost": 0.00021
+        }
+      }
+    },
+    {
+      "case_id": "M01_clarify_then_fill",
+      "status": "response_received",
+      "response_id": "gen-1794283716-CXGI6MTh7asCHRfLrkSw",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 21,
+        "prompt_tokens": 1536,
+        "total_tokens": 1557,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005133,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005133,
+          "upstream_inference_prompt_cost": 0.0004608,
+          "upstream_inference_completions_cost": 5.25e-05
+        }
+      }
+    },
+    {
+      "case_id": "M02_carryover_timeframe",
+      "status": "response_received",
+      "response_id": "gen-1794283724-qZcHCGtcSD0nTwYH0Gpd",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 1533,
+        "total_tokens": 1561,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005299,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005299,
+          "upstream_inference_prompt_cost": 0.0004599,
+          "upstream_inference_completions_cost": 7e-05
+        }
+      }
+    },
+    {
+      "case_id": "M03_correction_handle",
+      "status": "response_received",
+      "response_id": "gen-1794283731-EXnQA1n8jbykXk6SC2ce",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 20,
+        "prompt_tokens": 1533,
+        "total_tokens": 1553,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005099,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005099,
+          "upstream_inference_prompt_cost": 0.0004599,
+          "upstream_inference_completions_cost": 5e-05
+        }
+      }
+    },
+    {
+      "case_id": "M04_clarify_then_url",
+      "status": "response_received",
+      "response_id": "gen-1794283732-xm3fv0QvuWiBlciOH8lC",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 24,
+        "prompt_tokens": 1534,
+        "total_tokens": 1558,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005202,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005202,
+          "upstream_inference_prompt_cost": 0.0004602,
+          "upstream_inference_completions_cost": 6e-05
+        }
+      }
+    },
+    {
+      "case_id": "M05_correction_limit",
+      "status": "response_received",
+      "response_id": "gen-1794283733-oMat6Nblj37IRUZ7uMF2",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 21,
+        "prompt_tokens": 1532,
+        "total_tokens": 1553,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005121,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005121,
+          "upstream_inference_prompt_cost": 0.0004596,
+          "upstream_inference_completions_cost": 5.25e-05
+        }
+      }
+    },
+    {
+      "case_id": "M06_switch_tool",
+      "status": "response_received",
+      "response_id": "gen-1794283735-ADPeTjFYT3pVtGtebfLr",
+      "actual_model": "google/gemini-3.5-flash-lite",
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 1537,
+        "total_tokens": 1565,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0
+        },
+        "cost": 0.0005311,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0005311,
+          "upstream_inference_prompt_cost": 0.0004611,
+          "upstream_inference_completions_cost": 7e-05
+        }
+      }
+    }
+  ],
+  "capture_method": "Usage copied from real provider.complete response.raw. Original runner, tools and grading; no simulated responses.",
+  "run_id": "v1_an_B_base_openrouter_20261110T110855696060",
+  "finished_at_utc": "2026-11-10T04:08:55.730728+00:00",
+  "totals": {
+    "prompt_tokens": 29748,
+    "completion_tokens": 1059,
+    "total_tokens": 30807,
+    "cost_usd": "0.0115719",
+    "responses_with_usage": 20,
+    "actual_models": [
+      "google/gemini-3.5-flash-lite"
+    ]
+  }
+}

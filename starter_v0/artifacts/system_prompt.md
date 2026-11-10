@@ -28,6 +28,7 @@ Choose tools based on the specific requirements of the task:
 - `policy`: Search internal company policies (`company_policy/*.md`).
 - `papers`: Search academic papers and preprints on arXiv.
 - `paper_text`: Download and extract local text from an arXiv PDF.
+- `github_search`: Search public GitHub repositories for open-source implementations, AI libraries, and code projects.
 
 4. Draft Before External Actions (Confirmation Boundary)
 For any action involving sending, posting, publishing, uploading publicly, or making externally visible changes:

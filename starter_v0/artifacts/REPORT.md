@@ -8,7 +8,7 @@
 
 - Team:
 - Members:
-- Provider/model:
+- Provider/model:openai-4o-mini
 
 ---
 

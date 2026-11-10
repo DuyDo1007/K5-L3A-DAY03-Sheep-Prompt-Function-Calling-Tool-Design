@@ -1,0 +1,327 @@
+{
+  "transcript_id": "v3_openrouter_ui_20261110T110901234178",
+  "version": "v3",
+  "artifact_version": "v3+peb1c8179815b+t5b22a2476d41",
+  "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
+  "tools_hash": "5b22a2476d41b989d5dc1e54f24ce7890e781909deb2f7afafb856ab53a6d7c0",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Vin-AI\\K5-L3A-DAY03-Sheep-Prompt-Function-Calling-Tool-Design\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:09:01",
+  "updated_at": "2026-11-10T11:12:35",
+  "source": "streamlit_ui",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T11:09:23",
+      "user": "Tìm các bài đăng mới nhất nói về Claude Code",
+      "status": "answered",
+      "assistant_text": "I encountered an issue while trying to fetch the latest posts about \"Claude Code.\" Unfortunately, it seems there was a problem with the tool I used. \n\nI'll attempt to gather the information again. Please hold on.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "Claude Code",
+                "search_type": "Latest",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "Claude Code",
+                "search_type": "Latest",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "error": "RuntimeError",
+                "message": "Missing RAPIDAPI_KEY env var"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "I encountered an issue while trying to fetch the latest posts about \"Claude Code.\" Unfortunately, it seems there was a problem with the tool I used. \n\nI'll attempt to gather the information again. Please hold on.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "Claude Code",
+            "search_type": "Latest",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "error": "RuntimeError",
+            "message": "Missing RAPIDAPI_KEY env var"
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T11:09:33"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T11:10:02",
+      "user": "thông tin mới ",
+      "status": "answered",
+      "assistant_text": "Here are the latest articles about Claude Code:\n\n1. **[Claude Code Secrets: 1,379 Exposed on GitHub [2026]](https://shattered.io/claude-code-settings-local-json-1379-secrets-github-2026)** - This article discusses how Claude Code, developed by Anthropic, can remember shell commands that users approve, potentially leading to sensitive information being exposed in public repositories. (Source: shattered.io)\n\n2. **[Claude Code settings files expose sensitive data on GitHub | brief | SC Media](https://www.scworld.com/brief/claude-code-settings-files-expose-sensitive-data-on-github)** - Researchers found that Claude Code's local settings files can leak sensitive information, including database passwords and API tokens, when users automate command approvals. (Source: scworld.com)\n\n3. **[JPMorganChase Broadens Claude Code Use Beyond Engineering Teams – Unite.AI](https://www.unite.ai/jpmorganchase-broadens-claude-code-use-beyond-engineering-teams)** - This article highlights how JPMorganChase is expanding the use of Claude Code beyond engineering teams to enhance productivity and deliver customized client solutions. (Source: unite.ai)\n\n4. **[Did Claude Code’s ‘don’t ask again’ option accidentally expose your enterprise's passwords and keys? | VentureBeat](https://venturebeat.com/security/did-claude-codes-dont-ask-again-option-accidentally-expose-your-enterprises-passwords-and-keys)** - A warning about how the convenience feature in Claude Code can lead to the exposure of sensitive credentials stored in local settings files. (Source: venturebeat.com)\n\n5. **[Claude Code settings files expose thousands of secrets on GitHub - Ars Technica](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github)** - This article reports on the findings of AI security researchers who discovered thousands of sensitive credentials in Claude Code settings files on GitHub. (Source: arstechnica.com)\n\nFeel free to check these articles for more detailed information!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "Claude Code",
+                "search_type": "Latest",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "Claude Code",
+                "search_type": "Latest",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "error": "RuntimeError",
+                "message": "Missing RAPIDAPI_KEY env var"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "Claude Code",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "Claude Code",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "Claude Code",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "Claude Code Secrets: 1,379 Exposed on GitHub [2026]",
+                    "url": "https://shattered.io/claude-code-settings-local-json-1379-secrets-github-2026",
+                    "source": "shattered.io",
+                    "summary": "The mechanism is mundane, which is the point. Claude Code, built by Anthropic, can remember a shell command you approved so it never asks again. If that command contained a password or token, the plain text lands in the file. Developers then commit the whole project folder, and the file goes public with it. [...] Claude Code reads settings from several scopes. Anthropic’s settings reference lists user, project, local and managed levels. Knowing which file is shared and which is personal helps you decide where a rule belongs and what Git will do with it. [...] Claude Code asks permission before it runs shell commands. The prompt includes an option reading “Yes, and don’t ask again.” Pick it, and the tool can save the approved command into `.claude/settings.local.json` so the same command runs silently next time.",
+                    "score": 0.7491794
+                  },
+                  {
+                    "title": "Claude Code settings files expose sensitive data on GitHub | brief | SC Media",
+                    "url": "https://www.scworld.com/brief/claude-code-settings-files-expose-sensitive-data-on-github",
+                    "source": "scworld.com",
+                    "summary": "AI/ML, Generative AI, Threat Intelligence\n\n# Claude Code settings files expose sensitive data on GitHub\n\nBy SC Staff\n\n(Credit: ardasavasciogullari – stock.adobe.com)\n\n(Credit: ardasavasciogullari – stock.adobe.com)\n\nClaude Code is leaking sensitive information on public GitHub repositories due to a flaw in how the tool manages local configuration settings, based on information published by Ars Technica. [...] Researchers at Apiiro discovered that Claude Code stores user-approved shell commands in a local settings file. When users select the option to automate future approvals, the tool saves these commands—which often contain database passwords, API tokens and root logins—directly into the file. While Anthropic documentation suggests these files should be ignored by version control, the settings are not automatically excluded at the repository level. This oversight leads to accidental uploads when",
+                    "score": 0.74385756
+                  },
+                  {
+                    "title": "JPMorganChase Broadens Claude Code Use Beyond Engineering Teams – Unite.AI",
+                    "url": "https://www.unite.ai/jpmorganchase-broadens-claude-code-use-beyond-engineering-teams",
+                    "source": "unite.ai",
+                    "summary": "At the center of the engineering expansion is Claude Code, Anthropic’s coding agent, which plans work, writes code, runs tests and opens pull requests. In the Corporate and Investment Bank, Anthropic says work is moving into production faster, with the resulting capacity redeployed against business priorities. Engineers are modernizing additional legacy systems and sharing their own agents, including tools for pull-request review and self-healing.\n\n## Work Beyond the Codebase [...] In Asset & Wealth Management, JPMorganChase is placing employees with business insight alongside technology and product specialists in small, empowered teams. Claude Code is now part of their engineering workflow. Anthropic says this structure is helping the teams deliver customized client investment solutions at scale and move faster, while every change faces more rigorous testing before it reaches clients. [...] ## Controls Decide What Reaches Production\n\nClaude Code runs inside Devspace, JPMorganChase’s containerized development platform, on the firm’s own infrastructure rather than on developer desktops. Agents do not receive direct access to employee credentials or internal systems. Access widens in stages, and each new Claude model must pass the bank’s approval process before employees can use it.",
+                    "score": 0.72884524
+                  },
+                  {
+                    "title": "Did Claude Code’s ‘don’t ask again’ option accidentally expose your enterprise's passwords and keys? | VentureBeat",
+                    "url": "https://venturebeat.com/security/did-claude-codes-dont-ask-again-option-accidentally-expose-your-enterprises-passwords-and-keys",
+                    "source": "venturebeat.com",
+                    "summary": "The problem stems from a familiar convenience feature. Claude Code, like other AI coding assistants, can do more than suggest programming changes.\n\nIt can also propose and execute commands on a developer's computer, such as connecting to a database to troubleshoot an application or calling an external software service. These operations sometimes require passwords or other private credentials, which can appear directly within the commands Claude Code proposes. [...] Here's the catch: Rather than simply remembering that the command is permitted, Claude Code can save the entire command, including any passwords or access keys embedded within it, in a local settings file called\n\n```\n.claude/settings.local.json\n```\n\n.\n\nThat file is supposed to remain private on the developer's computer. Claude Code even takes steps to prevent it from being uploaded to GitHub, the widely used platform where developers store and share software code. [...] That's the warning from cybersecurity company Apiiro, whose researchers discovered 1,122 publicly accessible Claude Code settings files containing sensitive credentials, including database passwords, cloud service keys and tokens used to access other software systems.\n\nThe files belonged to individual developers and organizations, potentially giving unauthorized outsiders the information needed to access private databases, cloud infrastructure and other business services.",
+                    "score": 0.69820654
+                  },
+                  {
+                    "title": "Claude Code settings files expose thousands of secrets on GitHub - Ars Technica",
+                    "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+                    "source": "arstechnica.com",
+                    "summary": "Claude Code is leaking sensitive information on public GitHub instances thanks to a partial oversight in the way its settings files are handled. That’s the finding of AI security researchers at Apiiro, who discovered thousands of secrets, including database passwords, API tokens, and root logins, amid Claude Code settings files embedded in GitHub repositories. [...] The leak stems from the way Claude Code handles user approval for automated shell commands. When a user chooses the “Yes, and don’t ask again” option to approve running a command, that choice gets stored as part of a rule in the local “.claude/settings.local.json” file on the user’s computer. That rule is sometimes coded as a pattern, but the command itself is often written to that settings file as is, including any sensitive information that may be embedded within it.",
+                    "score": 0.69622743
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "assistant_text": "Here are the latest articles about Claude Code:\n\n1. **[Claude Code Secrets: 1,379 Exposed on GitHub [2026]](https://shattered.io/claude-code-settings-local-json-1379-secrets-github-2026)** - This article discusses how Claude Code, developed by Anthropic, can remember shell commands that users approve, potentially leading to sensitive information being exposed in public repositories. (Source: shattered.io)\n\n2. **[Claude Code settings files expose sensitive data on GitHub | brief | SC Media](https://www.scworld.com/brief/claude-code-settings-files-expose-sensitive-data-on-github)** - Researchers found that Claude Code's local settings files can leak sensitive information, including database passwords and API tokens, when users automate command approvals. (Source: scworld.com)\n\n3. **[JPMorganChase Broadens Claude Code Use Beyond Engineering Teams – Unite.AI](https://www.unite.ai/jpmorganchase-broadens-claude-code-use-beyond-engineering-teams)** - This article highlights how JPMorganChase is expanding the use of Claude Code beyond engineering teams to enhance productivity and deliver customized client solutions. (Source: unite.ai)\n\n4. **[Did Claude Code’s ‘don’t ask again’ option accidentally expose your enterprise's passwords and keys? | VentureBeat](https://venturebeat.com/security/did-claude-codes-dont-ask-again-option-accidentally-expose-your-enterprises-passwords-and-keys)** - A warning about how the convenience feature in Claude Code can lead to the exposure of sensitive credentials stored in local settings files. (Source: venturebeat.com)\n\n5. **[Claude Code settings files expose thousands of secrets on GitHub - Ars Technica](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github)** - This article reports on the findings of AI security researchers who discovered thousands of sensitive credentials in Claude Code settings files on GitHub. (Source: arstechnica.com)\n\nFeel free to check these articles for more detailed information!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "Claude Code",
+            "search_type": "Latest",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "error": "RuntimeError",
+            "message": "Missing RAPIDAPI_KEY env var"
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "Claude Code",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Claude Code",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Claude Code Secrets: 1,379 Exposed on GitHub [2026]",
+                "url": "https://shattered.io/claude-code-settings-local-json-1379-secrets-github-2026",
+                "source": "shattered.io",
+                "summary": "The mechanism is mundane, which is the point. Claude Code, built by Anthropic, can remember a shell command you approved so it never asks again. If that command contained a password or token, the plain text lands in the file. Developers then commit the whole project folder, and the file goes public with it. [...] Claude Code reads settings from several scopes. Anthropic’s settings reference lists user, project, local and managed levels. Knowing which file is shared and which is personal helps you decide where a rule belongs and what Git will do with it. [...] Claude Code asks permission before it runs shell commands. The prompt includes an option reading “Yes, and don’t ask again.” Pick it, and the tool can save the approved command into `.claude/settings.local.json` so the same command runs silently next time.",
+                "score": 0.7491794
+              },
+              {
+                "title": "Claude Code settings files expose sensitive data on GitHub | brief | SC Media",
+                "url": "https://www.scworld.com/brief/claude-code-settings-files-expose-sensitive-data-on-github",
+                "source": "scworld.com",
+                "summary": "AI/ML, Generative AI, Threat Intelligence\n\n# Claude Code settings files expose sensitive data on GitHub\n\nBy SC Staff\n\n(Credit: ardasavasciogullari – stock.adobe.com)\n\n(Credit: ardasavasciogullari – stock.adobe.com)\n\nClaude Code is leaking sensitive information on public GitHub repositories due to a flaw in how the tool manages local configuration settings, based on information published by Ars Technica. [...] Researchers at Apiiro discovered that Claude Code stores user-approved shell commands in a local settings file. When users select the option to automate future approvals, the tool saves these commands—which often contain database passwords, API tokens and root logins—directly into the file. While Anthropic documentation suggests these files should be ignored by version control, the settings are not automatically excluded at the repository level. This oversight leads to accidental uploads when",
+                "score": 0.74385756
+              },
+              {
+                "title": "JPMorganChase Broadens Claude Code Use Beyond Engineering Teams – Unite.AI",
+                "url": "https://www.unite.ai/jpmorganchase-broadens-claude-code-use-beyond-engineering-teams",
+                "source": "unite.ai",
+                "summary": "At the center of the engineering expansion is Claude Code, Anthropic’s coding agent, which plans work, writes code, runs tests and opens pull requests. In the Corporate and Investment Bank, Anthropic says work is moving into production faster, with the resulting capacity redeployed against business priorities. Engineers are modernizing additional legacy systems and sharing their own agents, including tools for pull-request review and self-healing.\n\n## Work Beyond the Codebase [...] In Asset & Wealth Management, JPMorganChase is placing employees with business insight alongside technology and product specialists in small, empowered teams. Claude Code is now part of their engineering workflow. Anthropic says this structure is helping the teams deliver customized client investment solutions at scale and move faster, while every change faces more rigorous testing before it reaches clients. [...] ## Controls Decide What Reaches Production\n\nClaude Code runs inside Devspace, JPMorganChase’s containerized development platform, on the firm’s own infrastructure rather than on developer desktops. Agents do not receive direct access to employee credentials or internal systems. Access widens in stages, and each new Claude model must pass the bank’s approval process before employees can use it.",
+                "score": 0.72884524
+              },
+              {
+                "title": "Did Claude Code’s ‘don’t ask again’ option accidentally expose your enterprise's passwords and keys? | VentureBeat",
+                "url": "https://venturebeat.com/security/did-claude-codes-dont-ask-again-option-accidentally-expose-your-enterprises-passwords-and-keys",
+                "source": "venturebeat.com",
+                "summary": "The problem stems from a familiar convenience feature. Claude Code, like other AI coding assistants, can do more than suggest programming changes.\n\nIt can also propose and execute commands on a developer's computer, such as connecting to a database to troubleshoot an application or calling an external software service. These operations sometimes require passwords or other private credentials, which can appear directly within the commands Claude Code proposes. [...] Here's the catch: Rather than simply remembering that the command is permitted, Claude Code can save the entire command, including any passwords or access keys embedded within it, in a local settings file called\n\n```\n.claude/settings.local.json\n```\n\n.\n\nThat file is supposed to remain private on the developer's computer. Claude Code even takes steps to prevent it from being uploaded to GitHub, the widely used platform where developers store and share software code. [...] That's the warning from cybersecurity company Apiiro, whose researchers discovered 1,122 publicly accessible Claude Code settings files containing sensitive credentials, including database passwords, cloud service keys and tokens used to access other software systems.\n\nThe files belonged to individual developers and organizations, potentially giving unauthorized outsiders the information needed to access private databases, cloud infrastructure and other business services.",
+                "score": 0.69820654
+              },
+              {
+                "title": "Claude Code settings files expose thousands of secrets on GitHub - Ars Technica",
+                "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+                "source": "arstechnica.com",
+                "summary": "Claude Code is leaking sensitive information on public GitHub instances thanks to a partial oversight in the way its settings files are handled. That’s the finding of AI security researchers at Apiiro, who discovered thousands of secrets, including database passwords, API tokens, and root logins, amid Claude Code settings files embedded in GitHub repositories. [...] The leak stems from the way Claude Code handles user approval for automated shell commands. When a user chooses the “Yes, and don’t ask again” option to approve running a command, that choice gets stored as part of a rule in the local “.claude/settings.local.json” file on the user’s computer. That rule is sometimes coded as a pattern, but the command itself is often written to that settings file as is, including any sensitive information that may be embedded within it.",
+                "score": 0.69622743
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T11:10:20"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T11:12:26",
+      "user": "giải thích rõ mục 5",
+      "status": "answered",
+      "assistant_text": "The article titled **\"[Claude Code is accidentally exposing secrets all over GitHub](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github)\"** from Ars Technica discusses a significant security issue related to Claude Code, developed by Anthropic. Here are the key points:\n\n1. **Leak of Sensitive Information**: Researchers from Apiiro discovered that Claude Code is leaking sensitive information, including database passwords, API tokens, and root logins, through its settings files that are sometimes uploaded to public GitHub repositories.\n\n2. **How the Leak Occurs**: The issue arises when users approve automated shell commands by selecting the “Yes, and don’t ask again” option. This choice is stored in a local settings file (`.claude/settings.local.json`). While the settings file is intended to remain local, it can inadvertently be uploaded to GitHub if the repository settings are not properly configured.\n\n3. **Git Ignore Settings**: Although Claude Code's documentation states that this settings file is added to the global `.gitignore` list (which prevents it from being shared), this setting does not apply at the repository level. Therefore, if a repository is cloned or a folder becomes a repository later, the sensitive file can be accidentally shared.\n\n4. **Extent of the Issue**: Apiiro's research found over 100,000 instances where the settings file was uploaded to public repositories, with about 1,100 of these containing sensitive information from 63 different organizations.\n\n5. **Previous Warnings**: This issue was flagged in bug reports as early as August 2025, but the reports were closed without action. The Claude Code team is aware of the problem and is looking into solutions to prevent such leaks.\n\nFor more detailed information, you can read the full article [here](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github).",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "fetch",
+              "args": {
+                "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "fetch",
+              "args": {
+                "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github"
+              },
+              "result": {
+                "tool": "read_url",
+                "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+                "items": [
+                  {
+                    "title": "Claude Code is accidentally exposing secrets all over GitHub - Ars Technica",
+                    "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+                    "source": "arstechnica.com",
+                    "summary": "[Skip to content](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/#main)\n\nText\nsettings\n\nStory text\n\nSizeSmallStandardLargeWidth\n\\*StandardWideLinksStandardOrange\n\n\\\\* Subscribers only\n\n[Learn more](https://arstechnica.com/store/product/subscriptions/)\n\nMinimize to nav\n\n\nClaude Code is leaking sensitive information on public GitHub instances thanks to a partial oversight in the way its settings files are handled. That’s the finding of AI security researchers at Apiiro, who [discovered thousands of secrets](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again), including database passwords, API tokens, and root logins, amid Claude Code settings files embedded in GitHub repositories.\n\nThe leak stems from the way Claude Code handles user approval for automated shell commands. When a user chooses the “Yes, and don’t ask again” option to approve running a command, that choice gets stored as part of a rule in the local “.claude/settings.local.json” file on the user’s computer. That rule is sometimes coded as a pattern, but the command itself is often written to that settings file as is, including any sensitive information that may be embedded within it.\n\nThis isn’t really a significant security issue if the settings file stays on the user’s local machine (assuming that machine doesn’t become compromised itself, of course). And Anthropic [notes in its Claude Code documentation](https://code.claude.com/docs/en/settings) that this particular settings file gets added to [the developer’s global .gitignore list](https://docs.github.com/en/get-started/git-basics/ignoring-files), which usually prevents it from being shared publicly.\n\nBut that .gitignore setting isn’t reflected at the repo level, meaning the sensitive file can be uploaded accidentally if a repo is cloned to another machine or a folder becomes a repo later, for instance. In many cases, Claude Code itself will commit changes to the settings file without the user’s input, Apiiro writes.\n\n![](https://cdn.arstechnica.net/wp-content/uploads/2026/11/claudsecrets.png)\n\nA breakdown of the kinds of secrets Apiiro found in publicly shared Claude Code settings files.\n\n\nCredit:\n[Apiiro](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\nA breakdown of the kinds of secrets Apiiro found in publicly shared Claude Code settings files.\n\n\nCredit:\n\n[Apiiro](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\nApiiro’s researchers found over 100,000 cases where Claude Code’s local settings file had been uploaded to a public GitHub repository. Of these, only about 1,100 from 63 different organizations contained secrets such as public API tokens, database passwords, or private keys. Even after these files are discovered and removed from a repository, the secrets can persist in forks of the original project if a GitHub user isn’t careful.\n\n## What’s to be done?\n\nAlthough this security issue is getting more attention now, it was [flagged in a Claude Code bug report](https://github.com/anthropics/claude-code/issues/5544) as far back as August 2025. [Other bug reports](https://github.com/anthropics/claude-code/issues/11982) also noted that the sensitive settings file was sometimes not added to the user’s .gitignore list or that Claude Code could [add the sensitive commands to another file](https://github.com/anthropics/claude-code/issues/91270) that was not protected from git sharing. These bug reports were all closed without action after 60 days of inactivity.\n\nIn [a comment thread on Hacker News](https://news.ycombinator.com/item?id=50408126) over the weekend, Claude Code’s Boris Cherny said the team is “looking into what we can do to prevent this.” That said, he noted that these settings files should pretty much never be checked in to a user’s git source control and that cases like these seemed to come up only when “the files were manually created and checked in.”\n\nIn the m"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "The article titled **\"[Claude Code is accidentally exposing secrets all over GitHub](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github)\"** from Ars Technica discusses a significant security issue related to Claude Code, developed by Anthropic. Here are the key points:\n\n1. **Leak of Sensitive Information**: Researchers from Apiiro discovered that Claude Code is leaking sensitive information, including database passwords, API tokens, and root logins, through its settings files that are sometimes uploaded to public GitHub repositories.\n\n2. **How the Leak Occurs**: The issue arises when users approve automated shell commands by selecting the “Yes, and don’t ask again” option. This choice is stored in a local settings file (`.claude/settings.local.json`). While the settings file is intended to remain local, it can inadvertently be uploaded to GitHub if the repository settings are not properly configured.\n\n3. **Git Ignore Settings**: Although Claude Code's documentation states that this settings file is added to the global `.gitignore` list (which prevents it from being shared), this setting does not apply at the repository level. Therefore, if a repository is cloned or a folder becomes a repository later, the sensitive file can be accidentally shared.\n\n4. **Extent of the Issue**: Apiiro's research found over 100,000 instances where the settings file was uploaded to public repositories, with about 1,100 of these containing sensitive information from 63 different organizations.\n\n5. **Previous Warnings**: This issue was flagged in bug reports as early as August 2025, but the reports were closed without action. The Claude Code team is aware of the problem and is looking into solutions to prevent such leaks.\n\nFor more detailed information, you can read the full article [here](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github).",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "fetch",
+          "args": {
+            "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github"
+          },
+          "result": {
+            "tool": "read_url",
+            "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+            "items": [
+              {
+                "title": "Claude Code is accidentally exposing secrets all over GitHub - Ars Technica",
+                "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github",
+                "source": "arstechnica.com",
+                "summary": "[Skip to content](https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/#main)\n\nText\nsettings\n\nStory text\n\nSizeSmallStandardLargeWidth\n\\*StandardWideLinksStandardOrange\n\n\\\\* Subscribers only\n\n[Learn more](https://arstechnica.com/store/product/subscriptions/)\n\nMinimize to nav\n\n\nClaude Code is leaking sensitive information on public GitHub instances thanks to a partial oversight in the way its settings files are handled. That’s the finding of AI security researchers at Apiiro, who [discovered thousands of secrets](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again), including database passwords, API tokens, and root logins, amid Claude Code settings files embedded in GitHub repositories.\n\nThe leak stems from the way Claude Code handles user approval for automated shell commands. When a user chooses the “Yes, and don’t ask again” option to approve running a command, that choice gets stored as part of a rule in the local “.claude/settings.local.json” file on the user’s computer. That rule is sometimes coded as a pattern, but the command itself is often written to that settings file as is, including any sensitive information that may be embedded within it.\n\nThis isn’t really a significant security issue if the settings file stays on the user’s local machine (assuming that machine doesn’t become compromised itself, of course). And Anthropic [notes in its Claude Code documentation](https://code.claude.com/docs/en/settings) that this particular settings file gets added to [the developer’s global .gitignore list](https://docs.github.com/en/get-started/git-basics/ignoring-files), which usually prevents it from being shared publicly.\n\nBut that .gitignore setting isn’t reflected at the repo level, meaning the sensitive file can be uploaded accidentally if a repo is cloned to another machine or a folder becomes a repo later, for instance. In many cases, Claude Code itself will commit changes to the settings file without the user’s input, Apiiro writes.\n\n![](https://cdn.arstechnica.net/wp-content/uploads/2026/11/claudsecrets.png)\n\nA breakdown of the kinds of secrets Apiiro found in publicly shared Claude Code settings files.\n\n\nCredit:\n[Apiiro](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\nA breakdown of the kinds of secrets Apiiro found in publicly shared Claude Code settings files.\n\n\nCredit:\n\n[Apiiro](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\nApiiro’s researchers found over 100,000 cases where Claude Code’s local settings file had been uploaded to a public GitHub repository. Of these, only about 1,100 from 63 different organizations contained secrets such as public API tokens, database passwords, or private keys. Even after these files are discovered and removed from a repository, the secrets can persist in forks of the original project if a GitHub user isn’t careful.\n\n## What’s to be done?\n\nAlthough this security issue is getting more attention now, it was [flagged in a Claude Code bug report](https://github.com/anthropics/claude-code/issues/5544) as far back as August 2025. [Other bug reports](https://github.com/anthropics/claude-code/issues/11982) also noted that the sensitive settings file was sometimes not added to the user’s .gitignore list or that Claude Code could [add the sensitive commands to another file](https://github.com/anthropics/claude-code/issues/91270) that was not protected from git sharing. These bug reports were all closed without action after 60 days of inactivity.\n\nIn [a comment thread on Hacker News](https://news.ycombinator.com/item?id=50408126) over the weekend, Claude Code’s Boris Cherny said the team is “looking into what we can do to prevent this.” That said, he noted that these settings files should pretty much never be checked in to a user’s git source control and that cases like these seemed to come up only when “the files were manually created and checked in.”\n\nIn the m"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T11:12:35"
+    }
+  ]
+}

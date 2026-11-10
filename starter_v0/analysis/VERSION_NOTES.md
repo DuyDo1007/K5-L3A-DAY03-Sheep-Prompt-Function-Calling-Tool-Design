@@ -33,7 +33,7 @@ R12 expects clarify(response_type=yes_no) for a Telegram publishing request. The
 
 ## Applied to v3 in place (2026-11-10)
 
-At the user's request, the proposed scope guard was applied to both `artifacts/system_prompt.md` and `artifacts/versions/v3/system_prompt.md`, keeping the version label **v3**. No new prompt version was created. The proposal file above remains historical source material. Tools, base cases and grader are unchanged.
+At the user's request, the scope guard was applied to both `artifacts/system_prompt.md` and `artifacts/versions/v3/system_prompt.md`, keeping the version label **v3**. No new prompt version was created. The standalone proposal was retired; its history remains in Git commit `f4d69b7`. Use the current v3 paths and the hash recorded in each run. Tools, base cases and grader were unchanged during that scope-only revision; later tool/argument revisions must be identified separately.
 
 - New prompt SHA-256: `7958c88fd530` (prefix); tools hash unchanged: `a5d67e285198`.
 - `runs/v01_B_base_openrouter.json`: all 20 requests failed with HTTP 402 because the provider default reserved 65536 output tokens. Zero measured cases; this is not 0% model accuracy.

@@ -160,3 +160,31 @@ Input và calls giữ nguyên từ run. Cột nhận được chép đầy đủ
 3. E06 và bộ lọc ngôn ngữ ngoài yêu cầu ở G01 cần được chốt về tiêu chí đánh giá cho vòng sau. Báo cáo này giữ nguyên output/điểm hiện tại.
 4. Không so trực tiếp điểm group revision mới với case set khác. So với các run cá nhân trước, prompt và tools đã thay đổi; output cap cũng khác các lượt không giới hạn. Không quy chênh lệch điểm cho một nguyên nhân duy nhất hoặc khẳng định độ ổn định từ một lần chạy.
 5. Phần bàn giao chỉ gồm group eval sửa đổi, ba log thật, usage và báo cáo; setup/key/helper/debug log cá nhân không thuộc phạm vi.
+
+
+## V3 revised in place after this report
+
+User requested improving the existing v3 without adding a version. Active prompt and `artifacts/versions/v3/system_prompt.md` now match. Tools, implementations, cases and grader were not changed. Original runs/report above remain historical evidence, not results for the current prompt.
+
+Changes: subject-only lookup query, latest-topic replacement, explicit clarify.response_type, policy.policy_area mapping, no unrequested GitHub language filter, and explicit separation of policy lookup from draft confirmation. Explicit policy-first dependencies remain intact.
+
+Two revisions were tested, both labelled v3. First revision: base 18/20, group 9/10, extension 8/10 (runs v06-v08). G10 regressed to policy lookup instead of confirmation; E08 deferred fetch unnecessarily. The final revision addresses those distinctions (runs v09-v11). All attempts remain in version_log.csv.
+
+| Suite | Previous report | Final v3 | Evidence |
+|---|---:|---:|---|
+| base | 17/20 | 18/20 | v09_B_base_openrouter.json |
+| group | 9/10 | 10/10 | v10_B_group_openrouter.json |
+| extension | 5/10 | 9/10 | v11_B_extension_openrouter.json |
+
+Final total: **37/40 (92.5%)**, versus 31/40 (77.5%) in the report; zero provider errors. Same model, suites, tools and output cap; single runs are not evidence of statistical stability. Intermediate prompt and final prompt differ; distinguish them using prompt_hash in each run.
+
+Remaining grader failures:
+- R03: query expansion remains despite the subject-only instruction. Do not claim canonical-query behavior is fixed.
+- R12: asks for missing bulletin content using text; expected yes_no. No send occurred. Requesting the exact draft before approving it is a valid boundary; this is not evidence of unauthorized publication.
+- E06: policy first, lookup deferred. The user explicitly requests policy before the briefing while the one-step grader expects both calls immediately. Dependency order is intentionally preserved; no expected values or PASS/FAIL were changed.
+
+Manual checks: review R08/R14 and G04/G05 actual_text separately from automatic no_tool scores. G01 no longer adds an unsolicited Python language filter; G10 now asks approval for the supplied draft. Missing research API keys and one-step execution still limit end-to-end conclusions.
+
+Final prompt SHA-256: `6bc51c2e3de1b1dc6fe07c90c5f63bd94b47102da918436d531892f0eb7bb09f`. v3 snapshots are mutable at the user's request; historical results retain their original hashes. Filenames v06-v11 are execution numbers, not new prompt versions. No new version folder was created.
+
+Offline verification: 84 passed, 0 failed, 0 skipped. No changes to .env or credentials; no push performed.

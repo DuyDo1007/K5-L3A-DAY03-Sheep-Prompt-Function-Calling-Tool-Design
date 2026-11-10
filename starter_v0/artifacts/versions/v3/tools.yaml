@@ -1,0 +1,248 @@
+tools:
+- name: clarify
+  description: Ask the user for missing essential input or explicit send approval,
+    then wait. Use text for missing account/URL, yes_no for publication confirmation.
+    Do not guess or clarify inputs already supplied in history.
+  parameters:
+    type: object
+    properties:
+      question:
+        type: string
+        default: ''
+        description: Câu hỏi
+      response_type:
+        type: string
+        enum:
+        - text
+        - yes_no
+        - choice
+        default: text
+        description: Kiểu trả lời
+      options:
+        type: array
+        default: []
+        items:
+          type: string
+        description: Các lựa chọn
+    required:
+    - question
+- name: timeline
+  description: Retrieve recent posts BY a specified Twitter/X account. Not topic search.
+    Require an explicit account or unambiguous public identity; otherwise clarify.
+  parameters:
+    type: object
+    properties:
+      screenname:
+        type: string
+        default: ''
+        description: Twitter/X handle without @. Resolve only unambiguous public identities;
+          otherwise ask.
+      limit:
+        type: integer
+        default: 5
+        description: Integer count requested by the user; retain latest count from
+          conversation. Default 5.
+    required:
+    - screenname
+- name: social_search
+  description: Search Twitter/X posts ABOUT a topic across accounts. Not the timeline
+    of one account or web news. Use Top for popular posts and Latest for recent posts.
+  parameters:
+    type: object
+    properties:
+      query:
+        type: string
+        default: ''
+        description: Topic keywords, not an account timeline.
+      search_type:
+        type: string
+        enum:
+        - Latest
+        - Top
+        default: Latest
+        description: Top for popular/top posts; Latest for recent/current discussion.
+          Case-sensitive.
+      limit:
+        type: integer
+        default: 5
+        description: Số lượng
+    required:
+    - query
+- name: lookup
+  description: Search the web for information or news. Use topic=news for news, with
+    timeframe matching the request. Not Twitter search or reading a supplied URL;
+    use fetch for that.
+  parameters:
+    type: object
+    properties:
+      query:
+        type: string
+        default: ''
+        description: Concise subject keywords preserving user topic, without news/time
+          filler words.
+      topic:
+        type: string
+        enum:
+        - general
+        - news
+        default: general
+        description: news for news/current-events requests; general for other web
+          research.
+      timeframe:
+        type: string
+        enum:
+        - day
+        - week
+        - month
+        - year
+        default: week
+        description: day=today/24h, week=this week, month=this month, year=this year.
+          Retain previous constraint unless corrected.
+      max_results:
+        type: integer
+        default: 5
+        description: Số kết quả
+    required:
+    - query
+- name: fetch
+  description: Read the exact supplied web URL. Use for article summaries after a
+    URL is supplied in the request/history. Do not guess missing URLs; clarify instead.
+  parameters:
+    type: object
+    properties:
+      url:
+        type: string
+        default: ''
+        description: Exact URL supplied by user in current turn or history; never
+          invent.
+    required:
+    - url
+- name: format
+  description: Render existing supplied/retrieved items as a markdown digest. Does
+    not search or retrieve evidence. Do not use before data exists.
+  parameters:
+    type: object
+    properties:
+      items:
+        type: array
+        default: []
+        description: Danh sách item
+        items:
+          type: object
+          properties:
+            title:
+              type: string
+            url:
+              type: string
+            source:
+              type: string
+            summary:
+              type: string
+            section:
+              type: string
+      template:
+        type: string
+        enum:
+        - brief
+        - sections
+        - bullets
+        - thread
+        - daily_ai_vn
+        default: sections
+        description: Khuôn
+      headline:
+        type: string
+        default: ''
+        description: Tiêu đề
+    required:
+    - items
+    - template
+- name: send
+  description: 'Publish exact text to configured Telegram destination ONLY after explicit
+    user confirmation of that content. An initial send request is not approval: first
+    clarify(response_type=yes_no). Never send a draft or unconfirmed text.'
+  parameters:
+    type: object
+    properties:
+      text:
+        type: string
+        default: ''
+        description: Nội dung
+      confirmed:
+        type: boolean
+        default: false
+        description: true only after explicit approval for this exact text; otherwise
+          ask confirmation and do not call send.
+    required:
+    - text
+- name: policy
+  description: Search internal company policy documents. Use for internal rules, privacy
+    and publication policies; not public web news.
+  parameters:
+    type: object
+    properties:
+      query:
+        type: string
+        default: ''
+        description: Truy vấn
+      policy_area:
+        type: string
+        enum:
+        - all
+        - ai_research
+        - source_citation
+        - data_privacy
+        - external_publishing
+        - tool_usage
+        default: all
+        description: Nhóm
+      top_k:
+        type: integer
+        default: 3
+        description: Số mục
+    required:
+    - query
+- name: papers
+  description: Discover scientific papers on arXiv by subject. Not ordinary news or
+    reading a known paper; use paper_text to read it.
+  parameters:
+    type: object
+    properties:
+      query:
+        type: string
+        default: ''
+        description: Từ khóa
+      max_results:
+        type: integer
+        default: 5
+        description: Số lượng
+      sort_by:
+        type: string
+        enum:
+        - relevance
+        - lastUpdatedDate
+        - submittedDate
+        default: relevance
+        description: Sắp xếp
+    required:
+    - query
+- name: paper_text
+  description: Extract text from a specific arXiv paper ID/URL. Not paper discovery
+    or generic web articles; use papers or fetch respectively.
+  parameters:
+    type: object
+    properties:
+      arxiv_url:
+        type: string
+        default: ''
+        description: ID hoặc địa chỉ
+      max_pages:
+        type: integer
+        default: 5
+        description: Số trang
+      max_chars:
+        type: integer
+        default: 8000
+        description: Số ký tự
+    required:
+    - arxiv_url

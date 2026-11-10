@@ -246,29 +246,29 @@ tools:
         description: Số ký tự
     required:
     - arxiv_url
-  - name: github_search
-    description: >-
-      Tìm kiếm các kho lưu trữ mã nguồn mở (repositories) công khai trên GitHub theo từ khóa, chủ đề, hoặc ngôn ngữ lập trình.
-      DÙNG KHI: Người dùng muốn tìm kiếm mã nguồn mở, project code, thư viện triển khai thuật toán/mô hình AI, hoặc tìm kiếm repo liên quan đến một bài báo/công nghệ trên GitHub (ví dụ: 'Tìm repo GitHub mã nguồn mở của mô hình Whisper', 'Tìm kho code Python về RAG trên GitHub', 'Tìm dự án AI agent trên GitHub nhiều sao nhất').
-      KHÔNG DÙNG KHI: Tìm kiếm thông tin tin tức, báo chí nói chung (dùng lookup); tìm kiếm bài đăng thảo luận trên mạng xã hội (dùng social_search hoặc timeline); tìm kiếm bài báo khoa học PDF (dùng papers).
-    parameters:
-      type: object
-      properties:
-        query:
-          type: string
-          default: ""
-          description: "Từ khóa hoặc tên dự án/công nghệ cần tìm kiếm trên GitHub (ví dụ: 'Whisper', 'RAG', 'Agentic AI'). Bắt buộc."
-        language:
-          type: string
-          default: ""
-          description: "Ngôn ngữ lập trình cần lọc (ví dụ: 'python', 'typescript', 'rust', 'c++'). Để trống nếu không yêu cầu cụ thể."
-        sort_by:
-          type: string
-          enum: [stars, forks, updated]
-          default: "stars"
-          description: "Tiêu chí sắp xếp: 'stars' (nhiều sao/phổ biến nhất, mặc định), 'forks' (nhiều lượt fork nhất), 'updated' (cập nhật gần đây nhất)."
-        limit:
-          type: integer
-          default: 5
-          description: "Số lượng repository tối đa cần lấy (mặc định: 5)."
-      required: [query]
+- name: github_search
+  description: >-
+    Tìm kiếm các kho lưu trữ mã nguồn mở (repositories) công khai trên GitHub theo từ khóa, chủ đề, hoặc ngôn ngữ lập trình.
+    DÙNG KHI: Người dùng muốn tìm kiếm mã nguồn mở, project code, thư viện triển khai thuật toán/mô hình AI, hoặc tìm kiếm repo liên quan đến một bài báo/công nghệ trên GitHub (ví dụ: 'Tìm repo GitHub mã nguồn mở của mô hình Whisper', 'Tìm kho code Python về RAG trên GitHub', 'Tìm dự án AI agent trên GitHub nhiều sao nhất').
+    KHÔNG DÙNG KHI: Tìm kiếm thông tin tin tức, báo chí nói chung (dùng lookup); tìm kiếm bài đăng thảo luận trên mạng xã hội (dùng social_search hoặc timeline); tìm kiếm bài báo khoa học PDF (dùng papers).
+  parameters:
+    type: object
+    properties:
+      query:
+        type: string
+        default: ""
+        description: "Từ khóa hoặc tên dự án/công nghệ cần tìm kiếm trên GitHub (ví dụ: 'Whisper', 'RAG', 'Agentic AI'). Bắt buộc."
+      language:
+        type: string
+        default: ""
+        description: "Ngôn ngữ lập trình cần lọc (ví dụ: 'python', 'typescript', 'rust', 'c++'). Để trống nếu không yêu cầu cụ thể."
+      sort_by:
+        type: string
+        enum: [stars, forks, updated]
+        default: "stars"
+        description: "Tiêu chí sắp xếp: 'stars' (nhiều sao/phổ biến nhất, mặc định), 'forks' (nhiều lượt fork nhất), 'updated' (cập nhật gần đây nhất)."
+      limit:
+        type: integer
+        default: 5
+        description: "Số lượng repository tối đa cần lấy (mặc định: 5)."
+    required: [query]

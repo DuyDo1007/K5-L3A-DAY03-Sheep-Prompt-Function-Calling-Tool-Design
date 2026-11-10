@@ -1,24 +1,34 @@
-# Bàn giao test v1_an và đề xuất prompt v4_an_proposed
+# Test lịch sử v1_an và trạng thái prompt v3
 
-Ngày bàn giao: 2026-11-10. Người dùng yêu cầu công bố đề xuất, lý do, note
-phiên bản và lượt test gần nhất. Các file setup, check, smoke test và bảng
-review cá nhân không thuộc phần bàn giao này.
+Ngày cập nhật: 2026-11-10. Phần sửa scope từ bản đề xuất đã được tích hợp
+vào v3; bản nháp riêng đã được loại bỏ để tránh nhầm là một phiên bản mới.
+Các file setup, check, smoke test và bảng review cá nhân không thuộc phần
+bàn giao này.
+
+**Quy ước khi viết báo cáo:** dùng các phiên bản prompt v0, v1, v2, v3.
+v3 đã được sửa tại chỗ nhiều lần, nên luôn dẫn thêm prompt hash và file run.
+`v1_an` là tên lượt thử cá nhân; `v01`–`v11` là số thứ tự file run, không
+phải các phiên bản prompt mới. Không gán kết quả run cũ cho snapshot v3 hiện tại.
 
 ## Phiên bản và trạng thái
 
 | Tên | Ý nghĩa | Trạng thái |
 |---|---|---|
-| v3 | Snapshot prompt/tools của nhóm được dùng trong lượt test | Giữ nguyên trong `artifacts/versions/v3/` |
-| v1_an | Lượt thử model Gemini 3.5 Flash Lite với prompt/tools v3; không phải phiên bản tối ưu prompt v1 của nhóm | Đã chạy API thật, có run JSON và usage |
-| v4_an_proposed | Đề xuất sửa duy nhất ranh giới trả lời ngoài phạm vi, phát triển từ prompt v3 | CHƯA CHẠY EVAL; chưa có metric sau thay đổi |
+| v3 trước khi sửa scope | Prompt hash `c555826d5aaf...`, được dùng trong run v1_an | Bằng chứng lịch sử; snapshot gốc lấy lại từ Git commit `4fcdb00` |
+| v1_an | Tên lượt thử Gemini 3.5 Flash Lite với v3 cũ, không phải phiên bản prompt v1 | Đã chạy API thật, có run JSON và usage |
+| v3 sau khi sửa scope | Prompt hash `7958c88fd530...`, được dùng trong run v02 | Đã tích hợp quy tắc dừng sau khi từ chối và có kiểm chứng riêng |
+| v3 hiện tại | Prompt hash `6bc51c2e3de1...`; có cả quy tắc scope, arguments và policy/confirmation mới | Dùng `artifacts/system_prompt.md` và snapshot `artifacts/versions/v3/system_prompt.md`; tham chiếu các run v09/v10/v11 |
 
-Đề xuất nằm riêng trong
-[`artifacts/versions/v4_an_proposed/system_prompt.md`](../artifacts/versions/v4_an_proposed/system_prompt.md).
-Không thay prompt đang chạy tại `artifacts/system_prompt.md`, tools YAML,
-grader, code tool, base cases hoặc `artifacts/version_log.csv`.
-Không ghi một vòng tối ưu thành công vào version log khi chưa có run thật.
+Hai đường dẫn prompt cần sử dụng hiện tại:
 
-## Bằng chứng test gần nhất
+- [`artifacts/system_prompt.md`](../artifacts/system_prompt.md): prompt ứng dụng đang đọc.
+- [`artifacts/versions/v3/system_prompt.md`](../artifacts/versions/v3/system_prompt.md): snapshot v3 hiện hành.
+
+Lịch sử đề xuất cũ vẫn tra được trong Git commit `f4d69b7`; không giữ thêm
+một file prompt trùng nội dung. Việc dọn tài liệu này không thay prompt,
+tools, grader, eval cases, version log hoặc kết quả run đã ghi.
+
+## Bằng chứng lịch sử: v1_an trước khi cập nhật v3
 
 - Run ID: `v1_an_B_base_openrouter_20261110T110855696060`.
 - Run gốc: [`runs/v1_an_B_base_openrouter_20261110T110855696060.json`](../runs/v1_an_B_base_openrouter_20261110T110855696060.json).
@@ -51,7 +61,7 @@ Usage được lấy từ raw response của provider thật trong lúc runner t
 thi, ghi riêng vì run_eval.py hiện không lưu token. Không dùng dữ liệu
 mock hoặc samples; không chỉnh sửa run gốc sau khi chạy.
 
-## Hai case FAIL theo grader
+## Hai case FAIL của v1_an theo grader
 
 | Case | Expected → actual | Kết luận có căn cứ |
 |---|---|---|
@@ -64,7 +74,7 @@ Nguồn: từng `results[*].id` trong run gốc, các trường `expect`,
 Nhãn `case_failure_type=wrong_tool` của R03 là mục tiêu test, không chứng
 minh model đã chọn sai tool.
 
-## Điểm grader chưa đo được
+## Điểm grader chưa đo được trong v1_an
 
 - **R08_out_of_scope:** `result.actual_text` nêu phạm vi rồi vẫn đưa công thức
   và kết quả nguyên hàm. Đây là vi phạm ranh giới nội dung trong lượt này,
@@ -82,13 +92,13 @@ minh model đã chọn sai tool.
 - `actual_text=null` ở các case dùng tool phản ánh runner dừng sau thực thi
   tool, chưa tổng hợp câu trả lời cuối từ tool results. Không điền text giả.
 
-## Đề xuất ưu tiên: v4_an_proposed
+## Phần sửa scope đã tích hợp vào v3
 
-**Giả thuyết duy nhất:** quy định rõ điểm dừng và nội dung không được trả
+**Giả thuyết đã áp dụng:** quy định rõ điểm dừng và nội dung không được trả
 lời sau khi phân loại ngoài phạm vi sẽ giảm hiện tượng “nêu giới hạn rồi
 vẫn giải đáp”, quan sát tại R08.
 
-Thay đổi so với v3 chỉ nằm ở phần scope:
+So với v3 cũ dùng trong v1_an, phần sửa scope gồm:
 
 1. Phân loại phạm vi trước khi trả lời hoặc chọn tool.
 2. Khi ngoài phạm vi, chỉ nêu ngắn gọn phạm vi nghiên cứu/tin tức và tùy chọn
@@ -102,34 +112,50 @@ Thay đổi so với v3 chỉ nằm ở phần scope:
 **Lý do:** v3 đã nêu không giải toán/viết code, nhưng text R08 cho thấy model
 có thể diễn giải ranh giới thành “không dùng công cụ tính toán”, rồi tự giải.
 Đây là quan sát về output; không khẳng định biết nguyên nhân nội tại của model.
-Thay đổi đề xuất làm rõ điều kiện hoàn tất và nội dung câu trả lời, không
+Thay đổi làm rõ điều kiện hoàn tất và nội dung câu trả lời, không
 thêm đáp án riêng cho case base hay làm lệch expected.
 
-**Cách kiểm chứng sau khi được giao chạy:** giữ nguyên model, tools v3,
-20 base cases và grader; chỉ thay prompt bằng v4_an_proposed. Ngoài metric
-cũ, review thủ công R08/R14 để kiểm tra không có lời giải/code, và kiểm tra
-R09/case research không bị từ chối nhầm. Mọi kết luận phải dẫn run mới.
-Chưa chạy bước này; không có số “sau tối ưu” để báo cáo.
+**Bằng chứng sau khi tích hợp:**
+[`v02_B_base_openrouter.json`](../runs/v02_B_base_openrouter.json)
+ghi version `v3`, prompt hash `7958c88fd530...`, đạt 19/20 case, không có
+provider error. Note kiểm chứng scope ghi nhận R08/R14 không đưa lời giải
+hoặc code. Đây là run của lần sửa scope trước các cập nhật arguments mới
+hơn, không phải kết quả cho mọi snapshot v3 về sau.
 
-## Các giả thuyết tiếp theo — kiểm chứng riêng từng vòng
+## Các cập nhật đã có trong v3 hiện tại
 
-| Ưu tiên | Đề xuất | Lý do và cách kiểm chứng |
-|---|---|---|
-| Sau v4 | Làm rõ canonical query bằng ví dụ tổng quát: giữ chủ đề trong query, loại tin/thời gian ở topic/timeframe; không tự thêm từ đồng nghĩa hoặc filler khi contract yêu cầu nguyên chủ đề. | R03 mở rộng query; R06 có filler nhưng không được chấm. Thử riêng thay đổi này, giữ nguyên base expected; không suy ngữ nghĩa truy vấn chỉ từ việc khớp chuỗi. |
-| Chốt contract trước khi tối ưu | Tách flow xin nội dung và flow xác nhận bản tin cụ thể. Thiếu nội dung thì thu thập; có nội dung đầy đủ mới hỏi yes_no cho đúng bản tin. Không coi yêu cầu đăng ban đầu là approval. | R12 hiện thiếu nội dung nhưng rubric yêu cầu yes_no ngay. Cần nhóm thống nhất flow/đánh giá và bổ sung group cases tương ứng. Không hứa sửa prompt sẽ làm R12 PASS, không đổi expected của base để nâng điểm. |
-| Kiểm tra end-to-end riêng | Cấu hình key công cụ qua kênh riêng và dùng vòng model → tool → model khi đánh giá câu trả lời hoàn chỉnh. | Thiếu key và runner một bước không được giải quyết bằng prompt. Không đưa credentials vào report/log/commit. |
+- Giữ chủ đề theo lượt mới nhất và bỏ điều kiện đã bị hủy/thay thế.
+- Truyền rõ `clarify.response_type`; không dựa vào default để khớp bộ chấm raw args.
+- Quy định subject-only query cho lookup, mapping `policy_area` và tránh tự
+  thêm bộ lọc GitHub ngoài yêu cầu.
+- Phân biệt hỏi về publishing policy với yêu cầu đăng bản nháp; giữ dependency
+  policy-first khi người dùng yêu cầu, và xác nhận chính xác nội dung trước khi gửi.
+
+Các quy tắc này đã có trong prompt hiện tại, không còn là danh sách đề xuất
+đang chờ áp dụng. Có rule không đồng nghĩa mọi case đều PASS; dùng log tương
+ứng để đánh giá. Các run có cùng hash v3 hiện tại:
+
+| Run | Suite | PASS / measured | Prompt hash |
+|---|---|---:|---|
+| [v09](../runs/v09_B_base_openrouter.json) | base | 18/20 | `6bc51c2e3de1...` |
+| [v10](../runs/v10_B_group_openrouter.json) | group | 10/10 | `6bc51c2e3de1...` |
+| [v11](../runs/v11_B_extension_openrouter.json) | extension | 9/10 | `6bc51c2e3de1...` |
+
+Các bảng trên chép số liệu của từng run thật; không coi chênh lệch với v1_an
+là bằng chứng của một thay đổi duy nhất. Lỗi tool/thiếu key và giới hạn
+single-step của runner vẫn phải báo riêng. Không đưa credentials vào báo cáo.
 
 ## Giới hạn kết luận
 
-Đây là một run model Gemini 3.5 với prompt v3 và một đề xuất scope chưa chạy.
-Không công bố prompt mới đã tăng accuracy, không đánh đồng điểm routing với
+Tài liệu giữ bằng chứng v1_an và phân biệt các lần sửa của v3 bằng hash/run.
+Không mặc định mỗi lần sửa đều tăng accuracy, không đánh đồng điểm routing với
 tool/API thành công, không dùng kết quả model khác để kết luận hiệu quả
 thay đổi prompt. Không thay PASS/FAIL gốc bằng nhận xét thủ công.
 
 
 ## Applied to v3 in place (2026-11-10)
 
-At the user's request, the proposed scope guard was applied to both `artifacts/system_prompt.md` and `artifacts/versions/v3/system_prompt.md`, keeping the version label **v3**. No new prompt version was created. The proposal file above remains historical source material. Tools, base cases and grader are unchanged.
+At the user's request, the scope guard was applied to both `artifacts/system_prompt.md` and `artifacts/versions/v3/system_prompt.md`, keeping the version label **v3**. No new prompt version was created. The standalone proposal was retired; its history remains in Git commit `f4d69b7`. Use the current v3 paths and the hash recorded in each run. Tools, base cases and grader were unchanged during that scope-only revision; later tool/argument revisions must be identified separately.
 
 - New prompt SHA-256: `7958c88fd530` (prefix); tools hash unchanged: `a5d67e285198`.
 - `runs/v01_B_base_openrouter.json`: all 20 requests failed with HTTP 402 because the provider default reserved 65536 output tokens. Zero measured cases; this is not 0% model accuracy.
